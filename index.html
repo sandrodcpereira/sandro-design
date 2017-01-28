@@ -3,6 +3,27 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Sandro Pereira</title>
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/favicons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/favicons/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="Sandro Pereira"/>
+	<meta name="msapplication-TileColor" content="##EAEEF" />
+	<meta name="msapplication-TileImage" content="assets/favicons/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="assets/favicons/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="assets/favicons/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="assets/favicons/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="assets/favicons/mstile-310x310.png" />
+	<link rel="mask-icon" href="assets/favicons/favicon.svg" color="#EAEEF0">
 	<script src="https://use.typekit.net/tpf3kji.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<style>
@@ -13,6 +34,7 @@
 			height: 100%;
 			font-family: "azo-sans-web", 'Azo Sans', sans-serif;
 			color: #2F3E4A;
+			background-color: #EAEEF0;
 		}
 
 		h1 {
@@ -64,20 +86,50 @@
 			transform: scale(1.2);
 		}
 
+		#logo {
+			height: 200px;
+			width: 200px;
+			margin: 0 auto;
+			background-color: red;
+    		animation-name: colours;
+   			animation-duration: 10s;
+   			animation-iteration-count: infinite;
+   			animation-timing-function: ease-in-out;
+   			background-image: url('assets/s-logo.svg');
+   			background-position: center center;
+   			-webkit-background-size: 200px 200px;
+   			background-size: 200px 200px;
+   			background-repeat: no-repeat;
+		}
+
+		@keyframes colours {
+		    0%   {background-color: #38c2f1;}
+		    10%  {background-color: #79d368;}
+		    20%  {background-color: #98da48;}
+		    30% {background-color: #c5e411;}
+		    40% {background-color: #f1be04;}
+		    50% {background-color: #ff7e1d;}
+		    60% {background-color: #ff4633;}
+		    70% {background-color: #ff204d;}
+		    80% {background-color: #a371a1;}
+		    90% {background-color: #718fbe;}
+		    100% {background-color: #38c2f1;}
+		}
+
 	</style>
 </head>
 <body>
 	<div class="container">
 		<div class="content">
 			<div id="logo"></div>
-			<h1>Hang tight, I'm working on a new page.</h1>
+			<h1>Hang tight, this page will be up again soon!</h1>
 			<p>In the meantime, you can find me and my work here:</p>
 			<ul>
-				<li class="icon dribbble"><a href="#"></a></li>
-				<li class="icon twitter"><a href="#"></a></li>
-				<li class="icon facebook"><a href="#"></a></li>
-				<li class="icon instagram"><a href="#"></a></li>
-				<li class="icon redbubble"><a href="#"></a></li>
+				<li class="icon dribbble"><a href="https://dribbble.com/sandrodcpereira?utm_source=landing-page"></a></li>
+				<li class="icon twitter"><a href="https://twitter.com/sandrodcpereira?utm_source=landing-page"></a></li>
+				<li class="icon facebook"><a href="https://www.facebook.com/sandrodcpereira?utm_source=landing-page"></a></li>
+				<li class="icon instagram"><a href="https://www.instagram.com/sandrodcpereira?utm_source=landing-page"></a></li>
+				<li class="icon redbubble"><a href="http://www.redbubble.com/people/sandrodcpereira?utm_source=landing-page"></a></li>
 			</ul>
 		</div>
 	</div>
