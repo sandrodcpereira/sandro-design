@@ -88,34 +88,11 @@
 		}
 
 		#logo {
-			height: 200px;
-			width: 200px;
+			height: 220px;
+			width: 220px;
 			margin: 0 auto;
-			background-color: red;
-    		animation-name: colours;
-   			animation-duration: 10s;
-   			animation-iteration-count: infinite;
-   			animation-timing-function: ease-in-out;
-   			background-image: url('assets/s-logo.svg');
-   			background-position: center center;
-   			-webkit-background-size: 200px 200px;
-   			background-size: 200px 200px;
-   			background-repeat: no-repeat;
 		}
 
-		@keyframes colours {
-		    0%   {background-color: #38c2f1;}
-		    10%  {background-color: #79d368;}
-		    20%  {background-color: #98da48;}
-		    30% {background-color: #c5e411;}
-		    40% {background-color: #f1be04;}
-		    50% {background-color: #ff7e1d;}
-		    60% {background-color: #ff4633;}
-		    70% {background-color: #ff204d;}
-		    80% {background-color: #a371a1;}
-		    90% {background-color: #718fbe;}
-		    100% {background-color: #38c2f1;}
-		}
 
 	</style>
 </head>
@@ -143,5 +120,33 @@
 	  ga('create', 'UA-20460092-2', 'auto');
 	  ga('send', 'pageview');
 	</script>
+
+	<script src="js/bodymovin.min.js"></script>
+
+	<script>
+	    //var params = {
+	    //    container: document.getElementById('logo'),
+	    //    renderer: 'svg',
+	    //    loop: true,
+	    //    autoplay: true,
+	    //    animationData: animationData,
+	    //    path: 'animation/logo.json'
+	    //};
+
+	    //var anim;
+
+	    //anim = bodymovin.loadAnimation(params);
+
+	    bodymovin.loadAnimation({
+		  container: document.getElementById('logo'), // the dom element that will contain the animation
+		  renderer: 'svg',
+		  loop: true,
+		  autoplay: true,
+		  path: 'animation/logo.json' // the path to the animation json
+		});
+
+	    
+    </script>
+
 </body>
 </html>
