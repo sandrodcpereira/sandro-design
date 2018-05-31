@@ -3,7 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Sandro Pereira</title>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+	<link rel="stylesheet" type="text/css" media="screen" href="normalise.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="style.css">
+
 	<link rel="mask-icon" href="assets/favicons/favicon.svg" color="#2F3E4A">
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/favicons/apple-touch-icon-57x57.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/favicons/apple-touch-icon-114x114.png" />
@@ -25,128 +30,82 @@
 	<meta name="msapplication-square150x150logo" content="assets/favicons/mstile-150x150.png" />
 	<meta name="msapplication-wide310x150logo" content="assets/favicons/mstile-310x150.png" />
 	<meta name="msapplication-square310x310logo" content="assets/favicons/mstile-310x310.png" />
-	<script src="https://use.typekit.net/tpf3kji.js"></script>
+
+	<script src="https://use.typekit.net/tpf3kji.js" async></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
-	<style>
-		/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-block}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
-
-		html, body {
-			width: 100%;
-			height: 100%;
-			font-family: "azo-sans-web", 'Azo Sans', sans-serif;
-			color: #2F3E4A;
-			background-color: #EAEEF0;
-		}
-
-		h1 {
-			font-weight: 100;
-		}
-
-		.container {
-			display: table;
-			width: 100%;
-			height: 100%;
-			text-align: center;
-			padding: 20px;
-			box-sizing: border-box;
-		}
-
-		.content {
-		    display: table-cell;
-		    vertical-align: middle;
-		}
-
-		ul {
-			padding: 0;
-		}
-
-		.icon {
-			list-style: none;
-			display: inline-block;
-		}
-
-		.icon > a {
-			display: block;
-			width: 40px;
-			height: 40px;
-			margin: 2px;
-			-webkit-background-size: 32px 32px;
-			background-size: 28px 28px;
-			background-position: center center;
-			background-repeat: no-repeat;
-			transition: transform .2s cubic-bezier(0.77, 0.04, 0.46, 1.43);
-		}
-
-		.icon.dribbble > a {background-image: url('assets/dribbble.svg');}
-		.icon.twitter > a {background-image: url('assets/twitter.svg');}
-		.icon.facebook > a {background-image: url('assets/facebook.svg');}
-		.icon.instagram > a {background-image: url('assets/instagram.svg');}
-		.icon.redbubble > a {background-image: url('assets/redbubble.svg');}
-
-		.icon > a:hover {
-			transform: scale(1.2);
-		}
-
-		#logo {
-			height: 220px;
-			width: 220px;
-			margin: 0 auto;
-		}
-
-
-	</style>
+	
 </head>
 <body>
-	<div class="container">
-		<div class="content">
-			<div id="logo"></div>
-			<h1>Hang tight, this page will be up again <strike>soon</strike> eventually!</h1>
-			<p>In the meantime, you can find me and my work here:</p>
+	<div class="wrapper">
+		<header>
+			<a href="index.html" id="logo">Sandro Pereira</a>
+
+			<h1>👋 Hello, my name is Sandro and I'm a Product Designer.</h1> 
+			<p>I have worked in B2B SaaS products for the past four years, and like to spend my free time doing web design, UI design, motion graphics, graphic design, and a bunch of other stuff.</p>
+			<p>Here's some of the stuff that I've been up to:</p>
+		</header>
+
+		<section>
+			<h4>Jan 2017 – Present</h4>
+			<h2>Product Designer at Akkroo</h2>
 			<ul>
-				<li class="icon dribbble"><a target="_blank" href="https://dribbble.com/sandrodcpereira?utm_source=landing-page"></a></li>
-				<li class="icon twitter"><a target="_blank" href="https://twitter.com/sandrodcpereira?utm_source=landing-page"></a></li>
-				<li class="icon facebook"><a target="_blank" href="https://www.facebook.com/sandrodcpereira?utm_source=landing-page"></a></li>
-				<li class="icon instagram"><a target="_blank" href="https://www.instagram.com/sandrodcpereira?utm_source=landing-page"></a></li>
-				<li class="icon redbubble"><a target="_blank" href="http://www.redbubble.com/people/sandrodcpereira?utm_source=landing-page"></a></li>
+				<li><a href="#TODO">Animation and Transitions in Mobile App Design</a></li>
+				<li><a href="#TODO">Designing Smarter Products</a></li>
+				<li><a href="#TODO">See sample of works</a></li>
 			</ul>
-		</div>
+		</section>
+
+		<section>
+			<h4>Jan 2015 – Dec 2016</h4>
+			<h2>Product Designer at SMARKIO</h2>
+			<ul>
+				<li><a href="#TODO">Framing in Product Design</a></li>
+				<li><a href="#TODO">See sample of works</a></li>
+			</ul>
+		</section>
+
+		<section>
+			<h4>Jun 2014 – Dec 2014</h4>
+			<h2>Visual Designer at Adclick</h2>
+			<ul>
+				<li><a href="#TODO">MPF Redesign</a></li>
+				<li><a href="#TODO">See sample of works</a></li>
+			</ul>
+		</section>
+
+		<section>
+			<h4>Sep 2013 – Dec 2013</h4>
+			<h2>UI Designer at IUNI</h2>
+			<ul>
+				<li><a href="#TODO">News Reader</a></li>
+			</ul>
+		</section>
+
+		<section>
+			<h4>2006 – Present</h4>
+			<h2>Freelance Designer</h2>
+			<ul>
+				<li><a href="#TODO">Motion Graphics</a></li>
+				<li><a href="#TODO">Sintagma</a></li>
+				<li><a href="#TODO">Illustration</a></li>
+				<li><a href="#TODO">Brastemp</a></li>
+				<li><a href="#TODO">Koala</a></li>
+				<li><a href="#TODO">Derivå</a></li>
+				<li><a href="#TODO">Dot Fetch</a></li>
+				<li><a href="#TODO">Branding & Logos</a></li>
+				<li><a href="#TODO">App Icon Design</a></li>
+			</ul>
+		</section>
+
+		<footer>
+			<ul>
+				<li><a href="#TODO">Dribbble</a></li>
+				<li><a href="#TODO">Twitter</a></li>
+				<li><a href="#TODO">Instagram</a></li>
+				<li><a href="#TODO">LinkedIn</a></li>
+				<li><a href="#TODO">Email</a></li>
+			</ul>
+		</footer>
 	</div>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-20460092-2', 'auto');
-	  ga('send', 'pageview');
-	</script>
-
-	<script src="js/bodymovin.min.js"></script>
-
-	<script>
-	    //var params = {
-	    //    container: document.getElementById('logo'),
-	    //    renderer: 'svg',
-	    //    loop: true,
-	    //    autoplay: true,
-	    //    animationData: animationData,
-	    //    path: 'animation/logo.json'
-	    //};
-
-	    //var anim;
-
-	    //anim = bodymovin.loadAnimation(params);
-
-	    bodymovin.loadAnimation({
-		  container: document.getElementById('logo'), // the dom element that will contain the animation
-		  renderer: 'svg',
-		  loop: false,
-		  autoplay: true,
-		  path: 'animation/logo.json' // the path to the animation json
-		});
-
-	    
-    </script>
-
 </body>
 </html>

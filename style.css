@@ -1,0 +1,27 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: "azo-sans-web", 'Azo Sans', sans-serif;
+	color: #2F3E4A;
+	line-height: 1.6em;
+	background-color: #EAEEF0;
+}
+
+.wrapper {
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+section, header {
+	margin-bottom: 80px;
+}
+
+section > h4 {
+	font-size: .8em;
+	font-weight: 500;
+	text-transform: uppercase;
+	opacity: .6;
+}
