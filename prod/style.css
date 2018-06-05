@@ -1,0 +1,108 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "azo-sans-web", 'Azo Sans', sans-serif;
+  color: #2F3E4A;
+  background-color: #EAEEF0;
+}
+.wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+section,
+header {
+  margin-bottom: 80px;
+}
+h1 {
+  font-size: 2em;
+  line-height: 1.4em;
+}
+h2 {
+  font-size: 1.6em;
+  line-height: 1.6em;
+}
+h3 {
+  font-size: 1.4em;
+  line-height: 1.4em;
+}
+h4 {
+  font-size: .8em;
+  line-height: 1.8em;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: .6;
+  letter-spacing: .1em;
+}
+p,
+li {
+  font-size: 1em;
+  line-height: 1.8em;
+}
+a {
+  color: #1B1BFF;
+}
+a:visited {
+  color: #FF2083;
+}
+section.test {
+  padding: 20px;
+  border: 1px solid red;
+}
+header {
+  padding: 80px 0 0;
+}
+header #logo {
+  display: block;
+  font-size: 0;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('../assets/sandro.svg');
+  transition: transform 0.2s cubic-bezier(0.69, -0.01, 0.63, 1.55);
+  margin-bottom: 30px;
+}
+header #logo:hover {
+  transform: scale(1.1);
+}
+footer {
+  padding: 0 0 80px 0;
+}
+footer ul {
+  margin-left: -10px;
+  padding: 0;
+}
+footer ul li {
+  display: inline-block;
+  list-style: none;
+}
+footer ul li a {
+  display: block;
+  font-size: 0;
+  width: 44px;
+  height: 44px;
+  -webkit-background-size: 24px;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: transform 0.2s cubic-bezier(0.69, -0.01, 0.63, 1.55);
+}
+footer ul li a[href="https://dribbble.com/sandrodcpereira?utm_source=portfolio"] {
+  background-image: url('../assets/dribbble.svg');
+}
+footer ul li a[href="https://twitter.com/sandrodcpereira?utm_source=portfolio"] {
+  background-image: url('../assets/twitter.svg');
+}
+footer ul li a[href="https://www.instagram.com/sandrodcpereira?utm_source=portfolio"] {
+  background-image: url('../assets/instagram.svg');
+}
+footer ul li a[href="https://www.linkedin.com/in/sandrodcpereira?utm_source=portfolio"] {
+  background-image: url('../assets/linkedin.svg');
+}
+footer ul li a:hover {
+  transform: scale(1.1);
+}
