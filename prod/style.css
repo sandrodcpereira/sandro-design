@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 html,
 body {
   width: 100%;
@@ -7,11 +10,34 @@ body {
   background-color: #EAEEF0;
 }
 .wrapper {
-  box-sizing: border-box;
   width: 100%;
-  max-width: 640px;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 50px;
+}
+.wrapper .back {
+  display: block;
+  width: 44px;
+  height: 44px;
+  font-size: 0;
+  position: fixed;
+  top: 89px;
+  margin-left: -50px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('../assets/back.svg');
+  opacity: .5;
+  transition: transform 0.2s cubic-bezier(0.69, -0.01, 0.63, 1.55), opacity 0.2s ease;
+}
+.wrapper .back:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+.wrapper .banner {
+  color: white;
+  background: #1B1BFF;
+  padding: 20px;
+  border-radius: 4px;
 }
 section,
 header {
