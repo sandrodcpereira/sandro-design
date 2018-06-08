@@ -4,10 +4,7 @@
 html,
 body {
   width: 100%;
-  height: 100%;
   font-family: "azo-sans-web", 'Azo Sans', sans-serif;
-  color: #2F3E4A;
-  background-color: #EAEEF0;
 }
 .wrapper {
   width: 100%;
@@ -23,9 +20,6 @@ body {
   position: fixed;
   top: 89px;
   margin-left: -50px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url('../assets/back.svg');
   opacity: .2;
   transition: transform 0.2s cubic-bezier(0.69, -0.01, 0.63, 1.55), opacity 0.2s ease;
 }
@@ -34,8 +28,6 @@ body {
   opacity: 1;
 }
 .wrapper .banner {
-  color: white;
-  background: #1B1BFF;
   padding: 20px;
   border-radius: 4px;
   margin: -50px 0 30px 0;
@@ -79,19 +71,11 @@ li {
   font-size: 1em;
   line-height: 1.8em;
 }
-a {
-  color: #1B1BFF;
-}
-a:visited {
-  color: #FF2083;
-}
 section img {
   width: 100%;
   border-radius: 4px;
-}
-section.test {
-  padding: 20px;
-  border: 1px solid red;
+  display: block;
+  margin: 20px auto;
 }
 header {
   padding: 80px 0 0;
@@ -101,15 +85,8 @@ header #logo {
   transform: scale(1);
   transition: transform 0.2s cubic-bezier(0.69, -0.01, 0.63, 1.55);
 }
-header #logo svg path {
-  fill: #2F3E4A;
-  background-color: red;
-}
 header #logo:hover {
-  transform: scale(1.1);
-}
-header #logo:hover svg path {
-  fill: #1B1BFF;
+  transform: scale(1.05);
 }
 footer {
   padding: 0 0 80px 0;
@@ -124,27 +101,148 @@ footer ul li {
 }
 footer ul li a {
   display: block;
-  font-size: 0;
-  width: 44px;
-  height: 44px;
-  -webkit-background-size: 24px;
-  background-size: 24px;
-  background-repeat: no-repeat;
-  background-position: center center;
+  padding: 8px;
   transition: transform 0.2s cubic-bezier(0.69, -0.01, 0.63, 1.55);
 }
-footer ul li a[href="https://dribbble.com/sandrodcpereira?utm_source=portfolio"] {
-  background-image: url('../assets/dribbble.svg');
-}
-footer ul li a[href="https://twitter.com/sandrodcpereira?utm_source=portfolio"] {
-  background-image: url('../assets/twitter.svg');
-}
-footer ul li a[href="https://www.instagram.com/sandrodcpereira?utm_source=portfolio"] {
-  background-image: url('../assets/instagram.svg');
-}
-footer ul li a[href="https://www.linkedin.com/in/sandrodcpereira?utm_source=portfolio"] {
-  background-image: url('../assets/linkedin.svg');
-}
 footer ul li a:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
+}
+.navigation {
+  display: block;
+  overflow: auto;
+}
+.navigation a {
+  display: inline-block;
+}
+.navigation a.next {
+  float: right;
+}
+/* Colour scheme */
+body {
+  color: #2F3E4A;
+}
+body a {
+  color: #2F3E4A;
+}
+body a:hover {
+  color: #1B1BFF;
+}
+body .back svg *,
+body #logo svg *,
+body footer li a svg * {
+  fill: #2F3E4A;
+}
+body .back:hover svg *,
+body #logo:hover svg *,
+body footer li a:hover svg * {
+  fill: #1B1BFF;
+}
+body .banner {
+  color: white;
+  background: #1B1BFF;
+}
+body.logos {
+  background-color: #ffffff;
+}
+body.newsreader {
+  background-color: #ffffff;
+}
+body.illustration {
+  background-color: #fe5b60;
+  color: #ffffff;
+}
+body.illustration a {
+  color: #ffffff;
+}
+body.illustration a:hover {
+  color: #2F3E4A;
+}
+body.illustration .back svg *,
+body.illustration #logo svg *,
+body.illustration footer li a svg * {
+  fill: #ffffff;
+}
+body.illustration .back:hover svg *,
+body.illustration #logo:hover svg *,
+body.illustration footer li a:hover svg * {
+  fill: #2F3E4A;
+}
+body.illustration .banner {
+  color: white;
+  background: #2F3E4A;
+}
+body.brastemp {
+  background-color: #abdff3;
+}
+body.koala {
+  background-color: #039dd7;
+  color: #ffffff;
+}
+body.koala a {
+  color: #ffffff;
+}
+body.koala a:hover {
+  color: #2F3E4A;
+}
+body.koala .back svg *,
+body.koala #logo svg *,
+body.koala footer li a svg * {
+  fill: #ffffff;
+}
+body.koala .back:hover svg *,
+body.koala #logo:hover svg *,
+body.koala footer li a:hover svg * {
+  fill: #2F3E4A;
+}
+body.koala .banner {
+  color: white;
+  background: #2F3E4A;
+}
+body.deriva {
+  background-color: #02b1de;
+  color: #ffffff;
+}
+body.deriva a {
+  color: #ffffff;
+}
+body.deriva a:hover {
+  color: #2F3E4A;
+}
+body.deriva .back svg *,
+body.deriva #logo svg *,
+body.deriva footer li a svg * {
+  fill: #ffffff;
+}
+body.deriva .back:hover svg *,
+body.deriva #logo:hover svg *,
+body.deriva footer li a:hover svg * {
+  fill: #2F3E4A;
+}
+body.deriva .banner {
+  color: white;
+  background: #2F3E4A;
+}
+body.motion {
+  background-color: #6254e7;
+  color: #ffffff;
+}
+body.motion a {
+  color: #ffffff;
+}
+body.motion a:hover {
+  color: #2F3E4A;
+}
+body.motion .back svg *,
+body.motion #logo svg *,
+body.motion footer li a svg * {
+  fill: #ffffff;
+}
+body.motion .back:hover svg *,
+body.motion #logo:hover svg *,
+body.motion footer li a:hover svg * {
+  fill: #2F3E4A;
+}
+body.motion .banner {
+  color: white;
+  background: #2F3E4A;
 }

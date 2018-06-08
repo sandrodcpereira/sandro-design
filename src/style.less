@@ -2,10 +2,7 @@
 
 html, body {
 	width: 100%;
-	height: 100%;
 	font-family: "azo-sans-web", 'Azo Sans', sans-serif;
-	color: #2F3E4A;
-	background-color: #EAEEF0;
 }
 
 .wrapper {
@@ -22,9 +19,6 @@ html, body {
 		position: fixed;
 		top: 89px;
 		margin-left: -50px;
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-image: url('../assets/back.svg');
 		opacity: .2;
 		transition: transform .2s cubic-bezier(0.69,-0.01, 0.63, 1.55), opacity .2s ease;
 
@@ -35,8 +29,6 @@ html, body {
 	}
 
 	.banner {
-		color: white;
-		background: #1B1BFF;
 		padding: 20px;
 		border-radius: 4px;
 		margin: -50px 0 30px 0;
@@ -91,24 +83,13 @@ p, li {
 	line-height: 1.8em;
 }
 
-a {
-	color: #1B1BFF;
-
-	&:visited {
-		color: #FF2083;
-	}
-}
-
 section {
 	img {
 		width: 100%;
 		border-radius: 4px;
+		display: block;
+		margin: 20px auto;
 	}
-}
-
-section.test {
-	padding: 20px;
-	border: 1px solid red;
 }
 
 header {
@@ -118,18 +99,9 @@ header {
 		display: inline-block;
 		transform: scale(1);
 		transition: transform .2s cubic-bezier(0.69,-0.01, 0.63, 1.55);
-		
 
-		svg {
-
-			path {
-				fill: #2F3E4A;
-				background-color: red;
-			}
-		}
 		&:hover {
-			transform: scale(1.1);
-			svg path {fill: #1B1BFF;}
+			transform: scale(1.05);
 		}
 	}
 }
@@ -147,34 +119,158 @@ footer {
 			
 			a {
 				display: block;
-				font-size: 0;
-				width: 44px;
-				height: 44px;
-				-webkit-background-size: 24px;
-				background-size: 24px;
-				background-repeat: no-repeat;
-				background-position: center center;
+				padding: 8px;
+				//transform: scale(1);
 				transition: transform .2s cubic-bezier(0.69,-0.01, 0.63, 1.55);
 
-				&[href="https://dribbble.com/sandrodcpereira?utm_source=portfolio"] {
-					background-image: url('../assets/dribbble.svg');
-				}
-				&[href="https://twitter.com/sandrodcpereira?utm_source=portfolio"] {
-					background-image: url('../assets/twitter.svg');
-				}
-				&[href="https://www.instagram.com/sandrodcpereira?utm_source=portfolio"] {
-					background-image: url('../assets/instagram.svg');
-				}
-				&[href="https://www.linkedin.com/in/sandrodcpereira?utm_source=portfolio"] {
-					background-image: url('../assets/linkedin.svg');
-				}
-				&[href="mailto:hello@sandrodcpereira.com"] {}
-				
 				&:hover {
-					transform: scale(1.1);
+					transform: scale(1.2);
 				}
 			}
 		}
 	}
 }
+
+.navigation {
+	display: block;
+	overflow: auto;
+
+	a {
+		display: inline-block; 
+
+		&.next {
+			float: right;
+		}
+	}
+}
+
+
+/* Colour scheme */
+
+
+body {
+	//background-color: #EAEEF0;
+	color: #2F3E4A;
+	a {
+		color: #2F3E4A;
+		&:hover {
+			color: #1B1BFF;
+			//&:visited {color: #FF2083;}
+		}
+		
+	}
+	.back, #logo, footer li a {
+		svg * {fill: #2F3E4A;}
+		&:hover {svg * {fill: #1B1BFF;}}
+	}
+	.banner {
+		color: white;
+		background: #1B1BFF;
+	}
+}
+
+
+body.logos {
+	background-color: #ffffff;
+}
+
+body.newsreader {
+	background-color: #ffffff;
+}
+
+
+body.illustration {
+	background-color: #fe5b60;
+	color: #ffffff;
+	a {
+		color: #ffffff;
+		&:hover {
+			color: #2F3E4A;
+			//&:visited {color: #FF2083;}
+		}	
+	}
+	.back, #logo, footer li a {
+		svg * {fill: #ffffff;}
+		&:hover {svg * {fill: #2F3E4A;}}
+	}
+	.banner {
+		color: white;
+		background: #2F3E4A;
+	}
+}
+
+body.brastemp {
+	background-color: #abdff3;
+}
+
+
+body.koala {
+	background-color: #039dd7;
+	color: #ffffff;
+	a {
+		color: #ffffff;
+		&:hover {
+			color: #2F3E4A;
+			//&:visited {color: #FF2083;}
+		}	
+	}
+	.back, #logo, footer li a {
+		svg * {fill: #ffffff;}
+		&:hover {svg * {fill: #2F3E4A;}}
+	}
+	.banner {
+		color: white;
+		background: #2F3E4A;
+	}
+}
+
+
+body.deriva {
+	background-color: #02b1de;
+	color: #ffffff;
+	a {
+		color: #ffffff;
+		&:hover {
+			color: #2F3E4A;
+			//&:visited {color: #FF2083;}
+		}	
+	}
+	.back, #logo, footer li a {
+		svg * {fill: #ffffff;}
+		&:hover {svg * {fill: #2F3E4A;}}
+	}
+	.banner {
+		color: white;
+		background: #2F3E4A;
+	}
+}
+
+
+body.motion {
+	background-color: #6254e7;
+	color: #ffffff;
+	a {
+		color: #ffffff;
+		&:hover {
+			color: #2F3E4A;
+			//&:visited {color: #FF2083;}
+		}	
+	}
+	.back, #logo, footer li a {
+		svg * {fill: #ffffff;}
+		&:hover {svg * {fill: #2F3E4A;}}
+	}
+	.banner {
+		color: white;
+		background: #2F3E4A;
+	}
+}
+
+
+
+
+
+
+
+
 
