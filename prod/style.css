@@ -326,27 +326,37 @@ body.smarkio-framing .banner {
   color: white;
   background: #2F3E4A;
 }
-body.dotfetch {
+body.dotfetch,
+body.not-found {
   background-color: #EB404A;
   color: #ffffff;
 }
-body.dotfetch a {
+body.dotfetch a,
+body.not-found a {
   color: #ffffff;
 }
-body.dotfetch a:hover {
+body.dotfetch a:hover,
+body.not-found a:hover {
   color: #2F3E4A;
 }
 body.dotfetch .back svg *,
+body.not-found .back svg *,
 body.dotfetch #logo svg *,
-body.dotfetch footer li a svg * {
+body.not-found #logo svg *,
+body.dotfetch footer li a svg *,
+body.not-found footer li a svg * {
   fill: #ffffff;
 }
 body.dotfetch .back:hover svg *,
+body.not-found .back:hover svg *,
 body.dotfetch #logo:hover svg *,
-body.dotfetch footer li a:hover svg * {
+body.not-found #logo:hover svg *,
+body.dotfetch footer li a:hover svg *,
+body.not-found footer li a:hover svg * {
   fill: #2F3E4A;
 }
-body.dotfetch .banner {
+body.dotfetch .banner,
+body.not-found .banner {
   color: white;
   background: #2F3E4A;
 }
