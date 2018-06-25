@@ -35,6 +35,11 @@ body {
 .wrapper .banner p {
   margin: 0;
 }
+hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(47, 62, 74, 0.1);
+}
 section,
 header {
   margin-bottom: 80px;
