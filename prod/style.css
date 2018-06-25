@@ -99,9 +99,11 @@ li {
 }
 section img {
   width: 100%;
-  border-radius: 4px;
   display: block;
   margin: 20px auto;
+}
+section img.border-radius {
+  border-radius: 4px;
 }
 header {
   padding: 80px 0 0;
