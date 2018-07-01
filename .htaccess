@@ -1,6 +1,7 @@
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
-ErrorDocument 404 http://www.sandro.design/404.htmls
+Redirect 301 /2011/01/super-mario-icons-extravaganza.html /super-mario-icons 
 
-RedirectPermanent /2011/01/super-mario-icons-extravaganza.html /super-mario-icons 
+ErrorDocument 404 http://www.sandro.design/404.html
+
