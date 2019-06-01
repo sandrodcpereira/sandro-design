@@ -129,6 +129,13 @@ section img.border {
   border-radius: 4px;
   border: 2px solid #EAEEF0;
 }
+section ul {
+  margin-top: 40px;
+}
+section ul a {
+  background-color: #f5e2ab;
+  padding: 2px 2px;
+}
 header {
   padding: 80px 0 0;
 }
