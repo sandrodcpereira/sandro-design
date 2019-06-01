@@ -97,6 +97,23 @@ li {
   font-size: 1em;
   line-height: 1.8em;
 }
+.label {
+  color: #ffffff;
+  font-size: .6em;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 1px 3px 1px 4px;
+  margin-left: 4px;
+  border-radius: 4px;
+  background-color: #1B1BFF;
+  vertical-align: middle;
+}
+.disabled {
+  text-decoration: underline;
+  opacity: .3;
+  cursor: not-allowed;
+}
 section img {
   width: 100%;
   display: block;
@@ -104,6 +121,13 @@ section img {
 }
 section img.border-radius {
   border-radius: 4px;
+}
+section img.small {
+  max-width: 200px;
+}
+section img.border {
+  border-radius: 4px;
+  border: 2px solid #EAEEF0;
 }
 header {
   padding: 80px 0 0;
