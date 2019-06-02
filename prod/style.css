@@ -77,6 +77,14 @@ abbr[title] {
   border-bottom: 1px dotted #303e4982;
   text-decoration: none;
 }
+p > a[target="_blank"]:after {
+  content: "s";
+  display: inline-block;
+  margin-left: 4px;
+  font-family: "Font Awesome 5 Free";
+  content: "\f360";
+  font-weight: 900;
+}
 .aspect-ratio {
   position: relative;
   width: 100%;
