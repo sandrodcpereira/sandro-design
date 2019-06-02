@@ -78,12 +78,21 @@ abbr[title] {
   text-decoration: none;
 }
 p > a[target="_blank"]:after {
-  content: "s";
+  font-family: "Font Awesome 5 Pro";
+  content: "\f35d";
+  font-weight: 900;
+  opacity: .4;
+  font-size: .8em;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
   display: inline-block;
   margin-left: 4px;
-  font-family: "Font Awesome 5 Free";
-  content: "\f360";
-  font-weight: 900;
+}
+p > a[target="_blank"]:hover:after {
+  opacity: 1;
 }
 .aspect-ratio {
   position: relative;
