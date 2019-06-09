@@ -165,8 +165,10 @@ section img.border {
   margin-top: 40px;
 }
 .home section ul a {
-  background-color: #f5e2ab;
-  padding: 2px 2px;
+  color: #1B1BFF;
+}
+.home section ul a:visited {
+  color: #7e1bff;
 }
 header {
   padding: 80px 0 0;
@@ -218,6 +220,9 @@ body a {
 }
 body a:hover {
   color: #1B1BFF;
+}
+body a:hover:visited {
+  color: #7e1bff;
 }
 body .back svg *,
 body #logo svg *,
