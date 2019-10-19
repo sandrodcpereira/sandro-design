@@ -6,7 +6,6 @@ Hello, my name is Sandro Pereira and this is my online portfolio. I'm writing th
 
 * [Less](http://lesscss.org), because variables and nested styles make things easier.
 * [Font Awesome](https://fontawesome.com), readymade icons save you a tonne of work.
-* [Handlebars](https://handlebarsjs.com), to make templating and reusing layout components easier to manage. (Still testing, might end up going with something else for this...)
 
 ## How to compile CSS
 
@@ -19,10 +18,6 @@ Here's how you do it, you dummy:
 3. All done, your Less file is now being watched. Cool.
 
 This obviously assumes that Less has been installed already, but that's a one time thing and it's easy enough to do.
-
-## How to compile Handlebars
-
-Who the fuck knows, really.
 
 ## How to run the page locally
 

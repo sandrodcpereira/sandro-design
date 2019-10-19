@@ -5,44 +5,59 @@ html,
 body {
   width: 100%;
   font-family: "azo-sans-web", 'Azo Sans', sans-serif;
+  background-color: #EAEEF0;
 }
 .wrapper {
   width: 100%;
-  max-width: 720px;
+  max-width: 740px;
   margin: 0 auto;
   padding: 0 50px;
 }
 .wrapper .back {
   display: block;
-  width: 44px;
-  height: 44px;
-  font-size: 0;
+  width: 54px;
+  height: 54px;
+  font-size: 2.4em;
   position: fixed;
-  top: 89px;
-  margin-left: -50px;
-  opacity: .2;
-  transition: transform 0.2s cubic-bezier(0.69, -0.01, 0.63, 1.55), opacity 0.2s ease;
+  top: 84px;
+  margin-left: -62px;
+  color: rgba(99, 128, 150, 0.2);
+  z-index: 999;
+  text-align: center;
+  line-height: 1.35em;
+}
+.wrapper .back > span {
+  opacity: 0;
+  display: block;
+  background-color: #2F3E4A;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: .4em;
+  font-weight: 700;
+  color: #EAEEF0;
+  text-transform: uppercase;
+  position: absolute;
+  top: 12px;
+  right: -45px;
+  pointer-events: none;
+  line-height: 1.2em;
+  transition: opacity 0.2s ease-out, right 0.2s ease-out;
 }
 .wrapper .back:hover {
-  transform: scale(1.1);
+  color: #2F3E4A;
+}
+.wrapper .back:hover > span {
   opacity: 1;
-}
-.wrapper .banner {
-  padding: 20px;
-  border-radius: 4px;
-  margin: -50px 0 30px 0;
-}
-.wrapper .banner p {
-  margin: 0;
-}
-hr {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  border: 1px solid rgba(47, 62, 74, 0.1);
+  right: -50px;
 }
 section,
 header {
   margin-bottom: 80px;
+}
+p,
+li {
+  font-size: 1.1em;
+  line-height: 1.9em;
 }
 h1,
 h2,
@@ -68,35 +83,105 @@ h4 {
   line-height: 1.8em;
   font-weight: 500;
   text-transform: uppercase;
-  opacity: .6;
+  color: #638096;
   letter-spacing: .1em;
+  margin-top: 8em;
+}
+hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: 1px solid #638096;
+  opacity: .1;
+}
+p.info {
+  font-size: 1em;
+  padding: 15px 25px 15px 52px;
+  border-radius: 6px;
+  background-color: rgba(27, 27, 255, 0.05);
+  position: relative;
+}
+p.info:before {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f05a";
+  font-weight: 900;
+  opacity: 1;
+  color: #638096;
+  font-size: 1.2em;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  position: absolute;
+  top: 15px;
+  left: 22px;
+}
+img {
+  width: 100%;
+  display: block;
+  margin: 20px auto;
+}
+img.border-radius {
+  border-radius: 4px;
+}
+img.small {
+  max-width: 200px;
+}
+img.border {
+  border-radius: 4px;
+  border: 2px solid #EAEEF0;
+}
+.img-full {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: #1B1BFF;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.img-full img {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.card {
+  background-color: rgba(99, 128, 150, 0.1);
+  border-radius: 6px;
+  padding: 15px 40px;
+  font-size: .8em;
+  margin: 2em 0;
 }
 figcaption {
   display: block;
   font-size: .8em;
   line-height: 1.8em;
   font-weight: 500;
-  opacity: .6;
+  color: #638096;
   text-align: center;
   margin-bottom: 100px;
 }
 blockquote {
-  font-size: 1.4em;
+  font-size: 1.8em;
+  color: #638096;
+  font-family: poynter-oldstyle-text, serif;
+  font-weight: 400;
   font-style: italic;
-  opacity: .6;
 }
 cite {
   display: block;
-  margin: 0 3em 3em 3em;
+  margin: -1em 3em 3em 3em;
   font-size: .8em;
   line-height: 1.8em;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: .1em;
   font-style: initial;
+  color: #638096;
 }
 abbr[title] {
-  border-bottom: 1px dotted #303e4982;
+  border-bottom: 1px dashed #638096;
   text-decoration: none;
 }
 p > a[target="_blank"]:after {
@@ -131,11 +216,6 @@ p > a[target="_blank"]:hover:after {
   top: 0;
   border-radius: 4px;
 }
-p,
-li {
-  font-size: 1em;
-  line-height: 1.8em;
-}
 .label {
   color: #ffffff;
   font-size: .6em;
@@ -147,50 +227,6 @@ li {
   border-radius: 4px;
   background-color: #1B1BFF;
   vertical-align: middle;
-}
-.disabled {
-  text-decoration: underline;
-  opacity: .3;
-  cursor: not-allowed;
-}
-section img {
-  width: 100%;
-  display: block;
-  margin: 20px auto;
-}
-section img.border-radius {
-  border-radius: 4px;
-}
-section img.small {
-  max-width: 200px;
-}
-section img.border {
-  border-radius: 4px;
-  border: 2px solid #EAEEF0;
-}
-section .img-full {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  background-color: #008ac8;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-section .img-full img {
-  width: 100%;
-  max-width: 800px;
-}
-.home section ul {
-  margin-top: 40px;
-}
-.home section ul a {
-  color: #1B1BFF;
-}
-.home section ul a:visited {
-  color: #7e1bff;
 }
 header {
   padding: 80px 0 0;
@@ -204,11 +240,15 @@ header #logo:hover {
   transform: scale(1.05);
 }
 footer {
-  padding: 0 0 80px 0;
+  margin-top: 120px;
+  padding: 0 0 100px 0;
+  text-align: center;
 }
 footer ul {
-  margin-left: -10px;
   padding: 0;
+  font-size: 1.4em;
+  margin-top: 80px;
+  margin-bottom: -14px;
 }
 footer ul li {
   display: inline-block;
@@ -216,11 +256,17 @@ footer ul li {
 }
 footer ul li a {
   display: block;
-  padding: 8px;
-  transition: transform 0.2s cubic-bezier(0.69, -0.01, 0.63, 1.55);
+  padding: 12px;
+  color: #638096;
 }
 footer ul li a:hover {
-  transform: scale(1.2);
+  color: #2F3E4A;
+}
+footer p {
+  font-weight: 700;
+  font-style: normal;
+  font-size: .8em;
+  color: #638096;
 }
 .navigation {
   display: block;
@@ -232,253 +278,35 @@ footer ul li a:hover {
 .navigation a.next {
   float: right;
 }
-/* Colour scheme */
-body {
-  background-color: #EAEEF0;
-  color: #2F3E4A;
+.home section ul {
+  margin-top: 40px;
 }
-body a {
-  color: #2F3E4A;
-}
-body a:hover {
+.home section ul a {
   color: #1B1BFF;
 }
-body a:hover:visited {
+.home section ul a:visited {
   color: #7e1bff;
 }
-body .back svg *,
-body #logo svg *,
-body footer li a svg * {
-  fill: #2F3E4A;
+.home .wrapper:first-child {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  background-color: #1B1BFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-body .back:hover svg *,
-body #logo:hover svg *,
-body footer li a:hover svg * {
-  fill: #1B1BFF;
+.home .wrapper:first-child header {
+  text-align: left;
+  max-width: 740px;
+  margin: 0 auto;
+  color: #EAEEF0;
+  margin-bottom: 20px;
+  padding: 0 50px;
 }
-body .banner {
-  color: white;
-  background: #1B1BFF;
+.home .wrapper:first-child header p a {
+  color: #EAEEF0;
 }
-body.logos,
-body.newsreader,
-body.sintagma,
-body.adclick-mpf,
-body.interactions {
-  background-color: #ffffff;
-}
-body.illustration {
-  background-color: #fe5b60;
-  color: #ffffff;
-}
-body.illustration a {
-  color: #ffffff;
-}
-body.illustration a:hover {
-  color: #2F3E4A;
-}
-body.illustration .back svg *,
-body.illustration #logo svg *,
-body.illustration footer li a svg * {
-  fill: #ffffff;
-}
-body.illustration .back:hover svg *,
-body.illustration #logo:hover svg *,
-body.illustration footer li a:hover svg * {
-  fill: #2F3E4A;
-}
-body.illustration .banner {
-  color: white;
-  background: #2F3E4A;
-}
-body.brastemp {
-  background-color: #abdff3;
-}
-body.koala {
-  background-color: #039dd7;
-  color: #ffffff;
-}
-body.koala a {
-  color: #ffffff;
-}
-body.koala a:hover {
-  color: #2F3E4A;
-}
-body.koala .back svg *,
-body.koala #logo svg *,
-body.koala footer li a svg * {
-  fill: #ffffff;
-}
-body.koala .back:hover svg *,
-body.koala #logo:hover svg *,
-body.koala footer li a:hover svg * {
-  fill: #2F3E4A;
-}
-body.koala .banner {
-  color: white;
-  background: #2F3E4A;
-}
-body.deriva {
-  background-color: #02b1de;
-  color: #ffffff;
-}
-body.deriva a {
-  color: #ffffff;
-}
-body.deriva a:hover {
-  color: #2F3E4A;
-}
-body.deriva .back svg *,
-body.deriva #logo svg *,
-body.deriva footer li a svg * {
-  fill: #ffffff;
-}
-body.deriva .back:hover svg *,
-body.deriva #logo:hover svg *,
-body.deriva footer li a:hover svg * {
-  fill: #2F3E4A;
-}
-body.deriva .banner {
-  color: white;
-  background: #2F3E4A;
-}
-body.motion {
-  background-color: #6254e7;
-  color: #ffffff;
-}
-body.motion a {
-  color: #ffffff;
-}
-body.motion a:hover {
-  color: #2F3E4A;
-}
-body.motion .back svg *,
-body.motion #logo svg *,
-body.motion footer li a svg * {
-  fill: #ffffff;
-}
-body.motion .back:hover svg *,
-body.motion #logo:hover svg *,
-body.motion footer li a:hover svg * {
-  fill: #2F3E4A;
-}
-body.motion .banner {
-  color: white;
-  background: #2F3E4A;
-}
-body.adclick {
-  background-color: #f48120;
-  color: #ffffff;
-}
-body.adclick a {
-  color: #ffffff;
-}
-body.adclick a:hover {
-  color: #2F3E4A;
-}
-body.adclick .back svg *,
-body.adclick #logo svg *,
-body.adclick footer li a svg * {
-  fill: #ffffff;
-}
-body.adclick .back:hover svg *,
-body.adclick #logo:hover svg *,
-body.adclick footer li a:hover svg * {
-  fill: #2F3E4A;
-}
-body.adclick .banner {
-  color: white;
-  background: #2F3E4A;
-}
-body.smarkio,
-body.smarkio-framing {
-  background-color: #1b5aa2;
-  color: #ffffff;
-}
-body.smarkio a,
-body.smarkio-framing a {
-  color: #ffffff;
-}
-body.smarkio a:hover,
-body.smarkio-framing a:hover {
-  color: #2F3E4A;
-}
-body.smarkio .back svg *,
-body.smarkio-framing .back svg *,
-body.smarkio #logo svg *,
-body.smarkio-framing #logo svg *,
-body.smarkio footer li a svg *,
-body.smarkio-framing footer li a svg * {
-  fill: #ffffff;
-}
-body.smarkio .back:hover svg *,
-body.smarkio-framing .back:hover svg *,
-body.smarkio #logo:hover svg *,
-body.smarkio-framing #logo:hover svg *,
-body.smarkio footer li a:hover svg *,
-body.smarkio-framing footer li a:hover svg * {
-  fill: #2F3E4A;
-}
-body.smarkio .banner,
-body.smarkio-framing .banner {
-  color: white;
-  background: #2F3E4A;
-}
-body.dotfetch,
-body.not-found {
-  background-color: #EB404A;
-  color: #ffffff;
-}
-body.dotfetch a,
-body.not-found a {
-  color: #ffffff;
-}
-body.dotfetch a:hover,
-body.not-found a:hover {
-  color: #2F3E4A;
-}
-body.dotfetch .back svg *,
-body.not-found .back svg *,
-body.dotfetch #logo svg *,
-body.not-found #logo svg *,
-body.dotfetch footer li a svg *,
-body.not-found footer li a svg * {
-  fill: #ffffff;
-}
-body.dotfetch .back:hover svg *,
-body.not-found .back:hover svg *,
-body.dotfetch #logo:hover svg *,
-body.not-found #logo:hover svg *,
-body.dotfetch footer li a:hover svg *,
-body.not-found footer li a:hover svg * {
-  fill: #2F3E4A;
-}
-body.dotfetch .banner,
-body.not-found .banner {
-  color: white;
-  background: #2F3E4A;
-}
-body.akkroo {
-  background-color: #008ac8;
-  color: #ffffff;
-}
-body.akkroo a {
-  color: #ffffff;
-}
-body.akkroo a:hover {
-  color: #2F3E4A;
-}
-body.akkroo .back svg *,
-body.akkroo #logo svg *,
-body.akkroo footer li a svg * {
-  fill: #ffffff;
-}
-body.akkroo .back:hover svg *,
-body.akkroo #logo:hover svg *,
-body.akkroo footer li a:hover svg * {
-  fill: #2F3E4A;
-}
-body.akkroo .banner {
-  color: white;
-  background: #2F3E4A;
+.home .wrapper:first-child header p abbr[title] {
+  border-bottom: 1px dashed rgba(234, 238, 240, 0.25);
 }
