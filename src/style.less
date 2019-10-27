@@ -315,10 +315,12 @@ footer {
 		font-size: 1.4em;
 		margin-top: 80px;
 		margin-bottom: -14px;
+		
 
 		li {
 			display: inline-block;
 			list-style: none;
+			position: relative;
 			
 			a {
 				display: block;
@@ -327,6 +329,30 @@ footer {
 
 				&:hover {
 					color: @dark-grey;
+
+					span {
+						opacity: 1;
+						top: -6px;
+					}
+				}
+
+				span {
+					position: absolute;
+					top: -2px;
+					left: 50%;
+					display: block;
+					background-color: @dark-grey;
+					font-size: .4em;
+					opacity: 0;
+					line-height: 1em;
+					color: @pure-white;
+					text-transform: uppercase;
+					font-weight: 700;
+					letter-spacing: 1px;
+					padding: 5px 6px;
+	    			border-radius: 6px;
+					transform: translate(-50%, 0px);
+					transition: opacity .2s ease-out, top .2s ease-out;
 				}
 			}
 		}
@@ -339,6 +365,10 @@ footer {
 		color: @mid-grey;
 	}
 }
+
+// article navigation (previous & next)
+
+// needs to be reviewed
 
 .navigation {
 	display: block;
@@ -359,11 +389,6 @@ footer {
 	section {
 		ul {
 			margin-top: 40px;
-			
-			a {
-				color: @accent-color;
-				&:visited {color: @visited-link;}
-			}
 		}
 	}
 

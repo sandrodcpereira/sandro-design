@@ -253,6 +253,7 @@ footer ul {
 footer ul li {
   display: inline-block;
   list-style: none;
+  position: relative;
 }
 footer ul li a {
   display: block;
@@ -261,6 +262,28 @@ footer ul li a {
 }
 footer ul li a:hover {
   color: #2F3E4A;
+}
+footer ul li a:hover span {
+  opacity: 1;
+  top: -6px;
+}
+footer ul li a span {
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  display: block;
+  background-color: #2F3E4A;
+  font-size: .4em;
+  opacity: 0;
+  line-height: 1em;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 5px 6px;
+  border-radius: 6px;
+  transform: translate(-50%, 0px);
+  transition: opacity 0.2s ease-out, top 0.2s ease-out;
 }
 footer p {
   font-weight: 700;
@@ -280,12 +303,6 @@ footer p {
 }
 .home section ul {
   margin-top: 40px;
-}
-.home section ul a {
-  color: #1B1BFF;
-}
-.home section ul a:visited {
-  color: #7e1bff;
 }
 .home .wrapper:first-child {
   height: 100vh;

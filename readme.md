@@ -21,7 +21,7 @@ This obviously assumes that Less has been installed already, but that's a one ti
 
 ## How to run the page locally
 
-Crap, I forget this all the fucking time, too. It's easy.
+Crap, I forget this all the fucking time, too. It's easy, though.
 
 1. Open Terminal and navigate to the repository you want to host locally.
 2. Type `python -m SimpleHTTPServer 8080` and press enter. 
