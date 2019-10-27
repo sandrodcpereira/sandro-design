@@ -439,13 +439,14 @@ ul.improvements > li:before {content: "\f00d";}
 		display: flex;
   		justify-content: center;
   		align-items: center;
+  		position: relative;
 
 		header {
 			text-align: left;
 			max-width: @max-width;
 			margin: 0 auto;
 			color: @light-grey;
-			margin-bottom: 20px;
+			margin-bottom: 40px;
 			padding: 0 50px;
 
 			p {
@@ -458,6 +459,26 @@ ul.improvements > li:before {content: "\f00d";}
 				}
 			}
 
+			.scroll-indicator {
+				position: absolute;
+				bottom: 80px;
+				left: 50%;
+				transform: translate(-50%, 0px);
+				display: block;
+				height: 60px;
+				width: 60px;
+				animation: scroll 5s infinite;
+				color: @pure-white;
+				font-size: 2.2em;
+				text-align: center;
+				line-height: 1.8em;
+				opacity: .4;
+				transition: opacity .5s ease;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
 		}
 	}
 }
@@ -468,5 +489,14 @@ ul.improvements > li:before {content: "\f00d";}
 .sintagma .img-full {background-color: #ffffff;}
 .logos .img-full {background-color: #ffffff;}
 
-
-
+@keyframes scroll {
+  0% {
+    transform: translate(-50%, 0px);
+  }
+  10% {
+  	transform: translate(-50%, 5px);
+  }
+  20% {
+    transform: translate(-50%, 0px);
+  }
+}
