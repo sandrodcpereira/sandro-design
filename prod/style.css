@@ -361,3 +361,18 @@ ul.improvements > li:before {
 .home .wrapper:first-child header p abbr[title] {
   border-bottom: 1px dashed rgba(234, 238, 240, 0.25);
 }
+.motion .img-full {
+  background-color: #6254e7;
+}
+.illustration .img-full {
+  background-color: #fe5b60;
+}
+.brastemp .img-full {
+  background-color: #abdff3;
+}
+.sintagma .img-full {
+  background-color: #ffffff;
+}
+.logos .img-full {
+  background-color: #ffffff;
+}
