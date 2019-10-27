@@ -60,6 +60,11 @@ li {
   font-size: 1.1em;
   line-height: 1.9em;
 }
+li.disabled {
+  text-decoration: underline;
+  opacity: .5;
+  cursor: not-allowed;
+}
 h1,
 h2,
 h3 {
@@ -234,10 +239,10 @@ p > a[target="_blank"]:hover:after {
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 1px;
-  padding: 1px 3px 1px 4px;
+  padding: 1px 5px 1px 4px;
   margin-left: 4px;
   border-radius: 4px;
-  background-color: #1B1BFF;
+  background-color: #2F3E4A;
   vertical-align: middle;
 }
 header {

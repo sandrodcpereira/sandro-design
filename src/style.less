@@ -84,6 +84,14 @@ p, li {
 	line-height: 1.9em;
 }
 
+li {
+	&.disabled {
+		text-decoration: underline;
+		opacity: .5;
+		cursor: not-allowed;
+	}
+}
+
 h1, h2, h3 {
 	font-family: poynter-oldstyle-text, serif;
 	font-weight: 700;
@@ -295,10 +303,10 @@ p > a[target="_blank"] {
 	text-transform: uppercase;
 	font-weight: 800;
 	letter-spacing: 1px;
-	padding: 1px 3px 1px 4px;
+	padding: 1px 5px 1px 4px;
 	margin-left: 4px;
 	border-radius: 4px;
-	background-color: @accent-color;
+	background-color: @dark-grey;
 	vertical-align: middle;
 }
 
