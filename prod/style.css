@@ -6,10 +6,11 @@ body {
   width: 100%;
   font-family: "azo-sans-web", 'Azo Sans', sans-serif;
   background-color: #EAEEF0;
+  color: #2F3E4A;
 }
 .wrapper {
   width: 100%;
-  max-width: 740px;
+  max-width: 840px;
   margin: 0 auto;
   padding: 0 50px;
 }
@@ -118,7 +119,7 @@ p.info:before {
 img {
   width: 100%;
   display: block;
-  margin: 20px auto;
+  margin: 40px auto 20px auto;
 }
 img.border-radius {
   border-radius: 4px;
@@ -164,10 +165,15 @@ figcaption {
 }
 blockquote {
   font-size: 1.8em;
+  line-height: 1.6em;
   color: #638096;
   font-family: poynter-oldstyle-text, serif;
   font-weight: 400;
   font-style: italic;
+}
+blockquote.jtbd > u {
+  text-decoration: none;
+  background-color: rgba(99, 128, 150, 0.2);
 }
 cite {
   display: block;
@@ -184,6 +190,9 @@ abbr[title] {
   border-bottom: 1px dashed #638096;
   text-decoration: none;
 }
+p > a[target="_blank"] {
+  color: #2F3E4A;
+}
 p > a[target="_blank"]:after {
   font-family: "Font Awesome 5 Pro";
   content: "\f35d";
@@ -197,6 +206,9 @@ p > a[target="_blank"]:after {
   line-height: 1;
   display: inline-block;
   margin-left: 4px;
+}
+p > a[target="_blank"]:hover {
+  color: #1B1BFF;
 }
 p > a[target="_blank"]:hover:after {
   opacity: 1;
@@ -291,6 +303,23 @@ footer p {
   font-size: .8em;
   color: #638096;
 }
+ul.value,
+ul.improvements {
+  list-style: none;
+}
+ul.value li:before,
+ul.improvements li:before {
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.5em;
+  width: 1.5em;
+}
+ul.value > li:before {
+  content: "\f00c";
+}
+ul.improvements > li:before {
+  content: "\f00d";
+}
 .navigation {
   display: block;
   overflow: auto;
@@ -315,7 +344,7 @@ footer p {
 }
 .home .wrapper:first-child header {
   text-align: left;
-  max-width: 740px;
+  max-width: 840px;
   margin: 0 auto;
   color: #EAEEF0;
   margin-bottom: 20px;
