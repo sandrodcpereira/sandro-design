@@ -396,6 +396,12 @@ ul.improvements > li:before {
 .logos .img-full {
   background-color: #ffffff;
 }
+.about .img-full {
+  background-image: url('/assets/generic/porto.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
 @keyframes scroll {
   0% {
     transform: translate(-50%, 0px);
