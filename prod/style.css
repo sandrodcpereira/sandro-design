@@ -370,7 +370,7 @@ ul.improvements > li:before {
   display: block;
   height: 60px;
   width: 60px;
-  animation: scroll 5s infinite;
+  animation: scroll 3s infinite;
   color: #ffffff;
   font-size: 2.2em;
   text-align: center;
@@ -414,5 +414,29 @@ ul.improvements > li:before {
   }
   20% {
     transform: translate(-50%, 0px);
+  }
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 60px -60px;
+}
+.row > video,
+.row > img {
+  width: 100%;
+  max-width: 320px;
+  margin-right: 80px;
+  border-radius: 8px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 1023px) {
+  .row {
+    flex-direction: column;
+    margin: 60px 0;
+  }
+  .row > video,
+  .row > img {
+    margin: 20px auto;
   }
 }
