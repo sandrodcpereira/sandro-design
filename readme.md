@@ -5,6 +5,7 @@ Hello, my name is Sandro Pereira and this is my online portfolio. I'm writing th
 ## What I am using
 
 * [Less](http://lesscss.org), because variables and nested styles make things easier.
+* [Less Watch Compiler](https://www.npmjs.com/package/less-watch-compiler), because you have to compile your CSS somehow.
 * [Font Awesome](https://fontawesome.com), readymade icons save you a tonne of work.
 
 ## How to compile CSS
@@ -24,8 +25,8 @@ This obviously assumes that Less has been installed already, but that's a one ti
 Crap, I forget this all the fucking time, too. It's easy, though.
 
 1. Open Terminal and navigate to the repository you want to host locally.
-2. Type `python -m SimpleHTTPServer 8080` and press enter. 
+2. Type `python -m SimpleHTTPServer 8080` and press enter.
 3. Cool beans. Open a browser and go to `http://localhost:8080` to visit the page.
 
-Other addresses work too, obviously. 
+Other addresses work too, obviously.
 
