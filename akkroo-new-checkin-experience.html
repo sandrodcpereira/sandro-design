@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+	<link rel="stylesheet" type="text/css" media="screen" href="prod/normalise.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="prod/style.css">
+	<link rel="stylesheet" href="https://use.typekit.net/hbh0upr.css">
+
+	<script src="https://kit.fontawesome.com/266997c388.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="prod/script.js"></script>
+
+	<link rel="mask-icon" href="assets/favicons/favicon.svg" color="#2F3E4A">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/favicons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/favicons/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="Sandro Pereira"/>
+	<meta name="msapplication-TileColor" content="##EAEEF" />
+	<meta name="msapplication-TileImage" content="assets/favicons/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="assets/favicons/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="assets/favicons/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="assets/favicons/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="assets/favicons/mstile-310x310.png" />
+
+	<title>New Check-in Experience in the Akkroo App — Sandro Pereira</title>
+
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<header></header>
+
+		<nav></nav>
+
+		<main>
+			<section>
+				<h4>Q4 2018</h4>
+				<h1>New Check-in Experience in the Akkroo App</h1>
+			</section>
+
+			<section>
+
+				<div class="img-full akkroo">
+					<img src="assets/akkroo/hero-checkin.png" alt="Two devices showing the user inteface for check-in events in the Akkroo app">
+				</div>
+
+				<h2>Context</h2>
+
+				<p>The check-in functionality of the Akkroo product allows users to upload a list of leads and accounts they expect to meet at a trade show, empowering them to leverage information they may already have on important prospects and potentially making it easy to close the sale.</p>
+
+				<p>In the early stages of planning to deliver the <a href="akkroo-react-native-app.html">React Native Akkroo App</a>, we decided that the existing check-in experience was not up to the standard that we were hoping to offer with the new release, so we tackled it as a separate project after the launch of the new app.</p>
+
+				<p>The existing experience, having been added years prior to cater to a <abbr title="Business to Customer">B2C</abbr> use case, was neither intuitive nor fast and caused a lot of frustration to users on the show floor. Despite this, some of our <abbr title="Business to Business">B2C</abbr> customers did find value in the ability to leverage pre-existing lead information, so we decided to revamp the functionality instead of scrapping it altogether.</p>
+
+			</section>
+
+			<section>
+
+				<h2>Problem</h2>
+
+				<p>We framed this project around the user persona of the Sales Representative — who we named Serena Sales —, the typical user of the Akkroo app.</p>
+
+				<p>Using the <a href="https://www.intercom.com/books/jobs-to-be-done" target="_blank">Jobs to Be Done</a> framework, we arrived at the following goal:</p>
+
+				<blockquote class="jtbd">As <u>Serena Sales</u>, I want to be able to <u>access a list of attendees in the app</u> in order to <u>leverage existing information and measure attendance rate</u>.</blockquote>
+
+			</section>
+
+			<section>
+
+				<h2>Discovery and ideation</h2>
+
+				<p>Our main goal was to completely rethink the user flow for these types of events — it needed not just to work for any customers already usign the functionality, but also to provide enough value to get others to give it a try in favour of the basic lead capture type event.</p>
+
+				<p>We also knew from the beginning of this project could potentially power the future of the Akkroo app. The user flow to lookup attendees could later be repurposed to allow users to tap into their <abbr title="Customer Relationship Management">CRM</abbr> and <abbr title="Marketing Automation">MA</abbr> databases — or potentially any other source.</p>
+
+				<p>Looking at the old user flow, we easily flagged the two forks (represented by a <i class="fas fork fa-square"></i> in the diagram below) as being the biggest issues: they caused frustration by splitting the flow in two distinct and conflicting experiences, and asked users to make decisions without providing the information required for them to act with confidence.</p>
+
+				<img src="assets/akkroo/flow-checkin-old.png" alt="A representation of the old user flow.">
+				<figcaption>A simplified representation of the old user flow.</figcaption>
+
+				<div class="info">
+					<p>The <b>"is lead in guest list?"</b> fork, for instance, was one of the biggest sources of frustration for our users. Were users expected to remember every single name in the list of attendees?</p>
+				</div>
+
+				<p>Focusing on those two spots, we revamped the user flow in order to provide an experience that is less confusing and more empowering. Here's some of the most significant changes we made:</p>
+
+				<div class="row">
+
+					<img src="assets/akkroo/ui-checkin-1.png" alt="The check-in UI in the Akkroo app after a user has typed the name of a person, showing some results and a prompt to add a new record">
+
+					<div class="text">
+
+						<h3><i class="fas fork fa-square"></i> Is lead in guestlist?</h3>
+
+						<p>Our solution to fix this stress point was to remove the need for it comepletely. In its place, we designed an interface that can accomodate for capturing both new contacts and append information to existing ones.</p>
+
+						<p>By nudging the user towards the searching functionality, we can present them either an existing record of the lead they're looking for, or give them the option to create a new one that will prefill the name (or email address) with the search query, saving them time.</p>
+					</div>
+
+				</div>
+
+
+				<div class="row">
+
+					<img src="assets/akkroo/ui-checkin-2.png" alt="The check-in UI in the Akkroo app showing different states in the guest list: some that can be checked-in, others that would need some more information collected">
+
+					<div class="text">
+
+						<h3><i class="fas fork fa-square"></i> More info available?</h3>
+
+						<p>Here, we reworked the interface to make sure we don't overload our users with unecessary decisions during a busy and stressful event.</p>
+
+						<p>If the user needs to collect any information in order to perform a check-in, they'll be taken to the collection form so that they can do it easily.</p>
+
+						<p>If they do have all the required information, they can quickly check-in and move on to the next lead (or collect optional information they may have gathered).</p>
+
+					</div>
+
+				</div>
+
+				<p>After these changes were introduced, we ended up with a user flow that looked a lot simpler and was easier for our users to understand and navigate when at a stressful event:</p>
+
+				<img src="assets/akkroo/flow-checkin-new.png" alt="A representation of the new user flow.">
+				<figcaption>A simplified representation of the new user flow.</figcaption>
+
+			</section>
+
+			<section>
+
+				<h2>Feedback sessions</h2>
+
+				<p>Because this feature was completely new in the way that it mixed the ability to check attendees in, review existing information, and capture new information, we worked very closely with some of our customers and have improved this functionality over many iterations.</p>
+
+				<p>Through constant improvements and gradual optimisation of the experience, we were able to eventually arrive at a flow that was easy and fast to use without a steep learning curve for existing custmers.</p>
+
+			</section>
+
+			<section>
+				<h2>Outcome</h2>
+
+				<p>Getting to rethink a traditional lead capture user flow from the ground up by adding multiple sources of information (starting with the list of attendees, but eventually extending to others), merging collection of data with data lookup in a seamless way, and doing it in a way that is easy even for non-tech-savvy people to use was very challenging, but ultimately very gratifying.</p>
+
+				<p>In the end, we turned a feature that could have been deprecated into an experience that is aligned with our ultimate goal for the product. All that was achieved by working closely with our customers, gathering tonnes of feedback, and continuous iteration.</p>
+
+				<p><b>Value added:</b></p>
+
+				<ul class="value">
+					<li>Better experience that is more aligned with the market that Akkroo is catering to.</li>
+					<li>Future-proof user flow that can surface information from any kind of source.</li>
+					<li>There was an increase in usage of check-in events.</li>
+				</ul>
+
+				<p><b>Room for improvement:</b></p>
+
+				<ul class="improvements">
+					<li>Integration of badge and business card scanning into check-in events wasn't achievable with the infrastucture we had at the time, but would come later on.</li>
+				</ul>
+
+
+			</section>
+		</main>
+
+		<footer></footer>
+
+	</div>
+</body>
+</html>

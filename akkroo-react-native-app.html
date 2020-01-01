@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+	<link rel="stylesheet" type="text/css" media="screen" href="prod/normalise.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="prod/style.css">
+	<link rel="stylesheet" href="https://use.typekit.net/hbh0upr.css">
+
+	<script src="https://kit.fontawesome.com/266997c388.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="prod/script.js"></script>
+
+	<link rel="mask-icon" href="assets/favicons/favicon.svg" color="#2F3E4A">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/favicons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/favicons/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="Sandro Pereira"/>
+	<meta name="msapplication-TileColor" content="##EAEEF" />
+	<meta name="msapplication-TileImage" content="assets/favicons/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="assets/favicons/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="assets/favicons/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="assets/favicons/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="assets/favicons/mstile-310x310.png" />
+
+	<title>React Native Akkroo App — Sandro Pereira</title>
+
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<header></header>
+
+		<nav></nav>
+
+		<main>
+			<section>
+				<h4>Q3 2018</h4>
+				<h1>React Native Akkroo App</h1>
+			</section>
+
+			<section>
+
+				<div class="img-full akkroo">
+					<img src="assets/akkroo/hero-rnapp.png" alt="Two devices showing the user interface of the React Native Akkroo app">
+				</div>
+
+				<h2>Context</h2>
+
+				<p>One of the main goals of the Akkroo product is to replace traditional lead capture methods (think paper forms and badge scanners) used by sales representatives at trade shows. Despite this, Akkroo is typically sold to marketing departments for its powerful integration and monitoring capabilities — not sales teams, the ones attending the trade shows.</p>
+
+				<p>After finally introducing some much needed functionality with the <a href="akkroo-major-app-update.html">Major App Update</a> months prior, app user adoption was steadily improving, but performance and stability issues were still having a negative impact on the users’ experience.</p>
+
+				<p>In addition to that, we were getting more and more requests for a native Android app — users wanted to use their personal devices, but by only supporting iOS devices, we were preventing a substantial number of them from doing so.</p>
+
+			</section>
+
+			<section>
+
+				<h2>Problem</h2>
+
+				<p>We framed this project around the user persona of the Sales Representative — who we named Serena Sales —, the typical user of the Akkroo app.</p>
+
+				<p>Using the <a href="https://www.intercom.com/books/jobs-to-be-done" target="_blank">Jobs to Be Done</a> framework, we arrived at the following goal:</p>
+
+				<blockquote class="jtbd">As <u>Serena Sales</u>, I want to be able to <u>have a stable and reliable experience in a range of devices</u> in order to <u>trust and make the most of what Akkroo has to offer</u>.</blockquote>
+
+			</section>
+
+			<section>
+
+				<h2>Discovery and ideation</h2>
+
+				<p>Since this new app version was to be introduced very shortly after the <a href="akkroo-major-app-update.html">Major App Update</a> that had introduced a brand new user flow, we decided not to introduce any additional changes to it, choosing instead to tighten the user interface and focus on adding some delight to the user experience.</p>
+
+				<p>Starting with the base design, we started by creating a design system with reusable components. We spent a lot of time perfecting the grid and optimising the layout, along with writing documentation that would make development smoother.</p>
+
+				<img class="medium" src="assets/akkroo/ui-style-guide.png" alt="Some of the components designed for the app">
+				<figcaption>A look at some of the components designed for the app.</figcaption>
+
+				<p>After the layout was designed, we spent some time designing a brand new set of icons that would look consistent and readable to use throughout both our app and dashboard products.</p>
+
+				<img class="medium" src="assets/akkroo/ui-icon-set.png" alt="Some of the icons designed for the app">
+				<figcaption>The Akkroo icon set.</figcaption>
+
+				<p>To help build trust with users who had had syncing issues in the past, we took the messaging around syncing status even further, with simplified iconography and more explicit copy.</p>
+
+				<div class="video-container">
+					<div class="helper">
+						<p><i class="fas fa-video"></i> Video</p>
+					</div>
+
+					<!--div class="play-trigger"><i class="fas fa-play"></i></div-->
+
+					<video class="video no-shadow" autoplay loop muted poster="">
+					    <source type="video/mp4" src="assets/akkroo/demo-syncing.mp4">
+					   	Sorry, your browser does not support this video.
+					</video>
+				</div>
+
+				<figcaption>A simplified and more transparent syncing process.</figcaption>
+
+				<p>Finally, we spent a lot of time thinking about how to add an element of delight to the user experience by introducing fun microinteractions to actions that would otherwise be mundane and uninteresting.</p>
+
+				<p>Here's a couple of examples:</p>
+
+				<div class="row">
+
+					<div class="frame-container">
+						<div class="helper">
+							<p><i class="fas fa-hand-pointer"></i> Prototype</p>
+						</div>
+
+						<a class="play-trigger" href="https://xd.adobe.com/embed/0226a01c-b65f-4ce3-7118-3eec26cf43c4-7417/?fullscreen&hints=off" target="prototypeHighFive"><i class="fas fa-play"></i></a>
+
+						<iframe width="360" height="640" name="prototypeHighFive" src="about:blank" frameborder="0" allowfullscreen></iframe>
+					</div>
+
+					<div class="text">
+
+						<h3>Fun empty states</h3>
+
+						<p>The moments before a tradeshow can be quite stressful, so you're greeted by our cheerful mascot, Kangakkroo, when opening up a brand new event.</p>
+
+						<div class="info prototype">
+							<p>Need an extra boost of energy before the start of a busy day at an event? Try and give Kangakkroo a high five.</p>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="frame-container">
+
+						<div class="helper">
+							<p><i class="fas fa-hand-pointer"></i> Prototype</p>
+						</div>
+
+						<a class="play-trigger" href="https://xd.adobe.com/embed/2fe60c0d-ead9-4eb1-4bf7-cced0668ecc9-59d7/?fullscreen&hints=off" target="prototypeSyncingEvents"><i class="fas fa-play"></i></a>
+
+						<iframe width="360" height="640" name="prototypeSyncingEvents" src="about:blank" frameborder="0" allowfullscreen></iframe>
+
+					</div>
+
+					<div class="text">
+
+						<h3>Syncing animations</h3>
+
+						<p>Using some themes that are specific to events, like badges, we made the syncing process more unique and fun.</p>
+
+						<div class="info prototype">
+							<p>Swipe down on the prototype to test the syncing interaction.</p>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<!--div class="row">
+
+					<div class="frame-container">
+						<div class="helper">
+							<p><i class="fas fa-hand-pointer"></i> Prototype</p>
+						</div>
+
+						<a class="play-trigger" href="https://xd.adobe.com/embed/171fb6b2-292a-4aa6-5811-5a838e127637-612e/?fullscreen&hints=off" target="prototypeRecordStarring"><i class="fas fa-play"></i></a>
+
+						<iframe width="360" height="640" name="prototypeRecordStarring" src="about:blank" frameborder="0" allowfullscreen></iframe>
+
+					</div>
+
+					<div class="text">
+						<p>Collected a lead that is special and want to make sure you don't forget about it? We made sure the visual feedback matches your excitement.</p>
+
+						<div class="info prototype">
+							<p>Star some of the records on the list to see the animation.</p>
+						</div>
+
+
+					</div>
+
+				</div-->
+
+
+				<p>Some difficult decisions had to be made, too: early in the project, we decided the check-in functionality — the ability to upload a list of leads or accounts you’re expecting to meet at an event — would need a complete redesign before it could meet the standard we were hoping to achieve with the new app, so it was left out of the initial release of our brand new app.</p>
+
+				<p>This meant that customers who relied on it had to stick with the legacy app, which prevented us from retiring it immediately after the new app was launched. This ultimately proved to be a good decision — the <a href="akkroo-new-checkin-experience.html">New Check-in Experience</a> successfully launched later that year.</p>
+
+			</section>
+
+			<section>
+
+				<h2>Feedback sessions</h2>
+
+				<p>Due to the big impact this project was going to have on the organisation, we planned company-wide large-scale user testing sessions to gather feedback and insights about our new app. Some customers were also interviewed and had the chance to give us some feedback.</p>
+
+				<img src="assets/akkroo/ui-rnapp.png" alt="Three pictures showing people in a meeting room.">
+				<figcaption>Photos from our testing and feedback sessions.</figcaption>
+
+				<p>Some of the feedback we received during those sessions was either implemented before release or shortly after. Things like:</p>
+				<ul>
+					<li>Introducing a way to navigate to events happening today.</li>
+					<li>Tweaking the syncing process and messaging to be very explicit.</li>
+					<li>Adding clear messaging when working offline.</li>
+					<li>And many more…</li>
+				</ul>
+
+			</section>
+
+			<section>
+				<h2>Outcome</h2>
+
+				<p>This project resulted in the biggest launch we’ve had at Akkroo since I joined, and the results have been overwhelmingly positive.</p>
+
+				<p><b>Value added:</b></p>
+
+				<ul class="value">
+					<li>Massive performance and stability upgrade compared to the previous version of the app.</li>
+					<li>Codebase that was easier to develop for and allowed us to release many features since the release.</li>
+					<li>Refined user experience.</li>
+					<li>More mature and reusable component and design system.</li>
+					<li>Android support!</li>
+				</ul>
+
+
+				<p><b>Room for improvement:</b></p>
+
+				<ul class="improvements">
+					<li>Not all the interactions made their way into the app due to time constraints, but most would make their way into the app eventually.</li>
+				</ul>
+
+
+			</section>
+		</main>
+
+		<footer></footer>
+
+	</div>
+</body>
+</html>

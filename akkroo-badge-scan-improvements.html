@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+	<link rel="stylesheet" type="text/css" media="screen" href="prod/normalise.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="prod/style.css">
+	<link rel="stylesheet" href="https://use.typekit.net/hbh0upr.css">
+
+	<script src="https://kit.fontawesome.com/266997c388.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="prod/script.js"></script>
+
+	<link rel="mask-icon" href="assets/favicons/favicon.svg" color="#2F3E4A">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/favicons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/favicons/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="Sandro Pereira"/>
+	<meta name="msapplication-TileColor" content="##EAEEF" />
+	<meta name="msapplication-TileImage" content="assets/favicons/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="assets/favicons/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="assets/favicons/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="assets/favicons/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="assets/favicons/mstile-310x310.png" />
+
+	<title>Badge Scanning Improvements in the Akkroo App — Sandro Pereira</title>
+
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<header></header>
+
+		<nav></nav>
+
+		<main>
+			<section>
+				<h4>Q2 & Q3 2019</h4>
+				<h1>Badge Scanning Improvements in the Akkroo App</h1>
+			</section>
+
+			<section>
+
+				<div class="img-full akkroo">
+					<img src="assets/akkroo/hero-badge.png" alt="Two devices showing the user inteface for badge scanning in the Akkroo app">
+				</div>
+
+				<h2>Context</h2>
+
+				<p>After the launch of the new <a href="akkroo-react-native-app.html">Akkroo app built on React Native</a>, there was a big focus on improving existing features and providing a more seamless experience for our app users. A piece of functionality that was severely improved was the badge scanner.</p>
+
+				<p>One of the biggest issues app users encountered when using our app was the perception of having lost data when an action was performed incorrectly — maybe they scanned the wrong QR code in an event badge, or their marketing manager forgot to correctly set up an integration with the badge provider. On both instances, the scan would not return any data, thus “losing” the lead and the opportunity for our sales user.</p>
+
+				<p>While those scenarios could be classified as user errors, the user perception was that it was the Akkroo app that had failed to retrieve the badge data, resulting in anxiety and lack of confidence in the product. </p>
+
+				<div class="info">
+					<p>Badge scanning in Akkroo and similar apps works by scanning a badge, which typically returns a string. These strings are then sent to the badge provider <abbr title="Application Program Interface">API</abbr> to be "exchanged" for the data contained in the badge.</p>
+				</div>
+
+			</section>
+
+			<section>
+
+				<h2>Problem</h2>
+
+				<p>We framed this project around the user persona of the Sales Representative — who we named Serena Sales —, the typical user of the Akkroo app.</p>
+
+				<p>Using the <a href="https://www.intercom.com/books/jobs-to-be-done" target="_blank">Jobs to Be Done</a> framework, we arrived at the following goal:</p>
+
+				<blockquote class="jtbd">As <u>Serena Sales</u>, I want to be able to <u>know I have scanned the right badge</u> in order to <u>trust that the Akkroo app will retrieve the data contained within</u>.</blockquote>
+
+			</section>
+
+			<section>
+
+				<h2>Discovery and ideation</h2>
+
+				<p>We tackled this challenge by implementing three different solutions that, in the end, provided peace of mind to our users by assuring them that:</p>
+
+
+				<div class="row">
+
+					<img src="assets/akkroo/ui-badge-1.png" alt="The badge scanning UI in the Akkroo app showing a warning telling the user that there is no badge integration set up for that event">
+
+					<div class="text">
+						<h3>1. There is a badge provider integration in place</h3>
+
+						<p>By warning users when there is no integration in place, we can manage their expectations by letting them know the app will not be able to retrieve data from badges.</p>
+
+						<p>This gives them the opportunity to either rectify the mistake (in case someone forgot to set up the integration) or make up for the loss of immediate data by collecting additional information.</p>
+
+						<!--p class="info">Scanning badges without an integration is an existing, albeit rare, use case, meaning that we still needed to allow users to do it in those scenarios.</p-->
+
+					</div>
+
+
+				</div>
+
+
+
+				<div class="row">
+
+
+					<div class="video-container">
+						<div class="helper">
+							<p><i class="fas fa-video"></i> Video</p>
+						</div>
+
+						<div class="play-trigger"><i class="fas fa-play"></i></div>
+
+						<video class="video" muted poster="assets/akkroo/preview-badge.png">
+						    <source type="video/mp4" src="assets/akkroo/demo-badge.mp4">
+						   	Sorry, your browser does not support this video.
+						</video>
+					</div>
+
+					<div class="text">
+						<h3>2. They have scanned the correct code</h3>
+
+						<p>When using the scanner in the app, we employ real-time validation to assure the user that they are scanning the right kind of code and that the string retrieved is in the expected format.</p>
+
+						<p>This helps us avoid scenarios in which the wrong badges are scanned, leaving Akkroo with no way to retrieve data for that lead.</p>
+
+						<div class="info video">
+							<p>Play the video to see the validation in action.</p>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="row">
+
+					<img src="assets/akkroo/ui-badge-3.png" alt="The badge scanning UI in the Akkroo app showing data retrieved from a badge">
+
+					<div class="text">
+						<h3>3. The badge contains data</h3>
+
+						<p>By returning the badge data in real-time, we eliminate the users’ anxiety of wondering whether the badge contained real data or not.</p>
+
+						<p>By surfacing the information immediately, the users can confirm they scanned the correct badge, that it contained information, and even make additions or corrections.</p>
+					</div>
+
+				</div>
+
+				<div class="row">
+
+					<img src="assets/akkroo/ui-badge-4.png" alt="The badge scanning UI in the Akkroo app prompting the user to scan a badge using NFC technology">
+
+					<div class="text">
+						<h3>Bonus: NFC badge support</h3>
+
+						<p>In addition to improvements above, we’ve also added the ability to scan <abbr title="Near-Field Communication">NFC</abbr> badges, a much requested feature, by plugging it into our existing badge data infrastructure.</p>
+					</div>
+
+				</div>
+
+
+
+
+			</section>
+
+			<section>
+				<h2>Outcome</h2>
+
+				<p>This project is a great example of how you can supercharge a feature just by focusing on the possible points of failure and making sure to design for when those happen.</p>
+
+				<p>By doing so, we can build a trusting relationship with our users: they know that our product will let them know if anything goes wrong, giving them the chance to correct the mistake and giving them the peace of mind to focus on the task at hand.</p>
+
+				<p><b>Value added:</b></p>
+
+				<ul class="value">
+
+
+					<li>Assuring users they have a badge scan integration set up.</li>
+					<li>Assuring users they are scanning the right badge.</li>
+					<li>Assuring users the badge they scanned contained data.</li>
+					<li>Enabling users to scan <abbr title="Near-Field Communication">NFC</abbr> badges in addition to <abbr title="Quick Response">QR</abbr> and barcode badges.</li>
+
+
+				</ul>
+
+			</section>
+		</main>
+
+		<footer></footer>
+
+	</div>
+
+</body>
+</html>
