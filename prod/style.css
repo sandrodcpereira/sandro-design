@@ -770,7 +770,7 @@ ul.thumbnails li a {
   text-decoration: none;
 }
 ul.thumbnails li a.disabled {
-  opacity: .5;
+  opacity: .3;
   cursor: not-allowed;
 }
 ul.thumbnails li a img {
