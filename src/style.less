@@ -802,3 +802,81 @@ ul.improvements > li:before {content: "\f00d";}
 	}
 }
 
+
+// test thumbnails
+
+ul.thumbnails {
+	//border: 1px solid blue;
+	padding: 0;
+	margin: 40px -40px 0 -20px;
+
+
+	li {
+		border-radius: 6px;
+		overflow: hidden;
+		//border: 1px solid red;
+		background-color: @pure-white;
+		display: inline-block;
+		width: calc( 50% - 20px );
+		margin: 0 20px 20px 0;
+		padding: 0;
+		vertical-align: top;
+		box-shadow: 0 6px 6px rgba(0,0,0,0.10);
+
+		@media (max-width: 640px) {
+			width: calc( 100% - 20px );
+		}
+
+		&:hover {
+			box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+		}
+
+		
+
+		a {
+			display: block;
+			text-decoration: none;
+
+			&.disabled {
+				opacity: .5;
+				//pointer-events: none;
+				cursor: not-allowed;
+			}
+
+			img {
+				background-color: @accent-color;
+				margin: 0;
+			}
+
+			h3 {
+				margin: 20px 20px 5px 20px;
+				text-decoration: none;
+				font-size: 1.2em;
+			}
+
+			p {
+				margin: 0 20px 15px 20px;
+				font-size: .8em;
+				color: @dark-grey;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
