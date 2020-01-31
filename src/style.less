@@ -806,15 +806,12 @@ ul.improvements > li:before {content: "\f00d";}
 // test thumbnails
 
 ul.thumbnails {
-	//border: 1px solid blue;
 	padding: 0;
 	margin: 40px -40px 0 -20px;
-
 
 	li {
 		border-radius: 6px;
 		overflow: hidden;
-		//border: 1px solid red;
 		background-color: @pure-white;
 		display: inline-block;
 		width: calc( 50% - 20px );
@@ -822,16 +819,15 @@ ul.thumbnails {
 		padding: 0;
 		vertical-align: top;
 		box-shadow: 0 6px 6px rgba(0,0,0,0.10);
+		transition: box-shadow 0.2s ease;
 
 		@media (max-width: 640px) {
 			width: calc( 100% - 20px );
 		}
 
 		&:hover {
-			box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+			box-shadow: 0 6px 12px rgba(0,0,0,0.25);
 		}
-
-		
 
 		a {
 			display: block;
@@ -839,7 +835,6 @@ ul.thumbnails {
 
 			&.disabled {
 				opacity: .3;
-				//pointer-events: none;
 				cursor: not-allowed;
 			}
 
