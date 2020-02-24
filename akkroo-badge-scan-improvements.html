@@ -61,7 +61,39 @@
 
 				<h2>Context</h2>
 
-				<p>After the launch of the new <a href="akkroo-react-native-app.html">Akkroo app built on React Native</a>, there was a big focus on improving existing features and providing a more seamless experience for our app users. A piece of functionality that was severely improved was the badge scanner.</p>
+				<p>Following the brand new app experience introduced with the <a href="akkroo-major-app-update.html">Major App Update</a> project and the refining of the general experience introduced with the <a href="akkroo-react-native-app.html">React Native App</a> project, it was finally time for us to redesign one of the most important features of the app: the badge scanner.</p>
+
+				<div class="row">
+
+
+					<div class="video-container">
+						<div class="helper">
+							<p><i class="fas fa-video"></i> Video</p>
+						</div>
+
+						<div class="play-trigger"><i class="fas fa-play"></i></div>
+
+						<video class="video" muted poster="assets/akkroo/preview-badge.png">
+						    <source type="video/mp4" src="assets/akkroo/demo-badge.mp4">
+						   	Sorry, your browser does not support this video.
+						</video>
+					</div>
+
+					<div class="text">
+
+						<p>At this point, the badge scanner functionality was entirely based on the legacy experience that had been designed years prior.</p>
+
+						<p>It offered a very rudimentary scanner that displayed the code string and not much else — the users could see the information contained in the badge, but only after the lead was submitted.</p>
+
+						<p>Needless to say, there was a lot to improve on.</p>
+
+						<div class="info video">
+							<p>Play the video to see what we started with.</p>
+						</div>
+
+					</div>
+
+				</div>
 
 				<p>One of the biggest issues app users encountered when using our app was the perception of having lost data when an action was performed incorrectly — maybe they scanned the wrong QR code in an event badge, or their marketing manager forgot to correctly set up an integration with the badge provider. On both instances, the scan would not return any data, thus “losing” the lead and the opportunity for our sales user.</p>
 
@@ -89,7 +121,24 @@
 
 				<h2>Discovery and ideation</h2>
 
-				<p>We tackled this challenge by implementing three different solutions that, in the end, provided peace of mind to our users by assuring them that:</p>
+				<p>When I started to work on this project, the initial goal was to simply fetch and display the badge data immediately after a successful scan. I designed a few prototypes that did just that, and they worked, but there was something missing — whenever something went wrong while fetching the badge data, it appeared that the user had done something wrong.</p>
+
+				~~~ insert rough sketches ~~~
+
+				<p>After a lot of ideation and many iterations, I arrived at a solution that felt much better: we’d separate the badge scanning process into two parts:</p>
+
+				<ol>
+					<li><b>Scanning a badge</b>, which is up to the user</li>
+					<li><b>Fetching the badge data</b>, which is done by our system</li>
+				</ol>
+
+				<p>By doing this, we can help users make a more accurate mental map of this process, and also reassure them when they do everything correctly, even if something does goes wrong on the second step of the process.</p>
+
+				<p>So we went back to the drawing board and made sure that the entire experience was visually consistent — from the moment the users see the prompt to scan the badge until the moment they get the data back.</p>
+
+				~~~ inser flow diagram ~~~
+
+				<p>After having defined the flow, we incrementally added additional features to provide peace of mind to our users by assuring them that:</p>
 
 
 				<div class="row">
