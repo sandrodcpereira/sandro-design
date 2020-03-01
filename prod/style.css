@@ -699,6 +699,9 @@ ul.improvements > li:before {
   width: 100%;
   margin: 80px auto 20px auto;
 }
+.video-container.no-label {
+  margin: 0px auto 40px auto;
+}
 .video-container > video {
   display: block;
   width: 100%;
