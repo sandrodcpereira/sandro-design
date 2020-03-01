@@ -122,22 +122,33 @@
 
 				<p>When I started to work on this project, the initial goal was to simply fetch and display the badge data immediately after a successful scan. Sounds like it'd do the job, right?</p>
 
-				~~~ insert rough sketches ~~~
+				<img src="assets/akkroo/ui-badge-sketch.png" alt="User flow showing an empty badge scanning field, a depiction of a badge being scanned, and a box with the information contained in the badge.">
+				<figcaption>Initial sketches of how we thought the UI would look like.</figcaption>
+
 				
 				<p>When we started to look at hedge cases and how users would recover from an error, though, we noticed that it was hard for them to tell when they were dealing with a mistake they had made themselves (e.g. scanning an invalid code) or an issue with the badge provider (e.g. their server being down and not being able to return the data).</p>				
 
 				<p>Our solution to this was to design solutions to prevent user mistakes (more on that in a bit) and to flesh out the interaction to better communicate to our users what exactly is happening. We achieved by splitting the badge scanning process in two parts:</p>
 
-				<ol>
+				<!--ol>
 					<li><b>Scanning a badge</b>, which is up to the user</li>
 					<li><b>Fetching the badge data</b>, which is done by our system</li>
-				</ol>
+				</ol-->
+
+				<div class="video-container">
+					<video class="video no-shadow" autoplay loop muted poster="">
+					    <source type="video/mp4" src="assets/akkroo/demo-badge-ui.mp4">
+					   	Sorry, your browser does not support this video.
+					</video>
+				</div>
 
 				<p>By doing this, we can help users make a more accurate mental map of this process, and also reassure them when they do everything correctly, even if something does goes wrong on the second step of the process.</p>
 
 				<p>So we went back to the drawing board and made sure that the entire experience was visually consistent — from the moment the users see the prompt to scan the badge until the moment they get the data back.</p>
 
-				~~~ inser flow diagram ~~~
+				<img src="assets/akkroo/flow-badge-scanner.png" alt="A representation of badge scanning process, showing the same UI box present throughout.">
+				<figcaption>The badge scanner stays on the screen and accompanies the user through the entire process.</figcaption>
+
 
 				<p>After having defined the flow, we designed the UI in a way that would:</p>
 
