@@ -742,6 +742,9 @@ ul.improvements > li:before {
 .frame-container > iframe[name="prototypeUserFeedback"] {
   background-image: url('../assets/akkroo/preview-feedback.png');
 }
+.frame-container > iframe[name="prototypeBadgeScanOld"] {
+  background-image: url('../assets/akkroo/preview-badge-old.png');
+}
 ul.thumbnails {
   padding: 0;
   margin: 40px -40px 0 -20px;

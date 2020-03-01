@@ -66,38 +66,37 @@
 				<div class="row">
 
 
-					<div class="video-container">
+					<div class="frame-container">
+
 						<div class="helper">
-							<p><i class="fas fa-video"></i> Video</p>
+							<p><i class="fas fa-hand-pointer"></i> Prototype</p>
 						</div>
 
-						<div class="play-trigger"><i class="fas fa-play"></i></div>
+						<a class="play-trigger" href="https://xd.adobe.com/embed/51a58355-77b0-41fe-47dd-1c330a7ae69a-2794/?fullscreen&hints=off" target="prototypeBadgeScanOld"><i class="fas fa-play"></i></a>
 
-						<video class="video" muted poster="assets/akkroo/preview-badge.png">
-						    <source type="video/mp4" src="assets/akkroo/demo-badge.mp4">
-						   	Sorry, your browser does not support this video.
-						</video>
+						<iframe width="360" height="640" name="prototypeBadgeScanOld" src="about:blank" frameborder="0" allowfullscreen></iframe>
+
 					</div>
 
 					<div class="text">
 
 						<p>At this point, the badge scanner functionality was entirely based on the legacy experience that had been designed years prior.</p>
 
-						<p>It offered a very rudimentary scanner that displayed the code string and not much else — the users could see the information contained in the badge, but only after the lead was submitted.</p>
+						<p>It offered a very rudimentary scanner that would scan any barcode and then display its code string — the users could see the information contained in the badge, but only after the lead was successfully submitted and the badge data was retrieved.</p>
 
 						<p>Needless to say, there was a lot to improve on.</p>
 
-						<div class="info video">
-							<p>Play the video to see what we started with.</p>
+						<div class="info prototype">
+							<p>Press "scan" on this prototype to try out our old badge scanner.</p>
 						</div>
 
 					</div>
 
 				</div>
 
-				<p>One of the biggest issues app users encountered when using our app was the perception of having lost data when an action was performed incorrectly — maybe they scanned the wrong QR code in an event badge, or their marketing manager forgot to correctly set up an integration with the badge provider. On both instances, the scan would not return any data, thus “losing” the lead and the opportunity for our sales user.</p>
+				<p>One of the biggest issues app users encountered when using our app was the perception of having lost data when an action was performed incorrectly — maybe they scanned the wrong code in an event badge, or their marketing manager forgot to correctly set up an integration with the badge provider. On both instances, the scan would never return any data, thus “losing” the lead and the opportunity for our sales user.</p>
 
-				<p>While those scenarios could be classified as user errors, the user perception was that it was the Akkroo app that had failed to retrieve the badge data, resulting in anxiety and lack of confidence in the product. </p>
+				<p>While those scenarios could be attributed to user error, we knew there were steps that we could take to prevent them from happening and help build trust in our product.</p>
 
 				<div class="info">
 					<p>Badge scanning in Akkroo and similar apps works by scanning a badge, which typically returns a string. These strings are then sent to the badge provider <abbr title="Application Program Interface">API</abbr> to be "exchanged" for the data contained in the badge.</p>
@@ -121,11 +120,13 @@
 
 				<h2>Discovery and ideation</h2>
 
-				<p>When I started to work on this project, the initial goal was to simply fetch and display the badge data immediately after a successful scan. I designed a few prototypes that did just that, and they worked, but there was something missing — whenever something went wrong while fetching the badge data, it appeared that the user had done something wrong.</p>
+				<p>When I started to work on this project, the initial goal was to simply fetch and display the badge data immediately after a successful scan. Sounds like it'd do the job, right?</p>
 
 				~~~ insert rough sketches ~~~
+				
+				<p>When we started to look at hedge cases and how users would recover from an error, though, we noticed that it was hard for them to tell when they were dealing with a mistake they had made themselves (e.g. scanning an invalid code) or an issue with the badge provider (e.g. their server being down and not being able to return the data).</p>				
 
-				<p>After a lot of ideation and many iterations, I arrived at a solution that felt much better: we’d separate the badge scanning process into two parts:</p>
+				<p>Our solution to this was to design solutions to prevent user mistakes (more on that in a bit) and to flesh out the interaction to better communicate to our users what exactly is happening. We achieved by splitting the badge scanning process in two parts:</p>
 
 				<ol>
 					<li><b>Scanning a badge</b>, which is up to the user</li>
@@ -138,7 +139,7 @@
 
 				~~~ inser flow diagram ~~~
 
-				<p>After having defined the flow, we incrementally added additional features to provide peace of mind to our users by assuring them that:</p>
+				<p>After having defined the flow, we designed the UI in a way that would:</p>
 
 
 				<div class="row">
@@ -146,11 +147,11 @@
 					<img src="assets/akkroo/ui-badge-1.png" alt="The badge scanning UI in the Akkroo app showing a warning telling the user that there is no badge integration set up for that event">
 
 					<div class="text">
-						<h3>1. There is a badge provider integration in place</h3>
+						<h3>1. Set clear expectations</h3>
 
-						<p>By warning users when there is no integration in place, we can manage their expectations by letting them know the app will not be able to retrieve data from badges.</p>
+						<p>Since different events can have different experiences (not all badge providers will let us retrieve badge data in real time, for instance), it's important to let our users know exactly what to expect from each event.</p>
 
-						<p>This allows them to either rectify the mistake (in case someone forgot to set up the integration) or make up for the loss of immediate data by collecting additional information.</p>
+						<p>To achieve this, we give them a brief explanation of what the set up is right as the event is about to begin.</p>
 
 						<!--p class="info">Scanning badges without an integration is an existing, albeit rare, use case, meaning that we still needed to allow users to do it in those scenarios.</p-->
 
@@ -178,11 +179,11 @@
 					</div>
 
 					<div class="text">
-						<h3>2. They have scanned the correct code</h3>
+						<h3>2. Prevent mistakes whenever possible</h3>
 
-						<p>When using the scanner in the app, we employ real-time validation to assure the user that they are scanning the right kind of code and that the string retrieved is in the expected format.</p>
+						<p>One of the most common causes for loss of data was that, sometimes, users would scan the wrong code and they wouldn't realise this until much later, when there was no alternative way to collect their prospect's details.</p>
 
-						<p>This helps us avoid scenarios in which the wrong badges are scanned, leaving Akkroo with no way to retrieve data for that lead.</p>
+						<p>To help prevent these mistakes, we added real-time validation to assure our users that they're scanning the right code and that the string retreived is in the expected format.</p>
 
 						<div class="info video">
 							<p>Play the video to see the validation in action.</p>
@@ -198,7 +199,7 @@
 					<img src="assets/akkroo/ui-badge-3.png" alt="The badge scanning UI in the Akkroo app showing data retrieved from a badge">
 
 					<div class="text">
-						<h3>3. The badge contains data</h3>
+						<h3>3. Give the users what they want, when they want it</h3>
 
 						<p>By returning the badge data in real-time, we eliminate the users’ anxiety of wondering whether the badge contained real data or not.</p>
 
