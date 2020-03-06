@@ -256,6 +256,7 @@ hr {
 
 .info {
 	padding: 15px 25px 15px 52px;
+	margin: 30px 0;
 	border-radius: 6px;
 	background-color: fadeout(@accent-color, 95%);
 	position: relative;
@@ -762,6 +763,10 @@ ul.improvements > li:before {content: "\f00d";}
 	//max-width: 640px;
 	margin: 80px auto 20px auto;
 
+	&.no-label {
+		margin: 0px auto 40px auto;		
+	}
+
 	> video {
 		display: block;
 		width: 100%;
@@ -799,6 +804,8 @@ ul.improvements > li:before {content: "\f00d";}
 		&[name="prototypeHighFive"] {background-image: url('../assets/akkroo/preview-highfive.png');}
 		&[name="prototypeOnboarding"] {background-image: url('../assets/akkroo/preview-onboarding.png');}
 		&[name="prototypeUserFeedback"] {background-image: url('../assets/akkroo/preview-feedback.png');}
+		&[name="prototypeBadgeScanOld"] {background-image: url('../assets/akkroo/preview-badge-old.png');}
+		&[name="prototypeBadgeScanNew"] {background-image: url('../assets/akkroo/preview-badge-new.png');}
 	}
 }
 
@@ -806,15 +813,12 @@ ul.improvements > li:before {content: "\f00d";}
 // test thumbnails
 
 ul.thumbnails {
-	//border: 1px solid blue;
 	padding: 0;
 	margin: 40px -40px 0 -20px;
-
 
 	li {
 		border-radius: 6px;
 		overflow: hidden;
-		//border: 1px solid red;
 		background-color: @pure-white;
 		display: inline-block;
 		width: calc( 50% - 20px );
@@ -822,16 +826,15 @@ ul.thumbnails {
 		padding: 0;
 		vertical-align: top;
 		box-shadow: 0 6px 6px rgba(0,0,0,0.10);
+		transition: box-shadow 0.2s ease;
 
 		@media (max-width: 640px) {
 			width: calc( 100% - 20px );
 		}
 
 		&:hover {
-			box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+			box-shadow: 0 6px 12px rgba(0,0,0,0.25);
 		}
-
-		
 
 		a {
 			display: block;
@@ -839,7 +842,6 @@ ul.thumbnails {
 
 			&.disabled {
 				opacity: .3;
-				//pointer-events: none;
 				cursor: not-allowed;
 			}
 

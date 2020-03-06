@@ -233,6 +233,7 @@ hr {
 }
 .info {
   padding: 15px 25px 15px 52px;
+  margin: 30px 0;
   border-radius: 6px;
   background-color: rgba(27, 27, 255, 0.05);
   position: relative;
@@ -698,6 +699,9 @@ ul.improvements > li:before {
   width: 100%;
   margin: 80px auto 20px auto;
 }
+.video-container.no-label {
+  margin: 0px auto 40px auto;
+}
 .video-container > video {
   display: block;
   width: 100%;
@@ -742,6 +746,12 @@ ul.improvements > li:before {
 .frame-container > iframe[name="prototypeUserFeedback"] {
   background-image: url('../assets/akkroo/preview-feedback.png');
 }
+.frame-container > iframe[name="prototypeBadgeScanOld"] {
+  background-image: url('../assets/akkroo/preview-badge-old.png');
+}
+.frame-container > iframe[name="prototypeBadgeScanNew"] {
+  background-image: url('../assets/akkroo/preview-badge-new.png');
+}
 ul.thumbnails {
   padding: 0;
   margin: 40px -40px 0 -20px;
@@ -756,6 +766,7 @@ ul.thumbnails li {
   padding: 0;
   vertical-align: top;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
 }
 @media (max-width: 640px) {
   ul.thumbnails li {
@@ -763,7 +774,7 @@ ul.thumbnails li {
   }
 }
 ul.thumbnails li:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 ul.thumbnails li a {
   display: block;

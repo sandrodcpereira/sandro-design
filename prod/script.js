@@ -11,7 +11,7 @@ $(function(){
 $(function(){
 	$('div.play-trigger').click(function(){
 		$(this).fadeOut();
-		$('video').get(0).play();
+		$(this).siblings( ".video").get(0).play();
 	});
 
 	$('video').on('ended',function(){

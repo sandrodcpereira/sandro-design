@@ -49,7 +49,7 @@
 
 		<main>
 			<section>
-				<h4>Q2 & Q3 2019</h4>
+				<h4>Q2 – Q4 2019</h4>
 				<h1>Badge Scanning Improvements in the Akkroo App</h1>
 			</section>
 
@@ -61,11 +61,42 @@
 
 				<h2>Context</h2>
 
-				<p>After the launch of the new <a href="akkroo-react-native-app.html">Akkroo app built on React Native</a>, there was a big focus on improving existing features and providing a more seamless experience for our app users. A piece of functionality that was severely improved was the badge scanner.</p>
+				<p>Following the brand new app experience introduced with the <a href="akkroo-major-app-update.html">Major App Update</a> project and the refining of the general experience introduced with the <a href="akkroo-react-native-app.html">React Native App</a> project, it was finally time for us to redesign one of the most important features of the app: the badge scanner.</p>
 
-				<p>One of the biggest issues app users encountered when using our app was the perception of having lost data when an action was performed incorrectly — maybe they scanned the wrong QR code in an event badge, or their marketing manager forgot to correctly set up an integration with the badge provider. On both instances, the scan would not return any data, thus “losing” the lead and the opportunity for our sales user.</p>
+				<div class="row">
 
-				<p>While those scenarios could be classified as user errors, the user perception was that it was the Akkroo app that had failed to retrieve the badge data, resulting in anxiety and lack of confidence in the product. </p>
+
+					<div class="frame-container">
+
+						<div class="helper">
+							<p><i class="fas fa-hand-pointer"></i> Prototype</p>
+						</div>
+
+						<a class="play-trigger" href="https://xd.adobe.com/embed/51a58355-77b0-41fe-47dd-1c330a7ae69a-2794/?fullscreen&hints=off" target="prototypeBadgeScanOld"><i class="fas fa-play"></i></a>
+
+						<iframe width="360" height="640" name="prototypeBadgeScanOld" src="about:blank" frameborder="0" allowfullscreen></iframe>
+
+					</div>
+
+					<div class="text">
+
+						<p>At this point, the badge scanner functionality was entirely based on the legacy experience that had been designed years prior.</p>
+
+						<p>It offered a very rudimentary scanner that would scan any barcode and then display its code string — the users could see the information contained in the badge, but only after the lead was successfully submitted and the badge data was retrieved.</p>
+
+						<p>Needless to say, there was a lot to improve on.</p>
+
+						<div class="info prototype">
+							<p>Press "scan" on this prototype to try out our old badge scanner.</p>
+						</div>
+
+					</div>
+
+				</div>
+
+				<p>One of the biggest issues app users encountered when using our app was the perception of having lost data when an action was performed incorrectly — maybe they scanned the wrong code in an event badge, or their marketing manager forgot to correctly set up an integration with the badge provider. On both instances, the scan would never return any data, thus “losing” the lead and the opportunity for our sales user.</p>
+
+				<p>While those scenarios could be attributed to user error, we knew there were steps that we could take to prevent them from happening and help build trust in our product.</p>
 
 				<div class="info">
 					<p>Badge scanning in Akkroo and similar apps works by scanning a badge, which typically returns a string. These strings are then sent to the badge provider <abbr title="Application Program Interface">API</abbr> to be "exchanged" for the data contained in the badge.</p>
@@ -89,7 +120,34 @@
 
 				<h2>Discovery and ideation</h2>
 
-				<p>We tackled this challenge by implementing three different solutions that, in the end, provided peace of mind to our users by assuring them that:</p>
+				<p>When I started to work on this project, the initial goal was to simply fetch and display the badge data immediately after a successful scan. Sounds like it'd do the job, right?</p>
+
+				<img src="assets/akkroo/ui-badge-sketch.png" alt="User flow showing an empty badge scanning field, a depiction of a badge being scanned, and a box with the information contained in the badge.">
+				<figcaption>Initial sketches of how we thought the UI would look like.</figcaption>
+
+				
+				<p>When we started to look at hedge cases and how users would recover from an error, though, we noticed that it was hard for them to tell when they were dealing with a mistake they had made themselves (e.g. scanning an invalid code) or an issue with the badge provider (e.g. their server being down and not being able to return the data).</p>				
+
+				<p>Our solution to this was to redesign the feature in a way that would prevent user mistakes (more on that in a bit) and flesh out the interaction to better communicate to our users what exactly is happening.</p>
+
+				<p>We achieved by splitting the badge scanning process into two parts:</p>
+
+				<div class="video-container no-label">
+					<video class="video no-shadow" autoplay loop muted poster="">
+					    <source type="video/mp4" src="assets/akkroo/demo-badge-ui.mp4">
+					   	Sorry, your browser does not support this video.
+					</video>
+				</div>
+
+				<p>By doing this, we can help users create a more accurate mental map of this process, and also reassure them when they do everything correctly, even if something does go wrong on the second step of the process.</p>
+
+				<p>So we went back to the drawing board and made sure that the entire experience was visually consistent from the moment the users saw the prompt to scan the badge until the moment they got the data back.</p>
+
+				<img src="assets/akkroo/flow-badge-scanner.png" alt="A representation of badge scanning process, showing the same UI box present throughout.">
+				<figcaption>The badge scanner stays on the screen and accompanies the user through the entire process.</figcaption>
+
+
+				<p>After having defined the flow, we designed the UI in a way that would:</p>
 
 
 				<div class="row">
@@ -97,11 +155,11 @@
 					<img src="assets/akkroo/ui-badge-1.png" alt="The badge scanning UI in the Akkroo app showing a warning telling the user that there is no badge integration set up for that event">
 
 					<div class="text">
-						<h3>1. There is a badge provider integration in place</h3>
+						<h3>1. Set clear expectations</h3>
 
-						<p>By warning users when there is no integration in place, we can manage their expectations by letting them know the app will not be able to retrieve data from badges.</p>
+						<p>Since different events can have different experiences (not all badge providers will let us retrieve badge data in real-time, for instance), it's important to let our users know exactly what to expect from each event.</p>
 
-						<p>This allows them to either rectify the mistake (in case someone forgot to set up the integration) or make up for the loss of immediate data by collecting additional information.</p>
+						<p>To achieve this, we give them a brief explanation of what the set up is right as the event is about to begin.</p>
 
 						<!--p class="info">Scanning badges without an integration is an existing, albeit rare, use case, meaning that we still needed to allow users to do it in those scenarios.</p-->
 
@@ -129,11 +187,11 @@
 					</div>
 
 					<div class="text">
-						<h3>2. They have scanned the correct code</h3>
+						<h3>2. Prevent mistakes whenever possible</h3>
 
-						<p>When using the scanner in the app, we employ real-time validation to assure the user that they are scanning the right kind of code and that the string retrieved is in the expected format.</p>
+						<p>One of the most common causes for loss of data was that, sometimes, users would scan the wrong code and they wouldn't realise this until much later, when there was no alternative way to collect their prospect's details.</p>
 
-						<p>This helps us avoid scenarios in which the wrong badges are scanned, leaving Akkroo with no way to retrieve data for that lead.</p>
+						<p>To help prevent these mistakes, we added real-time validation to assure our users that they're scanning the right code and that the string retrieved is in the expected format.</p>
 
 						<div class="info video">
 							<p>Play the video to see the validation in action.</p>
@@ -149,7 +207,7 @@
 					<img src="assets/akkroo/ui-badge-3.png" alt="The badge scanning UI in the Akkroo app showing data retrieved from a badge">
 
 					<div class="text">
-						<h3>3. The badge contains data</h3>
+						<h3>3. Give the users what they want, when they want it</h3>
 
 						<p>By returning the badge data in real-time, we eliminate the users’ anxiety of wondering whether the badge contained real data or not.</p>
 
@@ -178,9 +236,38 @@
 			<section>
 				<h2>Outcome</h2>
 
-				<p>This project is a great example of how you can supercharge a feature just by focusing on the possible points of failure and making sure to design for when those happen.</p>
+				<div class="row">
 
-				<p>By doing so, we can build a trusting relationship with our users: they know that our product will let them know if anything goes wrong, giving them the chance to correct the mistake and giving them the peace of mind to focus on the task at hand.</p>
+
+					<div class="frame-container">
+
+						<div class="helper">
+							<p><i class="fas fa-hand-pointer"></i> Prototype</p>
+						</div>
+
+						<a class="play-trigger" href="https://xd.adobe.com/embed/59963157-10c7-4a94-5fcc-aafde432fd8e-2fa7/?fullscreen&hints=off" target="prototypeBadgeScanNew"><i class="fas fa-play"></i></a>
+
+						<iframe width="360" height="640" name="prototypeBadgeScanNew" src="about:blank" frameborder="0" allowfullscreen></iframe>
+
+					</div>
+
+					<div class="text">
+
+				
+						<p>This project is a great example of how you can supercharge a feature just by focusing on the possible points of failure and making sure to design for when those happen.</p>
+
+						<p>By doing so, we can build a trusting relationship with our users: they know that our product will let them know if anything goes wrong, giving them the chance to correct the mistake and giving them the peace of mind to focus on the task at hand.</p>
+
+
+						<div class="info prototype">
+							<p>Press "scan" on this prototype to try out the revamped badge scanner.</p>
+						</div>
+
+					</div>
+
+				</div>
+
+
 
 				<p><b>Value added:</b></p>
 
