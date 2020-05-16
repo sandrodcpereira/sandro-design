@@ -573,6 +573,22 @@ ul.value, ul.improvements {
 	}
 }
 
+ul.steps {
+	list-style: none;
+	font-size: 1.1em;
+	
+	li:before {
+		display: inline-block;
+		margin-left: -1.5em;
+		width: 80px;
+		padding: 20px;
+		text-align: right;
+		border: 1px solid green;
+	}
+}
+
+ul.steps > li:before {content: "hello";}
+
 ul.value > li:before {content: "\f00c";}
 ul.improvements > li:before {content: "\f00d";}
 
