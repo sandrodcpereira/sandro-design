@@ -780,6 +780,16 @@ ul.improvements > li:before {content: "\f00d";}
 			border-radius: 0;
 		}
 	}
+
+	&.big {
+		margin: 0px -100px 0 -100px;
+		width: calc(100% + 200px);
+
+		@media (max-width: 1023px) {
+			margin: 0px -20px 0 -20px;
+			width: calc(100% + 40px);
+		}
+	}
 }
 
 .frame-container {

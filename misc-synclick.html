@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+	<link rel="stylesheet" type="text/css" media="screen" href="prod/normalise.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="prod/style.css">
+	<link rel="stylesheet" href="https://use.typekit.net/hbh0upr.css">
+
+	<script src="https://kit.fontawesome.com/266997c388.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="prod/script.js"></script>
+
+	<link rel="mask-icon" href="assets/favicons/favicon.svg" color="#2F3E4A">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/favicons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/favicons/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="Sandro Pereira"/>
+	<meta name="msapplication-TileColor" content="##EAEEF" />
+	<meta name="msapplication-TileImage" content="assets/favicons/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="assets/favicons/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="assets/favicons/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="assets/favicons/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="assets/favicons/mstile-310x310.png" />
+
+	<title>Synclick — Sandro Pereira</title>
+
+</head>
+<body class="sintagma">
+
+	<div class="wrapper">
+
+		<header></header>
+
+		<nav></nav>
+
+		<main>
+			<section>
+				<h4>2020</h4>
+				<h1>Synclick</h1>
+			</section>
+
+			<section>
+				
+				<div class="img-full">
+					<img src="assets/synclick/hero-synclick.png" alt="Two devices showing the user inteface for badge scanning in the Akkroo app">
+				</div>
+
+				<h2>Context</h2>
+
+				<p>During the Coronavirus pandemic of 2020, my friends and I were, along with most people, stuck inside our homes with very limited options for social interaction.</p>
+
+				<p>With our monthly cinema trips no longer an option, we turned to the closest alternative: watching films together on Netflix.</p>
+
+				<p>Unfortunately, we soon found out that, to make sure we were all watching the same thing at the same time, we would have to either:</p>
+
+				<ul>
+					<li>Get on a call and awkwardly countdown — trying to account for connectivity issues and lag — so that everyone presses play at the same time. (Wait, do you press play on "1" or "0?")</li>
+					<li>Install one of those bulky extensions that try to do too much but never seem to work right.</li>
+				</ul>
+
+				<p>So a <a href="https://raymondchooi.com" target="_blank">friend</a> and I decided to think of a better way of achieving this.</p>
+
+				<h2>Problem</h2>
+
+				<p>We framed this project around our own personas. Using the <a href="https://www.intercom.com/books/jobs-to-be-done" target="_blank">Jobs to Be Done</a> framework, we arrived at the following goal:</p>
+
+
+				<blockquote class="jtbd">As <u>Sandro and his friends</u>, we want to be able to <u>synchronize what we're watching</u> in order to <u>socialise and react together to what's happening on the screen</u>.</blockquote>
+
+				<h2>Discovery and ideation</h2>
+
+				<p>After having defined our goal, we started out by removing all the bells and whistles we'd seen in the products we tried. </p>
+
+				<p>We quickly decided we didn't want to burden our solution with communication functionality. Whatsapp, Zoom, Slack, and many others do instant messaging and video calling so my better than we could have hoped to, so we were happy to continue using those tools in addition to our solution.</p>
+
+				<p>Focusing on our goal of keeping everyone in sync, we tried to find the easiest way to achieve just that without resorting to tricky meeting IDs and sharing links that only work some of the time.</p> 
+
+				<p>The solution? Making use of UTC (Coordinated Univeral Time), the one time that all computers are synced to.</p>
+
+				<p>In the end, the simplest solution to our problem was to automate pressing the play button to 30 second intervals on UTC. By doing this, we relieve ourselves of the pressure of having to press the play button at precisely the same time and of that lingering worry that we may be a couple of seconds behind everyone else.</p>
+
+				<div class="video-container big no-label">
+					<video class="video no-shadow" autoplay loop muted poster="">
+					    <source type="video/mp4" src="assets/synclick/timeline.mp4">
+					   	Sorry, your browser does not support this video.
+					</video>
+				</div>
+
+				<h2>Outcome</h2>
+
+				<p>The extension was released on the <a href="https://chrome.google.com/webstore/detail/synclick/ncaifenioohihdphfmkadanpcdegbeeh?hl=en-GB" target="_blank">Chrome Web Store</a> and we have used it in several of our film watching sessions to great success. While it has yet to take over the world, it has seen widespread adoption in our circle of friends and we refuse watch any more films without it!</p>
+
+				<p><b>Value added:</b></p>
+
+				<ul class="value">
+
+					<li>Successfully syncs video playback between unlimited users.</li>
+					<li>It's super easy to use and doesn't require exchanging links.</li>
+					<li>It's very lightweight.</li>
+
+				</ul>
+
+				<p><b>Room for improvement:</b></p>
+
+				<ul class="improvements">
+					
+					<li>Users can sometimes fall on different intervals... oops!</li>
+					<li>There's no support for additional streaming services yet.</li>
+
+				</ul>
+
+
+
+			</section>
+
+			<footer></footer>
+			
+
+		</main>
+
+	</div>
+</body>
+</html>
