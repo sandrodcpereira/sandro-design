@@ -190,8 +190,11 @@ li.disabled {
 h1,
 h2,
 h3 {
-  font-family: poynter-oldstyle-text, serif;
-  font-weight: 700;
+  /* font-family: poynter-oldstyle-text, serif;
+	font-weight: 700;
+	font-style: normal; */
+  font-family: eskorte-latin, serif;
+  font-weight: 600;
   font-style: normal;
 }
 h1 {
@@ -330,8 +333,11 @@ blockquote {
   font-size: 1.8em;
   line-height: 1.6em;
   color: #638096;
-  font-family: poynter-oldstyle-text, serif;
-  font-weight: 400;
+  /*font-family: poynter-oldstyle-text, serif;
+	font-weight: 400;
+	font-style: italic;*/
+  font-family: eskorte-latin, serif;
+  font-weight: 800;
   font-style: italic;
 }
 @media (max-width: 1023px) {
