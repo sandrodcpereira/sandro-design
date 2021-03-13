@@ -36,7 +36,7 @@ body {
   left: 0;
   top: 0;
   z-index: 9;
-  font-size: .5em;
+  font-size: 0.5em;
   opacity: 1;
   height: 100%;
 }
@@ -65,7 +65,7 @@ body {
   display: inline-block;
   width: fit-content;
   margin: 2px;
-  opacity: .1;
+  opacity: 0.1;
   letter-spacing: -2px;
   transition: letter-spacing 0.1s ease-out;
   color: transparent;
@@ -93,7 +93,7 @@ body {
   .wrapper nav:hover h3,
   .wrapper nav.focus h3 {
     color: #2F3E4A;
-    opacity: .8;
+    opacity: 0.8;
     background-image: none;
     letter-spacing: 0px;
   }
@@ -123,7 +123,7 @@ body {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
     left: -300px;
     transition: left 0.2s ease-out;
-    font-size: .6em;
+    font-size: 0.6em;
   }
   .wrapper nav.open {
     left: 0;
@@ -134,7 +134,7 @@ body {
   .wrapper nav .nav-container p,
   .wrapper nav .nav-container h3 {
     color: #2F3E4A;
-    opacity: .8;
+    opacity: 0.8;
     background-image: none;
     letter-spacing: 0px;
     padding: 6px 0;
@@ -159,7 +159,7 @@ body {
     background-color: #EAEEF0;
     border-radius: 0 8px 8px 0;
     transition: left 0.2s ease-out;
-    opacity: .5;
+    opacity: 0.5;
   }
   .wrapper nav .nav-container #menu-toggle i {
     pointer-events: none;
@@ -184,7 +184,7 @@ li {
 }
 li.disabled {
   text-decoration: underline;
-  opacity: .5;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 h1,
@@ -220,19 +220,19 @@ h3 {
   line-height: 1.2em;
 }
 h4 {
-  font-size: .8em;
+  font-size: 0.8em;
   line-height: 1.8em;
   font-weight: 500;
   text-transform: uppercase;
   color: #638096;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   margin-top: 8em;
 }
 hr {
   margin-top: 40px;
   margin-bottom: 40px;
   border: 1px solid #638096;
-  opacity: .1;
+  opacity: 0.1;
 }
 .info {
   padding: 15px 25px 15px 52px;
@@ -279,6 +279,9 @@ img {
 img.border-radius {
   border-radius: 4px;
 }
+img.border-radius-big {
+  border-radius: 8px;
+}
 img.medium {
   max-width: 600px;
 }
@@ -288,6 +291,9 @@ img.small {
 img.border {
   border-radius: 4px;
   border: 2px solid #EAEEF0;
+}
+img.shadow {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
 }
 .img-full {
   width: 100vw;
@@ -322,7 +328,7 @@ h3 .fas.fork.fa-square {
 }
 figcaption {
   display: block;
-  font-size: .8em;
+  font-size: 0.8em;
   line-height: 1.8em;
   font-weight: 500;
   color: #638096;
@@ -352,11 +358,11 @@ blockquote.jtbd > u {
 cite {
   display: block;
   margin: -1em 3em 3em 3em;
-  font-size: .8em;
+  font-size: 0.8em;
   line-height: 1.8em;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   font-style: initial;
   color: #638096;
 }
@@ -371,8 +377,8 @@ p > a[target="_blank"]:after {
   font-family: "Font Awesome 5 Pro";
   content: "\f35d";
   font-weight: 900;
-  opacity: .4;
-  font-size: .8em;
+  opacity: 0.4;
+  font-size: 0.8em;
   -webkit-font-smoothing: antialiased;
   font-style: normal;
   font-variant: normal;
@@ -404,7 +410,7 @@ p > a[target="_blank"]:hover:after {
 }
 .label {
   color: #ffffff;
-  font-size: .6em;
+  font-size: 0.6em;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 1px;
@@ -458,7 +464,7 @@ footer ul li a span {
   left: 50%;
   display: block;
   background-color: #2F3E4A;
-  font-size: .4em;
+  font-size: 0.4em;
   opacity: 0;
   line-height: 1em;
   color: #ffffff;
@@ -473,7 +479,7 @@ footer ul li a span {
 footer p {
   font-weight: 500;
   font-style: normal;
-  font-size: .8em;
+  font-size: 0.8em;
   color: #638096;
 }
 footer p > span {
@@ -608,8 +614,8 @@ ul.improvements > li:before {
   font-size: 2.2em;
   text-align: center;
   line-height: 1.8em;
-  opacity: .4;
-  transition: opacity .5s ease;
+  opacity: 0.4;
+  transition: opacity 0.5s ease;
 }
 .home .wrapper:first-child .header .scroll-indicator:hover {
   opacity: 1;
@@ -636,6 +642,9 @@ ul.improvements > li:before {
 }
 .adclick .img-full {
   background-color: #ffffff;
+}
+.integrate-mobile-app .row > img {
+  border-radius: 20px;
 }
 .about .img-full {
   background-image: url('../assets/generic/porto.png');
@@ -703,7 +712,7 @@ ul.improvements > li:before {
   position: absolute;
   top: -18px;
   left: -18px;
-  font-size: .8em;
+  font-size: 0.8em;
   color: #ffffff;
   background-color: #2F3E4A;
   padding: 8px 14px;
@@ -829,7 +838,7 @@ ul.thumbnails li a {
   text-decoration: none;
 }
 ul.thumbnails li a.disabled {
-  opacity: .3;
+  opacity: 0.3;
   cursor: not-allowed;
 }
 ul.thumbnails li a.disabled > h3 > span {
@@ -852,7 +861,7 @@ ul.thumbnails li a h3 > span {
   font-family: "azo-sans-web", 'Azo Sans', sans-serif;
   letter-spacing: 1px;
   border-radius: 8px;
-  font-size: .4em;
+  font-size: 0.4em;
   padding: 4px 6px;
   border: 3px solid #ffffff;
   display: inline-block;
@@ -861,6 +870,6 @@ ul.thumbnails li a h3 > span {
 }
 ul.thumbnails li a p {
   margin: 0 20px 15px 20px;
-  font-size: .8em;
+  font-size: 0.8em;
   color: #2F3E4A;
 }
