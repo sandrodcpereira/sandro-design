@@ -296,16 +296,22 @@ img {
 	display: block;
 	margin: 40px auto 20px auto;
 
-	&.border-radius {border-radius: 4px;}
+		&.border-radius {border-radius: 4px;}
 
-	&.medium {max-width: 600px;}
+		&.border-radius-big {border-radius: 8px;}
 
-	&.small {max-width: 200px;}
+		&.medium {max-width: 600px;}
 
-	&.border {
-		border-radius: 4px;
-		border: 2px solid @light-grey;
-	}
+		&.small {max-width: 200px;}
+
+		&.border {
+			border-radius: 4px;
+			border: 2px solid @light-grey;
+		}
+
+		&.shadow {
+			box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+		}
 }
 
 .img-full {
@@ -326,9 +332,39 @@ img {
 	}
 
 	&.akkroo {background-color: #0089CB;}
+	&.integrate {background-color: #213A60;}
 	&.chores-champ {
 		background-image: url('../assets/chores-champ/chores-champ-pattern.png');
 		background-position: center center;
+	}
+}
+
+.before-after-container {
+	max-width: 320px;
+	margin: 40px 80px 20px auto;
+	position: relative;
+
+	@media (max-width: 1023px) {
+		margin: 40px 20px;
+	}
+
+
+	img {
+		margin: 0;
+		box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+		border-radius: 20px;
+
+	}
+
+	.before {
+		position: absolute;
+		top: 0;
+		opacity: 0;
+		box-shadow: none;
+
+		&:hover {
+			opacity: 1;
+		}
 	}
 }
 
@@ -693,6 +729,14 @@ ul.improvements > li:before {content: "\f00d";}
 .logos .img-full {background-color: #ffffff;}
 .adclick .img-full {background-color: #ffffff;}
 
+/* .integrate-mobile-app {
+	.row > img {
+		border-radius: 20px;
+	}
+} */
+
+
+
 .about .img-full {
 	background-image: url('../assets/generic/porto.png');
 	background-repeat: no-repeat;
@@ -756,7 +800,7 @@ ul.improvements > li:before {content: "\f00d";}
 
 // media containers
 
-.video-container, .frame-container {
+.video-container, .frame-container, .before-after-container {
 	position: relative;
 
 	> .helper {
@@ -838,6 +882,13 @@ ul.improvements > li:before {content: "\f00d";}
 	border-radius: 8px;
 	box-shadow: 0 14px 28px rgba(0,0,0,0.15);
 
+	&.web {
+		width: initial;
+		max-width: none;
+		margin: 40px -60px 20px;
+		height: 538px;
+	}
+
 	> iframe {
 		width: 100%;
 		height: 100%;
@@ -853,6 +904,7 @@ ul.improvements > li:before {content: "\f00d";}
 		&[name="prototypeUserFeedback"] {background-image: url('../assets/akkroo/preview-feedback.png');}
 		&[name="prototypeBadgeScanOld"] {background-image: url('../assets/akkroo/preview-badge-old.png');}
 		&[name="prototypeBadgeScanNew"] {background-image: url('../assets/akkroo/preview-badge-new.png');}
+		&[name="prototypeHedgehog"] {background-image: url('../assets/integrate/preview-hedgehog.png');}
 	}
 }
 
