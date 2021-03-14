@@ -332,9 +332,35 @@ img {
 	}
 
 	&.akkroo {background-color: #0089CB;}
+	&.integrate {background-color: #213A60;}
 	&.chores-champ {
 		background-image: url('../assets/chores-champ/chores-champ-pattern.png');
 		background-position: center center;
+	}
+}
+
+.before-after-container {
+	max-width: 320px;
+	margin: 40px 80px 20px auto;
+	position: relative;
+
+
+	img {
+		margin: 0;
+		box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+		border-radius: 20px;
+
+	}
+
+	.before {
+		position: absolute;
+		top: 0;
+		opacity: 0;
+		box-shadow: none;
+
+		&:hover {
+			opacity: 1;
+		}
 	}
 }
 
@@ -699,11 +725,13 @@ ul.improvements > li:before {content: "\f00d";}
 .logos .img-full {background-color: #ffffff;}
 .adclick .img-full {background-color: #ffffff;}
 
-.integrate-mobile-app {
+/* .integrate-mobile-app {
 	.row > img {
 		border-radius: 20px;
 	}
-}
+} */
+
+
 
 .about .img-full {
 	background-image: url('../assets/generic/porto.png');
@@ -768,7 +796,7 @@ ul.improvements > li:before {content: "\f00d";}
 
 // media containers
 
-.video-container, .frame-container {
+.video-container, .frame-container, .before-after-container {
 	position: relative;
 
 	> .helper {

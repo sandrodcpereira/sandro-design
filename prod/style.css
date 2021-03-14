@@ -314,9 +314,31 @@ img.shadow {
 .img-full.akkroo {
   background-color: #0089CB;
 }
+.img-full.integrate {
+  background-color: #213A60;
+}
 .img-full.chores-champ {
   background-image: url('../assets/chores-champ/chores-champ-pattern.png');
   background-position: center center;
+}
+.before-after-container {
+  max-width: 320px;
+  margin: 40px 80px 20px auto;
+  position: relative;
+}
+.before-after-container img {
+  margin: 0;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+.before-after-container .before {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  box-shadow: none;
+}
+.before-after-container .before:hover {
+  opacity: 1;
 }
 .fas.fork.fa-square {
   transform: rotate(45deg);
@@ -643,9 +665,11 @@ ul.improvements > li:before {
 .adclick .img-full {
   background-color: #ffffff;
 }
-.integrate-mobile-app .row > img {
-  border-radius: 20px;
-}
+/* .integrate-mobile-app {
+	.row > img {
+		border-radius: 20px;
+	}
+} */
 .about .img-full {
   background-image: url('../assets/generic/porto.png');
   background-repeat: no-repeat;
@@ -704,11 +728,13 @@ ul.improvements > li:before {
   }
 }
 .video-container,
-.frame-container {
+.frame-container,
+.before-after-container {
   position: relative;
 }
 .video-container > .helper,
-.frame-container > .helper {
+.frame-container > .helper,
+.before-after-container > .helper {
   position: absolute;
   top: -18px;
   left: -18px;
@@ -719,15 +745,18 @@ ul.improvements > li:before {
   border-radius: 8px;
 }
 .video-container > .helper > p,
-.frame-container > .helper > p {
+.frame-container > .helper > p,
+.before-after-container > .helper > p {
   margin: 0;
 }
 .video-container > .helper > p > i,
-.frame-container > .helper > p > i {
+.frame-container > .helper > p > i,
+.before-after-container > .helper > p > i {
   margin-right: 4px;
 }
 .video-container > .play-trigger,
-.frame-container > .play-trigger {
+.frame-container > .play-trigger,
+.before-after-container > .play-trigger {
   position: absolute;
   top: 50%;
   left: 50%;
