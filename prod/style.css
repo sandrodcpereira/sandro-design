@@ -326,6 +326,11 @@ img.shadow {
   margin: 40px 80px 20px auto;
   position: relative;
 }
+@media (max-width: 1023px) {
+  .before-after-container {
+    margin: 40px 20px;
+  }
+}
 .before-after-container img {
   margin: 0;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
@@ -809,6 +814,12 @@ ul.improvements > li:before {
   border-radius: 8px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
 }
+.frame-container.web {
+  width: initial;
+  max-width: none;
+  margin: 40px -60px 20px;
+  height: 538px;
+}
 .frame-container > iframe {
   width: 100%;
   height: 100%;
@@ -837,6 +848,9 @@ ul.improvements > li:before {
 }
 .frame-container > iframe[name="prototypeBadgeScanNew"] {
   background-image: url('../assets/akkroo/preview-badge-new.png');
+}
+.frame-container > iframe[name="prototypeHedgehog"] {
+  background-image: url('../assets/integrate/preview-hedgehog.png');
 }
 ul.thumbnails {
   padding: 0;

@@ -344,6 +344,10 @@ img {
 	margin: 40px 80px 20px auto;
 	position: relative;
 
+	@media (max-width: 1023px) {
+		margin: 40px 20px;
+	}
+
 
 	img {
 		margin: 0;
@@ -878,6 +882,13 @@ ul.improvements > li:before {content: "\f00d";}
 	border-radius: 8px;
 	box-shadow: 0 14px 28px rgba(0,0,0,0.15);
 
+	&.web {
+		width: initial;
+		max-width: none;
+		margin: 40px -60px 20px;
+		height: 538px;
+	}
+
 	> iframe {
 		width: 100%;
 		height: 100%;
@@ -893,6 +904,7 @@ ul.improvements > li:before {content: "\f00d";}
 		&[name="prototypeUserFeedback"] {background-image: url('../assets/akkroo/preview-feedback.png');}
 		&[name="prototypeBadgeScanOld"] {background-image: url('../assets/akkroo/preview-badge-old.png');}
 		&[name="prototypeBadgeScanNew"] {background-image: url('../assets/akkroo/preview-badge-new.png');}
+		&[name="prototypeHedgehog"] {background-image: url('../assets/integrate/preview-hedgehog.png');}
 	}
 }
 
