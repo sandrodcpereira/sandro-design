@@ -633,7 +633,6 @@ ul.steps {
 		width: 80px;
 		padding: 30px 50px 30px 0px;
 		text-align: right;
-		//border: 1px solid green;
 		background-position: center left;
 		background-size: 100px;
 		background-repeat: no-repeat;
@@ -938,6 +937,15 @@ ul.thumbnails {
 		a {
 			display: block;
 			text-decoration: none;
+			border: 1px solid #11111126;
+			border-radius: 6px;
+
+			&:focus {
+				
+			    //outline: 8px solid #ff0102;
+    			outline-offset: -2px;
+			    outline: -webkit-focus-ring-color auto 1px;
+			}
 
 			&.disabled {
 				opacity: .3;
@@ -952,6 +960,7 @@ ul.thumbnails {
 			img {
 				background-color: @accent-color;
 				margin: 0;
+				border-radius: 5px 5px 0 0;
 			}
 
 			h3 {
