@@ -604,7 +604,7 @@ ul.improvements > li:before {
   justify-content: center;
   align-items: center;
   position: relative;
-  background-image: url('../assets/generic/background.png');
+  background-image: url('../assets/generic/bg1.jpg');
   background-size: cover;
   background-position: center center;
 }
