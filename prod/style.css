@@ -271,6 +271,13 @@ hr {
 .info.video:before {
   content: "\f04b";
 }
+.info.award {
+  background-color: #ECE6C9;
+}
+.info.award:before {
+  content: "\f5a2";
+  color: #E6B93D;
+}
 img {
   width: 100%;
   display: block;
@@ -681,6 +688,12 @@ ul.improvements > li:before {
 }
 .adclick .img-full {
   background-color: #ffffff;
+}
+.dotfetch .video-container {
+  margin: 40px auto 20px auto;
+}
+.dotfetch .video-container video {
+  padding-top: 0;
 }
 /* .integrate-mobile-app {
 	.row > img {
