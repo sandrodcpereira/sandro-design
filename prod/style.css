@@ -305,10 +305,16 @@ img.shadow {
   background-color: #1B1BFF;
   margin-top: 40px;
   margin-bottom: 40px;
+  text-align: center;
 }
 .img-full img {
   width: 100%;
   max-width: 800px;
+  margin: 0 auto;
+}
+.img-full .video {
+  width: 100%;
+  max-width: 300px;
   margin: 0 auto;
 }
 .img-full.akkroo {
@@ -316,6 +322,12 @@ img.shadow {
 }
 .img-full.integrate {
   background-color: #213A60;
+}
+.img-full.deriva {
+  background-color: #05bae2;
+}
+.img-full.dotfetch {
+  background-color: #ee4653;
 }
 .img-full.chores-champ {
   background-image: url('../assets/chores-champ/chores-champ-pattern.png');
@@ -397,10 +409,10 @@ abbr[title] {
   border-bottom: 1px dashed #638096;
   text-decoration: none;
 }
-p > a[target="_blank"] {
+section a[target="_blank"] {
   color: #2F3E4A;
 }
-p > a[target="_blank"]:after {
+section a[target="_blank"]:after {
   font-family: "Font Awesome 5 Pro";
   content: "\f35d";
   font-weight: 900;
@@ -414,10 +426,10 @@ p > a[target="_blank"]:after {
   display: inline-block;
   margin-left: 4px;
 }
-p > a[target="_blank"]:hover {
+section a[target="_blank"]:hover {
   color: #1B1BFF;
 }
-p > a[target="_blank"]:hover:after {
+section a[target="_blank"]:hover:after {
   opacity: 1;
 }
 .aspect-ratio {

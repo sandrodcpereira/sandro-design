@@ -324,6 +324,7 @@ img {
 	background-color: @accent-color;
 	margin-top: 40px;
 	margin-bottom: 40px;
+	text-align: center;
 
 	img {
 		width: 100%;
@@ -331,8 +332,16 @@ img {
 		margin: 0 auto;
 	}
 
+	.video {
+		width: 100%;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
 	&.akkroo {background-color: #0089CB;}
 	&.integrate {background-color: #213A60;}
+	&.deriva {background-color: #05bae2;}
+	&.dotfetch {background-color: #ee4653;}
 	&.chores-champ {
 		background-image: url('../assets/chores-champ/chores-champ-pattern.png');
 		background-position: center center;
@@ -429,7 +438,7 @@ abbr[title] {
 	text-decoration: none;
 }
 
-p > a[target="_blank"] {
+section a[target="_blank"] {
 	color: @dark-grey;
 
 	&:after {
