@@ -47,13 +47,14 @@ body {
   overflow-x: scroll;
   display: flex;
   align-items: left;
-  justify-content: center;
   flex-direction: column;
   height: 100%;
-  padding: 20px 40px 60px 20px;
 }
 .wrapper nav .nav-container i {
   font-size: 1.8em;
+}
+.wrapper nav .nav-container .nav-contents {
+  padding: 60px 40px 60px 20px;
 }
 .wrapper nav .nav-container ul {
   list-style-type: none;
