@@ -305,8 +305,6 @@ hr {
 	}
 }
 
-
-
 img {
 	width: 100%;
 	display: block;
@@ -478,6 +476,31 @@ section a[target="_blank"] {
 
 		&:after {
 			opacity: 1;
+		}
+	}
+}
+
+table {
+	width: 100%;
+	margin: 40px auto;
+
+	td, th {
+		//border: 1px solid blue;
+		font-weight: 900;
+		text-align: center;
+		padding: 20px;
+		background-color: fadeout(@mid-grey, 85%);
+		border-radius: 8px;
+
+		&.hidden {opacity: 0;}
+
+		span {
+			display: inline-block;
+			font-size: .9em;
+			background-color: @mid-grey;
+			color: white;
+			padding: 6px 10px;
+			border-radius: 6px;
 		}
 	}
 }

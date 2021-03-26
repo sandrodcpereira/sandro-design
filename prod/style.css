@@ -440,6 +440,31 @@ section a[target="_blank"]:hover {
 section a[target="_blank"]:hover:after {
   opacity: 1;
 }
+table {
+  width: 100%;
+  margin: 40px auto;
+}
+table td,
+table th {
+  font-weight: 900;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(99, 128, 150, 0.15);
+  border-radius: 8px;
+}
+table td.hidden,
+table th.hidden {
+  opacity: 0;
+}
+table td span,
+table th span {
+  display: inline-block;
+  font-size: 0.9em;
+  background-color: #638096;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
 .aspect-ratio {
   position: relative;
   width: 100%;
