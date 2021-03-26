@@ -47,13 +47,14 @@ body {
   overflow-x: scroll;
   display: flex;
   align-items: left;
-  justify-content: center;
   flex-direction: column;
   height: 100%;
-  padding: 20px 40px 60px 20px;
 }
 .wrapper nav .nav-container i {
   font-size: 1.8em;
+}
+.wrapper nav .nav-container .nav-contents {
+  padding: 60px 40px 60px 20px;
 }
 .wrapper nav .nav-container ul {
   list-style-type: none;
@@ -330,6 +331,9 @@ img.shadow {
 .img-full.integrate {
   background-color: #213A60;
 }
+.img-full.smarkio {
+  background-color: #3B84C9;
+}
 .img-full.deriva {
   background-color: #05bae2;
 }
@@ -438,6 +442,31 @@ section a[target="_blank"]:hover {
 }
 section a[target="_blank"]:hover:after {
   opacity: 1;
+}
+table {
+  width: 100%;
+  margin: 40px auto;
+}
+table td,
+table th {
+  font-weight: 900;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(99, 128, 150, 0.15);
+  border-radius: 8px;
+}
+table td.hidden,
+table th.hidden {
+  opacity: 0;
+}
+table td span,
+table th span {
+  display: inline-block;
+  font-size: 0.9em;
+  background-color: #638096;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
 }
 .aspect-ratio {
   position: relative;
