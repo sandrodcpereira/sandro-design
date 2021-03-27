@@ -191,9 +191,6 @@ li.disabled {
 h1,
 h2,
 h3 {
-  /* font-family: poynter-oldstyle-text, serif;
-	font-weight: 700;
-	font-style: normal; */
   font-family: eskorte-latin, serif;
   font-weight: 600;
   font-style: normal;
@@ -389,9 +386,6 @@ blockquote {
   font-size: 1.8em;
   line-height: 1.6em;
   color: #638096;
-  /*font-family: poynter-oldstyle-text, serif;
-	font-weight: 400;
-	font-style: italic;*/
   font-family: eskorte-latin, serif;
   font-weight: 800;
   font-style: italic;
@@ -467,6 +461,20 @@ table th span {
   color: white;
   padding: 6px 10px;
   border-radius: 6px;
+}
+@media (max-width: 800px) {
+  table {
+    font-size: 0.7em;
+  }
+  table td,
+  table th {
+    padding: 10px;
+  }
+  table td span,
+  table th span {
+    display: block;
+    margin: 2px;
+  }
 }
 .aspect-ratio {
   position: relative;
@@ -724,11 +732,6 @@ ul.improvements > li:before {
 .dotfetch .video-container video {
   padding-top: 0;
 }
-/* .integrate-mobile-app {
-	.row > img {
-		border-radius: 20px;
-	}
-} */
 .about .img-full {
   background-image: url('../assets/generic/porto.png');
   background-repeat: no-repeat;

@@ -27,15 +27,3 @@ $(function(){
 		$(this).fadeOut();
 	});
 });
-
-// fix navbar on smaller screens
-
-
-//$( document ).ready(function() { 
-//	$(function(){
-//		var navHeight = $(".nav-contents").height();
-//		console.log(navHeight);
-//    	$("div").css( "background-color", "yellow" );
-//	});
-//});
-

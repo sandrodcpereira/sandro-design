@@ -158,6 +158,19 @@ $(function(){
 	});
 });
 
+// center nav on screen if window is taller than nav
+
+$( document ).ready(function() { 
+	$(function(){
+		var navHeight = $(".nav-contents").height();
+		var windowHeight = $(window).height();
+		//console.log(navHeight + " and " + windowHeight);
+    	
+    	if (navHeight < windowHeight){
+			$(".nav-container").css("justify-content", "center");
+		};
+	});
+});
 
 
 </script>
