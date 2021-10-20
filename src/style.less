@@ -464,6 +464,71 @@ section a[target="_blank"] {
 	}
 }
 
+.thumbnails a[target="_blank"] {
+
+	&:after {
+		content: none;
+	}
+
+	h3 {
+		position: relative;
+		display: inline-block;
+
+		&:after {
+			font-family: "Font Awesome 5 Pro";
+			content: "\f35d";
+			font-weight: 900;
+			opacity: .4;
+			font-size: .8em;
+			-webkit-font-smoothing: antialiased;
+			display: inline-block;
+			font-style: normal;
+			font-variant: normal;
+			text-rendering: auto;
+			line-height: 1;
+			position: absolute;
+			top: 6px;
+			right: -24px;
+		}
+	}
+
+	&:hover {
+		h3 {
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.nav-contents a[target="_blank"] {
+	color: @dark-grey;
+
+	&:after {
+		font-family: "Font Awesome 5 Pro";
+		content: "\f35d";
+		font-weight: 900;
+		opacity: .4;
+		font-size: .8em;
+		-webkit-font-smoothing: antialiased;
+		display: inline-block;
+		font-style: normal;
+		font-variant: normal;
+		text-rendering: auto;
+		line-height: 1;
+		display: inline-block;
+		margin-left: 4px;
+	}
+
+	&:hover {
+		color: @accent-color;
+
+		&:after {
+			opacity: 1;
+		}
+	}
+}
+
 table {
 	width: 100%;
 	margin: 40px auto;

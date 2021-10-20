@@ -437,6 +437,55 @@ section a[target="_blank"]:hover {
 section a[target="_blank"]:hover:after {
   opacity: 1;
 }
+.thumbnails a[target="_blank"]:after {
+  content: none;
+}
+.thumbnails a[target="_blank"] h3 {
+  position: relative;
+  display: inline-block;
+}
+.thumbnails a[target="_blank"] h3:after {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f35d";
+  font-weight: 900;
+  opacity: 0.4;
+  font-size: 0.8em;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  position: absolute;
+  top: 6px;
+  right: -24px;
+}
+.thumbnails a[target="_blank"]:hover h3:after {
+  opacity: 1;
+}
+.nav-contents a[target="_blank"] {
+  color: #2F3E4A;
+}
+.nav-contents a[target="_blank"]:after {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f35d";
+  font-weight: 900;
+  opacity: 0.4;
+  font-size: 0.8em;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  display: inline-block;
+  margin-left: 4px;
+}
+.nav-contents a[target="_blank"]:hover {
+  color: #1B1BFF;
+}
+.nav-contents a[target="_blank"]:hover:after {
+  opacity: 1;
+}
 table {
   width: 100%;
   margin: 40px auto;
