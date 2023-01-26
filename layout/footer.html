@@ -60,9 +60,12 @@
 
 </ul>
 
-<p>©2022 • Website designed and built by <span>Sandro Pereira
+<p>©<span id="year">[oh crap something's broken — just pretend this reads the current year]</span> • Website designed and built by <span class="sandro">Sandro Pereira
 	<img class="sandro-peeking" src="assets/generic/sandro-peeking.png" alt="Sandro peeking over from the bottom of the screen">
 	<img class="sandro-peeking-hands" src="assets/generic/sandro-peeking-hands.png" alt="Sandro's hands peeking over from the bottom of the screen">
 </span></p>
 
+<script>
+	document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
 

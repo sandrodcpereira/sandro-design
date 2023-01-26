@@ -610,12 +610,12 @@ footer p {
   font-size: 0.8em;
   color: #638096;
 }
-footer p > span {
+footer p > span.sandro {
   color: #1B1BFF;
   font-weight: 700;
   cursor: help;
 }
-footer p > span .sandro-peeking {
+footer p > span.sandro .sandro-peeking {
   display: block;
   width: 60px;
   position: fixed;
@@ -626,7 +626,7 @@ footer p > span .sandro-peeking {
   margin: 0;
   transition: bottom 0.3s cubic-bezier(0.42, -0.01, 0.15, 1.45) 0.4s;
 }
-footer p > span .sandro-peeking-hands {
+footer p > span.sandro .sandro-peeking-hands {
   display: block;
   width: 160px;
   position: fixed;
@@ -637,10 +637,10 @@ footer p > span .sandro-peeking-hands {
   margin: 0;
   transition: bottom 0.2s ease-out;
 }
-footer p > span:hover .sandro-peeking {
+footer p > span.sandro:hover .sandro-peeking {
   bottom: -7px;
 }
-footer p > span:hover .sandro-peeking-hands {
+footer p > span.sandro:hover .sandro-peeking-hands {
   bottom: 0px;
 }
 ul.value,
