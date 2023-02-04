@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+	<link rel="stylesheet" type="text/css" media="screen" href="prod/normalise.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="prod/style.css">
+	<link rel="stylesheet" href="https://use.typekit.net/hbh0upr.css">
+
+	<script src="https://kit.fontawesome.com/266997c388.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="prod/script.js"></script>
+
+	<link rel="mask-icon" href="assets/favicons/favicon.svg" color="#2F3E4A">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/favicons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/favicons/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="Sandro Pereira"/>
+	<meta name="msapplication-TileColor" content="##EAEEF" />
+	<meta name="msapplication-TileImage" content="assets/favicons/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="assets/favicons/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="assets/favicons/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="assets/favicons/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="assets/favicons/mstile-310x310.png" />
+
+	<title>Showpad Video Redesign — Sandro Pereira</title>
+
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<header></header>
+
+		<nav></nav>
+
+		<main>
+			<section>
+				<h4>Q2 2022</h4>
+				<h1>Showpad Video Redesign</h1>
+			</section>
+
+			<section>
+
+				<div class="info">
+					<p><b>This is a project about Showpad Video.</b> Check <a href="showpad-video-trimming.html">Showpad Video Trimming</a> and <a href="showpad-video-backgrounds.html">virtual and blurred backgrounds</a> for more of my work on this product.</p>
+				</div>
+
+				<div class="img-full showpad">
+					<img src="assets/showpad/#TODO.png" alt="#TODO">
+				</div>
+
+				<h2>Context</h2>
+
+				<p>Showpad Video was introduced to offer a way for sales people to engage with prospective buyers in a post-COVID world.</p>
+
+				<p>With it, Showpad users can record a video clip from anywhere within the Showpad platform, showcase any of the assets provided by their marketing teams, share it via any of the several sharing options, and get analytics on how their video is performing.</p>
+
+				<p>Upon joining Showpad, I had the great fortune of joining the Video team — one of the smallest teams in the company, but also one of the most agile and best performing.</p>
+
+
+			</section>
+
+			<section>
+				
+				<h2>Problem</h2>
+
+				<p>Showpad Video had initially been introduced as an MVP, built in a relatively short period of time. Though its usage numbers confirmed it provided value to our customers, the users weren’t shy about letting us know the user experience left a bit to be desired.</p>
+
+				<p>While it did miss some important features (see my <a href="showpad-video-trimming.html">other</a> <a href="showpad-video-backgrounds.html">projects</a> projects on Showpad Video), the team felt that the general product lacked polish, so we looked at fixing that.</p>
+
+				<p>We also took this opportunity to fix many of the UI bugs present in the initial release.</p>
+
+			</section>
+
+			<section>
+
+				<h2>Discovery and ideation</h2>
+
+				<p>In order to identify the areas that needed more attention, we looked first at the entire experience and mapped pain points raised by users during validation sessions.</p>
+
+				<img src="assets/showpad/#TODO.png" alt="#TODO">
+				<figcaption>Mapping of user journeys and identified problems.</figcaption>
+
+				<p>In order to reduce scope and allow for a more focused approach, we split the journey into three chunks and tackled them one by one.</p>
+
+				<p>After several rounds of iteration and validation, we arrived at a user experience that was considerably improved compared to the starting point.</p>
+
+				<p>Here's some highlights:</p>
+
+				<h3>Pre-recording</h3>
+
+				<p>We redesigned the video widget to:</p>
+
+				<ol>
+					<li>Make it easier to see different recording types available and pick the right one.</li>
+					<li>Make it easier to confirm all inputs are working fine.</li>
+					<li>Let users place the camera feed, prepare for the recording, and get acquainted with the new controls. Speaking of which...</li>
+				</ol>
+
+				<h3>During recording</h3>
+
+				<p>We redesigned the recording controls to:</p>
+
+				<ol>
+					<li>Simplified logic necessary for the controls and camera placement, which resulted in a reduction in bugs.</li>
+					<li>Add more control over your camera size.</li>
+					<li>Make the controls disappear when not needed for a more professional-looking recording.</li>
+					<li>Introduce pop-out camera functionality for full screen recording.</li>
+				</ol>
+
+			</section>
+
+			<section>
+				
+				<h2>Outcome</h2>
+
+				<p>This project brought a much improved experience to one of Showpad’s flagship features. Users reported feeling more confident with this release compared to the original — it felt much more responsive and all of the bugs that plagued the original release were fixed. </p>
+
+				<p>This boost in user satisfaction was reflected in the usage of the product, which saw a significant increase, and paved the way for additional improvements.</p>
+
+			</section>
+
+		</main>
+
+		<footer></footer>
+
+	</div>
+
+</body>
+</html>
