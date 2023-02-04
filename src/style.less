@@ -211,6 +211,13 @@ li {
 	}
 }
 
+ol {
+	li::marker {
+		color: @accent-color;
+		font-weigth: 800;
+	}
+}
+
 h1, h2, h3 {
 	font-family: eskorte-latin, serif;
 	font-weight: 600;
@@ -237,7 +244,8 @@ h2 {
 
 h3 {
 	font-size: 1.6em;
-	line-height: 1.2em
+	line-height: 1.2em;
+	margin-top: 3em;
 }
 
 h4 {
@@ -349,7 +357,7 @@ img {
 }
 
 .before-after-container {
-	max-width: 320px;
+	
 	margin: 40px 80px 20px auto;
 	position: relative;
 
@@ -379,6 +387,12 @@ img {
 
 	position: relative;
 	width: 100%;
+	text-align: center;
+	margin: 24px 0 72px 0;
+
+	&.mobile {
+		max-width: 320px;
+	}
 
 	img {
 		margin: 0;
@@ -391,7 +405,8 @@ img {
 		top: 0;
 		opacity: 0;
 		box-shadow: none;
- 
+		transition: opacity .2s ease;
+ 	}
 
 	.dot {
 		position: absolute;
@@ -404,12 +419,38 @@ img {
     width: 24px;
     line-height: 24px;
     text-align: center;
-    transition: top .5s ease, left .5s ease;
+    transition: top .5s ease, left .5s ease, opacity .2s ease;
 
+		&.hierarchy {top: 40%; left: 30%;}
+		&.progress {top: -2%; left: 50%;}
+		&.overview {top: 70%; left: 80%;}
+		&.contents {top: 30%; left: 25%;}
+		&.navigation {top: 90%; left: 64%;}
+		&.next {top: 96%; left: 97%;}
+		&.prepare {top: 38%; left: 16%;}
+		&.recording {top: 30%; left: 64%;}
+		&.draft {top: 66%; left: 52%;}
+	}
 
-		&.one {
-			top: 10%;
-			left: 20%;
+	.helper {
+		position: absolute;
+		font-size: .8em;
+		color: @pure-white;
+		background-color: @dark-grey;
+		padding: 8px 14px;
+		border-radius: 8px;
+		text-align: center;
+		bottom: -40px;
+		left: 50%;
+		transform: translateX(-50%);
+		display: inline-block;
+
+		> p {
+			margin: 0;
+
+			> i {
+				margin-right: 4px;
+			}
 		}
 	}
 
@@ -417,10 +458,34 @@ img {
 		img.before {opacity: 1;}
 
 		.dot {
-			&.one { top: 20%; left: 40%;}
+			&.hierarchy {top: 60%; left: 30%;}
+			&.progress {top: 50%; left: 50%;}
+			&.overview {top: 20%; left: 80%;}
+			&.contents {top: 40%; left: 90%;}
+			&.navigation {top: 50%; left: 60%;}
+			&.next {top: 30%; left: 80%; }
+			&.prepare {top: 31%; left: 85%;}
+			&.recording {top: 38%; left: 30%;}
+			&.draft {top: 82%; left: 19%;}
 		}
 	}
+}
 
+p.before-after {
+	span {
+		display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: @accent-color;
+    line-height: 24px;
+    text-align: center;
+    font-weight: 800;
+    color: white;
+    font-size: 12px;
+    border-radius: 20px;
+    margin-right: 10px;
+    vertical-align: text-top;
+	}
 }
 
 .fas.fork.fa-square {
@@ -955,7 +1020,7 @@ ul.improvements > li:before {content: "\f00d";}
 
 // media containers
 
-.video-container, .frame-container, .before-after-container {
+.video-container, .frame-container, .before-after-container,  {
 	position: relative;
 
 	> .helper {

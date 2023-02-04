@@ -188,6 +188,10 @@ li.disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
+ol li::marker {
+  color: #1B1BFF;
+  font-weigth: 800;
+}
 h1,
 h2,
 h3 {
@@ -216,6 +220,7 @@ h2 {
 h3 {
   font-size: 1.6em;
   line-height: 1.2em;
+  margin-top: 3em;
 }
 h4 {
   font-size: 0.8em;
@@ -341,7 +346,6 @@ img.shadow {
   background-color: #ee4653;
 }
 .before-after-container {
-  max-width: 320px;
   margin: 40px 80px 20px auto;
   position: relative;
 }
@@ -367,6 +371,11 @@ img.shadow {
 .before-after-container-new {
   position: relative;
   width: 100%;
+  text-align: center;
+  margin: 24px 0 72px 0;
+}
+.before-after-container-new.mobile {
+  max-width: 320px;
 }
 .before-after-container-new img {
   margin: 0;
@@ -378,9 +387,7 @@ img.shadow {
   top: 0;
   opacity: 0;
   box-shadow: none;
-}
-.before-after-container-new .before:hover {
-  opacity: 1;
+  transition: opacity 0.2s ease;
 }
 .before-after-container-new .dot {
   position: absolute;
@@ -393,15 +400,115 @@ img.shadow {
   width: 24px;
   line-height: 24px;
   text-align: center;
-  transition: top 0.5s ease, left 0.5s ease;
+  transition: top 0.5s ease, left 0.5s ease, opacity 0.2s ease;
 }
-.before-after-container-new .dot.one {
-  top: 10%;
-  left: 20%;
+.before-after-container-new .dot.hierarchy {
+  top: 40%;
+  left: 30%;
 }
-.before-after-container-new:hover .dot.one {
+.before-after-container-new .dot.progress {
+  top: -2%;
+  left: 50%;
+}
+.before-after-container-new .dot.overview {
+  top: 70%;
+  left: 80%;
+}
+.before-after-container-new .dot.contents {
+  top: 30%;
+  left: 25%;
+}
+.before-after-container-new .dot.navigation {
+  top: 90%;
+  left: 64%;
+}
+.before-after-container-new .dot.next {
+  top: 96%;
+  left: 97%;
+}
+.before-after-container-new .dot.prepare {
+  top: 38%;
+  left: 16%;
+}
+.before-after-container-new .dot.recording {
+  top: 30%;
+  left: 64%;
+}
+.before-after-container-new .dot.draft {
+  top: 66%;
+  left: 52%;
+}
+.before-after-container-new .helper {
+  position: absolute;
+  font-size: 0.8em;
+  color: #ffffff;
+  background-color: #2F3E4A;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-align: center;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+}
+.before-after-container-new .helper > p {
+  margin: 0;
+}
+.before-after-container-new .helper > p > i {
+  margin-right: 4px;
+}
+.before-after-container-new:hover img.before {
+  opacity: 1;
+}
+.before-after-container-new:hover .dot.hierarchy {
+  top: 60%;
+  left: 30%;
+}
+.before-after-container-new:hover .dot.progress {
+  top: 50%;
+  left: 50%;
+}
+.before-after-container-new:hover .dot.overview {
   top: 20%;
-  left: 40%;
+  left: 80%;
+}
+.before-after-container-new:hover .dot.contents {
+  top: 40%;
+  left: 90%;
+}
+.before-after-container-new:hover .dot.navigation {
+  top: 50%;
+  left: 60%;
+}
+.before-after-container-new:hover .dot.next {
+  top: 30%;
+  left: 80%;
+}
+.before-after-container-new:hover .dot.prepare {
+  top: 31%;
+  left: 85%;
+}
+.before-after-container-new:hover .dot.recording {
+  top: 38%;
+  left: 30%;
+}
+.before-after-container-new:hover .dot.draft {
+  top: 82%;
+  left: 19%;
+}
+p.before-after span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: #1B1BFF;
+  line-height: 24px;
+  text-align: center;
+  font-weight: 800;
+  color: white;
+  font-size: 12px;
+  border-radius: 20px;
+  margin-right: 10px;
+  vertical-align: text-top;
 }
 .fas.fork.fa-square {
   transform: rotate(45deg);
