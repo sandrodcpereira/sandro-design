@@ -357,33 +357,6 @@ img {
 	&.dotfetch {background-color: #ee4653;}
 }
 
-.before-after-container {
-	
-	margin: 40px 80px 20px auto;
-	position: relative;
-
-	@media (max-width: 1023px) {
-		margin: 40px 20px;
-	}
-
-	img {
-		margin: 0;
-		box-shadow: 0 14px 28px rgba(0,0,0,0.15);
-		border-radius: 20px;
-	}
-
-	.before {
-		position: absolute;
-		top: 0;
-		opacity: 0;
-		box-shadow: none;
-
-		&:hover {
-			opacity: 1;
-		}
-	}
-}
-
 .old-new-toggle {
 
 	position: relative;
@@ -1021,6 +994,10 @@ ul.improvements > li:before {content: "\f00d";}
 	> .old-new-toggle {
 		margin: 40px 80px 20px auto;
 		width: initial;
+
+		@media (max-width: 1023px) {
+			margin: 40px 20px 20px 20px;
+		}
 	}
 
 	.text {
@@ -1029,6 +1006,8 @@ ul.improvements > li:before {content: "\f00d";}
 		@media (max-width: 1023px) {
 			width: 100%;
 		}
+
+		
 	}
 
 	> img {
@@ -1051,7 +1030,7 @@ ul.improvements > li:before {content: "\f00d";}
 
 // media containers
 
-.video-container, .frame-container, .before-after-container,  {
+.video-container, .frame-container  {
 	position: relative;
 
 	> .helper {
