@@ -27,3 +27,13 @@ $(function(){
 		$(this).fadeOut();
 	});
 });
+
+
+// old new toggle click
+
+$(function(){
+	$('div.old-new-toggle').click(function(){
+		$(this).toggleClass('old');
+		
+	});
+});
