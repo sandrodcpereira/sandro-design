@@ -368,29 +368,29 @@ img.shadow {
 .before-after-container .before:hover {
   opacity: 1;
 }
-.before-after-container-new {
+.old-new-toggle {
   position: relative;
   width: 100%;
   text-align: center;
   margin: 24px 0 72px 0;
   cursor: pointer;
 }
-.before-after-container-new.mobile {
+.old-new-toggle.mobile {
   max-width: 320px;
 }
-.before-after-container-new img {
+.old-new-toggle img {
   margin: 0;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
 }
-.before-after-container-new .before {
+.old-new-toggle .before {
   position: absolute;
   top: 0;
   opacity: 0;
   box-shadow: none;
   transition: opacity 0.2s ease;
 }
-.before-after-container-new .dot {
+.old-new-toggle .dot {
   position: absolute;
   font-size: 11px;
   font-weight: 800;
@@ -403,43 +403,43 @@ img.shadow {
   text-align: center;
   transition: top 0.5s ease, left 0.5s ease, opacity 0.2s ease;
 }
-.before-after-container-new .dot.hierarchy {
+.old-new-toggle .dot.hierarchy {
   top: 40%;
   left: 30%;
 }
-.before-after-container-new .dot.progress {
+.old-new-toggle .dot.progress {
   top: -2%;
   left: 50%;
 }
-.before-after-container-new .dot.overview {
+.old-new-toggle .dot.overview {
   top: 70%;
   left: 80%;
 }
-.before-after-container-new .dot.contents {
+.old-new-toggle .dot.contents {
   top: 30%;
   left: 25%;
 }
-.before-after-container-new .dot.navigation {
+.old-new-toggle .dot.navigation {
   top: 90%;
   left: 64%;
 }
-.before-after-container-new .dot.next {
+.old-new-toggle .dot.next {
   top: 96%;
   left: 97%;
 }
-.before-after-container-new .dot.prepare {
+.old-new-toggle .dot.prepare {
   top: 38%;
   left: 16%;
 }
-.before-after-container-new .dot.recording {
+.old-new-toggle .dot.recording {
   top: 30%;
   left: 64%;
 }
-.before-after-container-new .dot.draft {
+.old-new-toggle .dot.draft {
   top: 66%;
   left: 52%;
 }
-.before-after-container-new .helper {
+.old-new-toggle .helper {
   position: absolute;
   font-size: 0.8em;
   color: #ffffff;
@@ -452,13 +452,13 @@ img.shadow {
   transform: translateX(-50%);
   display: inline-block;
 }
-.before-after-container-new .helper > p {
+.old-new-toggle .helper > p {
   display: inline-block;
   margin: 0;
   text-transform: uppercase;
   font-size: 12px;
 }
-.before-after-container-new .helper > .toggle {
+.old-new-toggle .helper > .toggle {
   display: inline-block;
   height: 10px;
   width: 16px;
@@ -467,7 +467,7 @@ img.shadow {
   margin: 0 2px;
   position: relative;
 }
-.before-after-container-new .helper > .toggle > div {
+.old-new-toggle .helper > .toggle > div {
   display: inline-block;
   height: 8px;
   width: 8px;
@@ -478,49 +478,49 @@ img.shadow {
   left: 1px;
   transition: left 0.1s ease;
 }
-.before-after-container-new.old img.before {
+.old-new-toggle.old img.before {
   opacity: 1;
 }
-.before-after-container-new.old .dot.hierarchy {
+.old-new-toggle.old .dot.hierarchy {
   top: 60%;
   left: 30%;
 }
-.before-after-container-new.old .dot.progress {
+.old-new-toggle.old .dot.progress {
   top: 50%;
   left: 50%;
 }
-.before-after-container-new.old .dot.overview {
+.old-new-toggle.old .dot.overview {
   top: 20%;
   left: 80%;
 }
-.before-after-container-new.old .dot.contents {
+.old-new-toggle.old .dot.contents {
   top: 40%;
   left: 90%;
 }
-.before-after-container-new.old .dot.navigation {
+.old-new-toggle.old .dot.navigation {
   top: 50%;
   left: 60%;
 }
-.before-after-container-new.old .dot.next {
+.old-new-toggle.old .dot.next {
   top: 30%;
   left: 80%;
 }
-.before-after-container-new.old .dot.prepare {
+.old-new-toggle.old .dot.prepare {
   top: 31%;
   left: 85%;
 }
-.before-after-container-new.old .dot.recording {
+.old-new-toggle.old .dot.recording {
   top: 38%;
   left: 30%;
 }
-.before-after-container-new.old .dot.draft {
+.old-new-toggle.old .dot.draft {
   top: 82%;
   left: 19%;
 }
-.before-after-container-new.old .toggle {
+.old-new-toggle.old .toggle {
   background-color: #638096;
 }
-.before-after-container-new.old .toggle > div {
+.old-new-toggle.old .toggle > div {
   left: 7px;
 }
 p.before-after span {
@@ -983,6 +983,10 @@ ul.improvements > li:before {
 }
 .row > .video-container > video {
   padding-top: 0px;
+}
+.row > .old-new-toggle {
+  margin: 40px 80px 20px auto;
+  width: initial;
 }
 .row .text {
   width: 460px;
