@@ -1021,7 +1021,8 @@ ul.thumbnails li a h3 > span {
   line-height: normal;
 }
 ul.thumbnails li a p {
-  margin: 0 20px 15px 20px;
+  margin: 8px 20px 20px 20px;
   font-size: 0.8em;
+  line-height: 1.6em;
   color: #2F3E4A;
 }
