@@ -364,6 +364,45 @@ img.shadow {
 .before-after-container .before:hover {
   opacity: 1;
 }
+.before-after-container-new {
+  position: relative;
+  width: 100%;
+}
+.before-after-container-new img {
+  margin: 0;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+.before-after-container-new .before {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  box-shadow: none;
+}
+.before-after-container-new .before:hover {
+  opacity: 1;
+}
+.before-after-container-new .dot {
+  position: absolute;
+  font-size: 11px;
+  font-weight: 800;
+  color: #ffffff;
+  background-color: #1B1BFF;
+  border-radius: 20px;
+  height: 24px;
+  width: 24px;
+  line-height: 24px;
+  text-align: center;
+  transition: top 0.5s ease, left 0.5s ease;
+}
+.before-after-container-new .dot.one {
+  top: 10%;
+  left: 20%;
+}
+.before-after-container-new:hover .dot.one {
+  top: 20%;
+  left: 40%;
+}
 .fas.fork.fa-square {
   transform: rotate(45deg);
   color: #0089CB;
