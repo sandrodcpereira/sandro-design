@@ -394,17 +394,27 @@ img {
     width: 24px;
     line-height: 24px;
     text-align: center;
-    transition: top .5s ease, left .5s ease, opacity .2s ease;
+    transition: top .2s ease, left .2s ease, opacity .2s ease;
 
-		&.hierarchy {top: 40%; left: 30%;}
-		&.progress {top: -2%; left: 50%;}
-		&.overview {top: 70%; left: 80%;}
-		&.contents {top: 30%; left: 25%;}
-		&.navigation {top: 90%; left: 64%;}
-		&.next {top: 96%; left: 97%;}
-		&.prepare {top: 38%; left: 16%;}
-		&.recording {top: 30%; left: 64%;}
-		&.draft {top: 66%; left: 52%;}
+    &.first 			{transition-delay: .2s}
+    &.second 			{transition-delay: .3s}
+    &.third 			{transition-delay: .4s}
+
+		&.hierarchy 	{top: 40%; left: 30%;}
+		&.progress 		{top: -2%; left: 50%;}
+		&.overview 		{top: 70%; left: 80%;}
+		&.contents 		{top: 30%; left: 25%;}
+		&.navigation 	{top: 90%; left: 64%;}
+		&.next 				{top: 96%; left: 97%;}
+		&.prepare 		{top: 38%; left: 16%;}
+		&.recording 	{top: 30%; left: 64%;}
+		&.draft 			{top: 66%; left: 52%;}
+
+		&.highlight {
+			-webkit-box-shadow: 0px 0px 0px 8px rgba(27,27,255,0.25);
+			-moz-box-shadow: 0px 0px 0px 8px rgba(27,27,255,0.25);
+			box-shadow: 0px 0px 0px 8px rgba(27,27,255,0.25);
+		}
 	}
 
 	.helper {
@@ -453,15 +463,15 @@ img {
 	&.old {
 		img.before {opacity: 1;}
 		.dot {
-			&.hierarchy {top: 60%; left: 30%;}
-			&.progress {top: 50%; left: 50%;}
-			&.overview {top: 20%; left: 80%;}
-			&.contents {top: 40%; left: 90%;}
-			&.navigation {top: 50%; left: 60%;}
-			&.next {top: 30%; left: 80%; }
-			&.prepare {top: 31%; left: 85%;}
-			&.recording {top: 38%; left: 30%;}
-			&.draft {top: 82%; left: 19%;}
+			&.hierarchy 	{top: 60%; left: 30%;}
+			&.progress 		{top: 50%; left: 50%;}
+			&.overview 		{top: 20%; left: 80%;}
+			&.contents 		{top: 40%; left: 90%;}
+			&.navigation 	{top: 50%; left: 60%;}
+			&.next 				{top: 30%; left: 80%; }
+			&.prepare 		{top: 31%; left: 85%;}
+			&.recording 	{top: 38%; left: 30%;}
+			&.draft 			{top: 82%; left: 19%;}
 		}
 		.toggle {
 			background-color: @mid-grey;
@@ -484,6 +494,14 @@ p.before-after {
     border-radius: 20px;
     margin-right: 10px;
     vertical-align: text-top;
+	}
+
+	&:hover {
+		span {
+			-webkit-box-shadow: 0px 0px 0px 8px rgba(27,27,255,0.25);
+			-moz-box-shadow: 0px 0px 0px 8px rgba(27,27,255,0.25);
+			box-shadow: 0px 0px 0px 8px rgba(27,27,255,0.25);
+		}
 	}
 }
 

@@ -378,7 +378,16 @@ img.shadow {
   width: 24px;
   line-height: 24px;
   text-align: center;
-  transition: top 0.5s ease, left 0.5s ease, opacity 0.2s ease;
+  transition: top 0.2s ease, left 0.2s ease, opacity 0.2s ease;
+}
+.old-new-toggle .dot.first {
+  transition-delay: 0.2s;
+}
+.old-new-toggle .dot.second {
+  transition-delay: 0.3s;
+}
+.old-new-toggle .dot.third {
+  transition-delay: 0.4s;
 }
 .old-new-toggle .dot.hierarchy {
   top: 40%;
@@ -415,6 +424,11 @@ img.shadow {
 .old-new-toggle .dot.draft {
   top: 66%;
   left: 52%;
+}
+.old-new-toggle .dot.highlight {
+  -webkit-box-shadow: 0px 0px 0px 8px rgba(27, 27, 255, 0.25);
+  -moz-box-shadow: 0px 0px 0px 8px rgba(27, 27, 255, 0.25);
+  box-shadow: 0px 0px 0px 8px rgba(27, 27, 255, 0.25);
 }
 .old-new-toggle .helper {
   position: absolute;
@@ -513,6 +527,11 @@ p.before-after span {
   border-radius: 20px;
   margin-right: 10px;
   vertical-align: text-top;
+}
+p.before-after:hover span {
+  -webkit-box-shadow: 0px 0px 0px 8px rgba(27, 27, 255, 0.25);
+  -moz-box-shadow: 0px 0px 0px 8px rgba(27, 27, 255, 0.25);
+  box-shadow: 0px 0px 0px 8px rgba(27, 27, 255, 0.25);
 }
 .fas.fork.fa-square {
   transform: rotate(45deg);
