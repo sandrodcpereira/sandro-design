@@ -56,3 +56,4 @@ $(function(){
 		$('.dot').removeClass('highlight');
 	});
 });
+

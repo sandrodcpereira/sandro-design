@@ -360,6 +360,9 @@ img.shadow {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
 }
+.old-new-toggle img.no-shadow {
+  box-shadow: none;
+}
 .old-new-toggle .before {
   position: absolute;
   top: 0;
@@ -424,6 +427,22 @@ img.shadow {
 .old-new-toggle .dot.draft {
   top: 66%;
   left: 52%;
+}
+.old-new-toggle .dot.type {
+  top: 36%;
+  left: 39%;
+}
+.old-new-toggle .dot.size {
+  top: 11%;
+  left: 39%;
+}
+.old-new-toggle .dot.input {
+  top: 55%;
+  left: 80.5%;
+}
+.old-new-toggle .dot.hidden {
+  top: 79%;
+  left: 79%;
 }
 .old-new-toggle .dot.highlight {
   -webkit-box-shadow: 0px 0px 0px 8px rgba(27, 27, 255, 0.25);
@@ -507,6 +526,22 @@ img.shadow {
 .old-new-toggle.old .dot.draft {
   top: 82%;
   left: 19%;
+}
+.old-new-toggle.old .dot.type {
+  top: 37%;
+  left: 14%;
+}
+.old-new-toggle.old .dot.size {
+  top: 27%;
+  left: 37%;
+}
+.old-new-toggle.old .dot.input {
+  top: 74%;
+  left: 80%;
+}
+.old-new-toggle.old .dot.hidden {
+  top: 78%;
+  left: 78%;
 }
 .old-new-toggle.old .toggle {
   background-color: #638096;
@@ -943,10 +978,12 @@ ul.improvements > li:before {
 .adclick .img-full {
   background-color: #ffffff;
 }
-.dotfetch .video-container {
+.dotfetch .video-container,
+.showpad .video-container {
   margin: 40px auto 20px auto;
 }
-.dotfetch .video-container video {
+.dotfetch .video-container video,
+.showpad .video-container video {
   padding-top: 0;
 }
 .about .img-full {

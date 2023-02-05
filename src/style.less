@@ -373,6 +373,10 @@ img {
 		margin: 0;
 		box-shadow: 0 14px 28px rgba(0,0,0,0.15);
 		border-radius: 8px;
+
+		&.no-shadow {
+			box-shadow: none;
+		}
 	}
 
 	.before {
@@ -409,6 +413,10 @@ img {
 		&.prepare 		{top: 38%; left: 16%;}
 		&.recording 	{top: 30%; left: 64%;}
 		&.draft 			{top: 66%; left: 52%;}
+		&.type 				{top: 36%; left: 39%;}
+		&.size 				{top: 11%; left: 39%;}
+		&.input 			{top: 55%; left: 80.5%;}
+		&.hidden 			{top: 79%; left: 79%;}
 
 		&.highlight {
 			-webkit-box-shadow: 0px 0px 0px 8px rgba(27,27,255,0.25);
@@ -472,6 +480,10 @@ img {
 			&.prepare 		{top: 31%; left: 85%;}
 			&.recording 	{top: 38%; left: 30%;}
 			&.draft 			{top: 82%; left: 19%;}
+			&.type 				{top: 37%; left: 14%;}
+			&.size 				{top: 27%; left: 37%;}
+			&.input 			{top: 74%; left: 80%;}
+			&.hidden 			{top: 78%; left: 78%;}
 		}
 		.toggle {
 			background-color: @mid-grey;
@@ -964,7 +976,7 @@ ul.improvements > li:before {content: "\f00d";}
 .logos .img-full {background-color: #ffffff;}
 .adclick .img-full {background-color: #ffffff;}
 
-.dotfetch {
+.dotfetch, .showpad {
 	.video-container {
 		margin: 40px auto 20px auto;
 

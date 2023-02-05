@@ -39,7 +39,7 @@
 	<title>Showpad Video Redesign — Sandro Pereira</title>
 
 </head>
-<body>
+<body class="showpad">
 
 	<div class="wrapper">
 
@@ -105,34 +105,94 @@
 
 				<p>After several rounds of iteration and validation, we arrived at a user experience that was considerably improved compared to the starting point.</p>
 
-				<p>Here's some highlights:</p>
+				<p>Since Showpad Video is mostly aimed at sharing content that sits inside of Showpad, its interface consists of two main elements that sit on top of the main interface.</p>
 
-				<h3>Pre-recording</h3>
+				<img src="assets/showpad/video-complete.gif" alt="">
+				<figcaption>The set-up interface and the recording controls.</figcaption>
 
-				<p>We redesigned the video widget to:</p>
+				<h3>Recording set-up</h3>
 
-				<ol>
-					<li>Make it easier to see different recording types available and pick the right one.</li>
-					<li>Make it easier to confirm all inputs are working fine.</li>
-					<li>Let users place the camera feed, prepare for the recording, and get acquainted with the new controls. Speaking of which...</li>
-				</ol>
+				<p>This is where you set up your recording. You can pick between a few different recording types depending on the purpose of your video, select your input devices and make sure they're working, and define a few other settings.</p>
 
-				<h3>During recording</h3>
+				<p>The new interface, among other changes, aimed to:</p>
 
-				<p>We redesigned the recording controls to:</p>
+				<div class="row">
 
-				<ol>
-					<li>Simplified logic necessary for the controls and camera placement, which resulted in a reduction in bugs.</li>
-					<li>Add more control over your camera size.</li>
-					<li>Make the controls disappear when not needed for a more professional-looking recording.</li>
-					<li>Introduce pop-out camera functionality for full screen recording.</li>
-				</ol>
+					<div class="old-new-toggle" style="max-width: 400px;">
+						<img src="assets/showpad/video-controls-old.png" class="no-shadow before" alt="">
+						<img src="assets/showpad/video-controls-new.png" class="no-shadow" alt="">
+						<div class="dot first type">1</div>
+					<div class="dot second input">2</div>
+						<div class="helper">
+							<p>New</p>
+							<div class="toggle">
+								<div></div>
+							</div>
+							<p>Old</p>
+						</div>
+					</div>
+
+					<div class="text">
+						<p class="before-after type"><span>1</span><b>Expose all recording types available</b> without forcing the user to open a menu.</p>
+
+						<p class="before-after input"><span>2</span><b>Make it easier to see if your input devices are working as expected</b> and offer some guidance if they're not.</p>
+
+					</div>
+				</div>
+
+				<h3>Recording controls</h3>
+
+				<p>This is where you can see yourself, select the right size for your self-view and position it in the right place on the screen, and then control your capture once you start recording.</p>
+
+				<div class="old-new-toggle">
+					<img src="assets/showpad/recording-controls-old.png" class="no-shadow before" alt="">
+					<img src="assets/showpad/recording-controls-new.png" class="no-shadow" alt="">
+					<div class="dot first size">1</div>
+					<div class="dot second hidden">2</div>
+					<div class="helper">
+						<p>New</p>
+						<div class="toggle">
+							<div></div>
+						</div>
+						<p>Old</p>
+					</div>
+				</div>
+
+				<p>Some of the highlights of the changes introduced included:</p>
+
+
+				<p class="before-after size"><span>1</span>The ability to control the self-view video size.</p>
+
+				<p class="before-after hidden"><span>2</span>A two stepped approach to the controls in order to make them disappear — for a more professional-looking recording — without hurting discoverability.</p>
+
+				<h3>Other details</h3>
+
+				
+				<img src="assets/showpad/video-details.png" alt="">
+				<figcaption>Some edge cases taken into account during the design process.</figcaption>
+
+				<p>Many edge cases and specific scenarios were taken into account in order to help users recover in the event of an error or in the even of a non-standard user journey.</p>
+				
 
 			</section>
 
 			<section>
 				
 				<h2>Outcome</h2>
+
+				<div class="video-container">
+					<div class="helper">
+						<p><i class="fas fa-video"></i> Video</p>
+					</div>
+
+					<div class="play-trigger"><i class="fas fa-play"></i></div>
+
+					<video class="video" muted poster="">
+					    <source type="video/mp4" src="assets/showpad/video-demo.mp4">
+					   	Sorry, your browser does not support this video.
+					</video>
+				</div>
+				<figcaption>A quick demo recorded from the Showpad product.</figcaption>
 
 				<p>This project brought a much improved experience to one of Showpad’s flagship features. Users reported feeling more confident with this release compared to the original — it felt much more responsive and all of the bugs that plagued the original release were fixed. </p>
 
