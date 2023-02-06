@@ -1,6 +1,3 @@
-
-
-
 // layout component loader
 
 $(function(){

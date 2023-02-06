@@ -98,11 +98,52 @@
 
 				<h3>Ease of use</h3>
 
+				<p>In order to make trimming a video as easy as possible, we made sure to only include elements that were strictly necessary to the job at hand: the video itself, a timeline, and a handful of actions.</p>
+
+				<img src="assets/showpad/trimming-ui.png" alt="">
+				<figcaption>The video trimming interface.</figcaption>
+
 				<h3>Accuracy</h3>
+
+				<p>When it comes to editing video, every fraction of a second matters. Dragging a handle with your cursor can land you on the general time you want your video to start from or stop at, but you need to be able to make finer adjustments to get the timings just right.</p>
+
+				<p>In order to allow for this, we introduced the nudging controls: whenever you select a handle, you're then able to see the exact time, preview it, and then use either the buttons on the interface or the arrow keys on your keyboard to make finer adjustments.</p>
+
+				<img src="assets/showpad/trimming-nudge.png" alt="">
+				<figcaption>The nudging controls.</figcaption>
+
+				<h3>Keyboard shortcuts</h3>
+
+				<p>We wanted to make sure power users could also make use of these features in a way that made them work faster.</p>
+
+				<p>This means every action in the UI has a keyboard shortcut, and there's even modifiers that you can use, like holding shift when nudging to jump a whole second instead of a fraction of a second.</p>
+
+				<img src="assets/showpad/trimming-shortcuts.png" alt="">
+				<figcaption>The list of shortcuts available for video trimming.</figcaption>
+
+				<h3>Edge cases</h3>
+
+				<p>In this project, we had to take many edge cases into account. Like the fact that dealing with media files of variable lenght on a fixed size timeline can introduce some issues.</p>
+
+				<p>While we didn't have the time to implement all ideas, we did make sure to cover as many of those cases as possible, taking into account the likelihood of them ocurring in real life usage.</p>
+
+				<img src="assets/showpad/trimming-edge.png" alt="">
+				<figcaption>Some of the forbidden actions that could break the feature.</figcaption>
 
 				<h3>First time experience</h3>
 
 				<p>We went through several rounds of refinement and validation. Because this was a brand new piece of functionality, we created a guide to help teach users how to make the most of it. Check the features and guide for yourself below:</p>
+
+				<div class="frame-container web">
+					<div class="helper">
+						<p><i class="fas fa-hand-pointer"></i> Prototype</p>
+					</div>
+
+					<iframe style="border: none;" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FJj5QU0X6S8CNSTCMf8M09n%2FVideo-Trimming-Guide%3Fnode-id%3D1%253A5376%26scaling%3Dscale-down-width%26page-id%3D0%253A1%26starting-point-node-id%3D1%253A5376%26hide-ui%3D1" allowfullscreen></iframe>
+				</div>
+				<figcaption>Make sure to let the animations load to get the full experience!</figcaption>
+
+				
 
 			</section>
 
