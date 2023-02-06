@@ -1,6 +1,3 @@
-
-
-
 // layout component loader
 
 $(function(){
@@ -27,3 +24,33 @@ $(function(){
 		$(this).fadeOut();
 	});
 });
+
+
+// old vs. new toggle click
+
+$(function(){
+	$('div.old-new-toggle').click(function(){
+		$(this).toggleClass('old');
+		
+	});
+});
+
+
+// old vs. new number highlight
+
+document.addEventListener("mouseover", function(event) {
+  let target = event.target;
+  if (target.classList.contains("before-after")) {
+    let classes = target.className.split(" ");
+    let lastClass = classes[classes.length - 1];
+    let dot = document.querySelector(`.dot.${lastClass}`);
+    dot.classList.add("highlight");
+  }
+});
+
+$(function(){
+	$('p.before-after').mouseleave(function(){
+		$('.dot').removeClass('highlight');
+	});
+});
+

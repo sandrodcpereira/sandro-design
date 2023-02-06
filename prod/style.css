@@ -188,6 +188,10 @@ li.disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
+ol li::marker {
+  color: #1B1BFF;
+  font-weigth: 800;
+}
 h1,
 h2,
 h3 {
@@ -216,6 +220,7 @@ h2 {
 h3 {
   font-size: 1.6em;
   line-height: 1.2em;
+  margin-top: 3em;
 }
 h4 {
   font-size: 0.8em;
@@ -328,6 +333,9 @@ img.shadow {
 .img-full.integrate {
   background-color: #213A60;
 }
+.img-full.showpad {
+  background-color: #2D2E83;
+}
 .img-full.smarkio {
   background-color: #3B84C9;
 }
@@ -337,29 +345,228 @@ img.shadow {
 .img-full.dotfetch {
   background-color: #ee4653;
 }
-.before-after-container {
-  max-width: 320px;
-  margin: 40px 80px 20px auto;
+.old-new-toggle {
   position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 24px 0 72px 0;
+  cursor: pointer;
 }
-@media (max-width: 1023px) {
-  .before-after-container {
-    margin: 40px 20px;
-  }
+.old-new-toggle.mobile {
+  max-width: 320px;
 }
-.before-after-container img {
+.old-new-toggle img {
   margin: 0;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
+  border-radius: 8px;
 }
-.before-after-container .before {
+.old-new-toggle img.no-shadow {
+  box-shadow: none;
+}
+.old-new-toggle .before {
   position: absolute;
   top: 0;
   opacity: 0;
   box-shadow: none;
+  transition: opacity 0.2s ease;
 }
-.before-after-container .before:hover {
+.old-new-toggle .dot {
+  position: absolute;
+  font-size: 11px;
+  font-weight: 800;
+  color: #ffffff;
+  background-color: #1B1BFF;
+  border-radius: 20px;
+  height: 24px;
+  width: 24px;
+  line-height: 24px;
+  text-align: center;
+  transition: top 0.2s ease, left 0.2s ease, opacity 0.2s ease;
+}
+.old-new-toggle .dot.first {
+  transition-delay: 0.2s;
+}
+.old-new-toggle .dot.second {
+  transition-delay: 0.3s;
+}
+.old-new-toggle .dot.third {
+  transition-delay: 0.4s;
+}
+.old-new-toggle .dot.hierarchy {
+  top: 40%;
+  left: 30%;
+}
+.old-new-toggle .dot.progress {
+  top: -2%;
+  left: 50%;
+}
+.old-new-toggle .dot.overview {
+  top: 70%;
+  left: 80%;
+}
+.old-new-toggle .dot.contents {
+  top: 30%;
+  left: 25%;
+}
+.old-new-toggle .dot.navigation {
+  top: 90%;
+  left: 64%;
+}
+.old-new-toggle .dot.next {
+  top: 96%;
+  left: 97%;
+}
+.old-new-toggle .dot.prepare {
+  top: 38%;
+  left: 16%;
+}
+.old-new-toggle .dot.recording {
+  top: 30%;
+  left: 64%;
+}
+.old-new-toggle .dot.draft {
+  top: 66%;
+  left: 52%;
+}
+.old-new-toggle .dot.type {
+  top: 36%;
+  left: 39%;
+}
+.old-new-toggle .dot.size {
+  top: 11%;
+  left: 39%;
+}
+.old-new-toggle .dot.input {
+  top: 55%;
+  left: 80.5%;
+}
+.old-new-toggle .dot.hidden {
+  top: 79%;
+  left: 79%;
+}
+.old-new-toggle .dot.highlight {
+  -webkit-box-shadow: 0px 0px 0px 8px rgba(27, 27, 255, 0.25);
+  -moz-box-shadow: 0px 0px 0px 8px rgba(27, 27, 255, 0.25);
+  box-shadow: 0px 0px 0px 8px rgba(27, 27, 255, 0.25);
+}
+.old-new-toggle .helper {
+  position: absolute;
+  font-size: 0.8em;
+  color: #ffffff;
+  background-color: #2F3E4A;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-align: center;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+}
+.old-new-toggle .helper > p {
+  display: inline-block;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.old-new-toggle .helper > .toggle {
+  display: inline-block;
+  height: 10px;
+  width: 16px;
+  border-radius: 8px;
+  background-color: #1FAD72;
+  margin: 0 2px;
+  position: relative;
+}
+.old-new-toggle .helper > .toggle > div {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  border-radius: 8px;
+  background-color: white;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: left 0.1s ease;
+}
+.old-new-toggle.old img.before {
   opacity: 1;
+}
+.old-new-toggle.old .dot.hierarchy {
+  top: 60%;
+  left: 30%;
+}
+.old-new-toggle.old .dot.progress {
+  top: 50%;
+  left: 50%;
+}
+.old-new-toggle.old .dot.overview {
+  top: 20%;
+  left: 80%;
+}
+.old-new-toggle.old .dot.contents {
+  top: 40%;
+  left: 90%;
+}
+.old-new-toggle.old .dot.navigation {
+  top: 50%;
+  left: 60%;
+}
+.old-new-toggle.old .dot.next {
+  top: 30%;
+  left: 80%;
+}
+.old-new-toggle.old .dot.prepare {
+  top: 31%;
+  left: 85%;
+}
+.old-new-toggle.old .dot.recording {
+  top: 38%;
+  left: 30%;
+}
+.old-new-toggle.old .dot.draft {
+  top: 82%;
+  left: 19%;
+}
+.old-new-toggle.old .dot.type {
+  top: 37%;
+  left: 14%;
+}
+.old-new-toggle.old .dot.size {
+  top: 27%;
+  left: 37%;
+}
+.old-new-toggle.old .dot.input {
+  top: 74%;
+  left: 80%;
+}
+.old-new-toggle.old .dot.hidden {
+  top: 78%;
+  left: 78%;
+}
+.old-new-toggle.old .toggle {
+  background-color: #638096;
+}
+.old-new-toggle.old .toggle > div {
+  left: 7px;
+}
+p.before-after span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: #1B1BFF;
+  line-height: 24px;
+  text-align: center;
+  font-weight: 800;
+  color: white;
+  font-size: 12px;
+  border-radius: 20px;
+  margin-right: 10px;
+  vertical-align: text-top;
+}
+p.before-after:hover span {
+  -webkit-box-shadow: 0px 0px 0px 8px rgba(27, 27, 255, 0.25);
+  -moz-box-shadow: 0px 0px 0px 8px rgba(27, 27, 255, 0.25);
+  box-shadow: 0px 0px 0px 8px rgba(27, 27, 255, 0.25);
 }
 .fas.fork.fa-square {
   transform: rotate(45deg);
@@ -771,10 +978,12 @@ ul.improvements > li:before {
 .adclick .img-full {
   background-color: #ffffff;
 }
-.dotfetch .video-container {
+.dotfetch .video-container,
+.showpad .video-container {
   margin: 40px auto 20px auto;
 }
-.dotfetch .video-container video {
+.dotfetch .video-container video,
+.showpad .video-container video {
   padding-top: 0;
 }
 .about .img-full {
@@ -808,6 +1017,15 @@ ul.improvements > li:before {
 .row > .video-container > video {
   padding-top: 0px;
 }
+.row > .old-new-toggle {
+  margin: 40px 80px 20px auto;
+  width: initial;
+}
+@media (max-width: 1023px) {
+  .row > .old-new-toggle {
+    margin: 40px 20px 20px 20px;
+  }
+}
 .row .text {
   width: 460px;
 }
@@ -835,13 +1053,11 @@ ul.improvements > li:before {
   }
 }
 .video-container,
-.frame-container,
-.before-after-container {
+.frame-container {
   position: relative;
 }
 .video-container > .helper,
-.frame-container > .helper,
-.before-after-container > .helper {
+.frame-container > .helper {
   position: absolute;
   top: -18px;
   left: -18px;
@@ -852,18 +1068,15 @@ ul.improvements > li:before {
   border-radius: 8px;
 }
 .video-container > .helper > p,
-.frame-container > .helper > p,
-.before-after-container > .helper > p {
+.frame-container > .helper > p {
   margin: 0;
 }
 .video-container > .helper > p > i,
-.frame-container > .helper > p > i,
-.before-after-container > .helper > p > i {
+.frame-container > .helper > p > i {
   margin-right: 4px;
 }
 .video-container > .play-trigger,
-.frame-container > .play-trigger,
-.before-after-container > .play-trigger {
+.frame-container > .play-trigger {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1021,7 +1234,8 @@ ul.thumbnails li a h3 > span {
   line-height: normal;
 }
 ul.thumbnails li a p {
-  margin: 0 20px 15px 20px;
+  margin: 8px 20px 20px 20px;
   font-size: 0.8em;
+  line-height: 1.6em;
   color: #2F3E4A;
 }
