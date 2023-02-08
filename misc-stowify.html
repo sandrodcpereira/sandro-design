@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+	<link rel="stylesheet" type="text/css" media="screen" href="prod/normalise.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="prod/style.css">
+	<link rel="stylesheet" href="https://use.typekit.net/hbh0upr.css">
+
+	<script src="https://kit.fontawesome.com/266997c388.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="prod/script.js"></script>
+
+	<link rel="mask-icon" href="assets/favicons/favicon.svg" color="#2F3E4A">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/favicons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/favicons/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="Sandro Pereira"/>
+	<meta name="msapplication-TileColor" content="##EAEEF" />
+	<meta name="msapplication-TileImage" content="assets/favicons/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="assets/favicons/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="assets/favicons/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="assets/favicons/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="assets/favicons/mstile-310x310.png" />
+
+	<title>Stowify — Sandro Pereira</title>
+
+</head>
+<body class="stowify">
+
+	<div class="wrapper">
+
+		<header></header>
+
+		<nav></nav>
+
+		<main>
+			<section>
+				<h4>Q1 2023</h4>
+				<h1>Stowify Brand</h1>
+			</section>
+
+			<section>
+
+				<div class="img-full" style="background-color: #FF900E; padding: 40px 0;">
+					
+					<div class="animated-image logo"></div>
+
+					<div class="button-container">
+						<div class="button wink">Wink</div>
+						<div class="button oops">Frown</div>
+					</div>
+
+					<div class="animated-image glass"></div>
+
+					<div class="button-container">
+						<div class="button break">Break</div>
+						<div class="button disabled fix">Fix</div>
+					</div>
+
+					<div class="animated-image spinner"></div>
+
+					<div class="button-container">
+						<div class="button spin">Spin</div>
+					</div>
+
+				</div>
+
+				
+
+			</section>
+		</main>
+
+		<footer></footer>
+
+	</div>
+
+	<script>
+		
+$(function(){
+	$('.button.wink').click(function(){
+		$('.button.wink').addClass('disabled');
+    $('.animated-image.logo').addClass('wink');
+    setTimeout(function() { 
+        $('.button.wink').removeClass('disabled');
+        $('.animated-image.logo').removeClass('wink');
+    }, 1000);
+	});
+});
+
+$(function(){
+	$('.button.oops').click(function(){
+		$('.button.oops').addClass('disabled');
+    $('.animated-image.logo').addClass('oops');
+    setTimeout(function() { 
+        $('.animated-image.logo').removeClass('oops');
+    }, 5000);
+    setTimeout(function() { 
+    	$('.button.oops').removeClass('disabled');
+        $('.animated-image.logo').addClass('back');
+        setTimeout(function() { 
+	        $('.animated-image.logo').removeClass('back');
+	    }, 300);
+    }, 4000);
+	});
+});
+
+$(function(){
+	$('.button.spin').click(function(){
+		$('.button.spin').addClass('disabled');
+    $('.animated-image.spinner').addClass('spin');
+    setTimeout(function() { 
+        $('.button.spin').removeClass('disabled');
+        $('.animated-image.spinner').removeClass('spin');
+    }, 800);
+	});
+});
+
+$(function(){
+	$('.button.break').click(function(){
+		$('.button.break').addClass('disabled');
+    $('.animated-image.glass').addClass('break');
+    $('.button.fix').removeClass('disabled');
+    });
+});
+
+$(function(){
+	$('.button.fix').click(function(){
+		$('.button.fix').addClass('disabled');
+    $('.animated-image.glass').addClass('fix');
+    $('.button.break').removeClass('disabled');
+    });
+});
+
+
+
+
+
+	</script>
+</body>
+</html>

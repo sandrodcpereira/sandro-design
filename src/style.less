@@ -1157,19 +1157,16 @@ ul.improvements > li:before {content: "\f00d";}
 		background-size: contain;
 		background-repeat: no-repeat;
 
-		&[name="prototypeSyncingEvents"] {background-image: url('../assets/akkroo/preview-sync.png');}
+		&[name="prototypeSyncingEvents"] 	{background-image: url('../assets/akkroo/preview-sync.png');}
 		&[name="prototypeRecordStarring"] {background-image: url('../assets/akkroo/preview-sync.png');}
-		&[name="prototypeHighFive"] {background-image: url('../assets/akkroo/preview-highfive.png');}
-		&[name="prototypeOnboarding"] {background-image: url('../assets/akkroo/preview-onboarding.png');}
-		&[name="prototypeUserFeedback"] {background-image: url('../assets/akkroo/preview-feedback.png');}
-		&[name="prototypeBadgeScanOld"] {background-image: url('../assets/akkroo/preview-badge-old.png');}
-		&[name="prototypeBadgeScanNew"] {background-image: url('../assets/akkroo/preview-badge-new.png');}
-		&[name="prototypeHedgehog"] {background-image: url('../assets/integrate/preview-hedgehog.png');}
+		&[name="prototypeHighFive"] 			{background-image: url('../assets/akkroo/preview-highfive.png');}
+		&[name="prototypeOnboarding"] 		{background-image: url('../assets/akkroo/preview-onboarding.png');}
+		&[name="prototypeUserFeedback"] 	{background-image: url('../assets/akkroo/preview-feedback.png');}
+		&[name="prototypeBadgeScanOld"] 	{background-image: url('../assets/akkroo/preview-badge-old.png');}
+		&[name="prototypeBadgeScanNew"] 	{background-image: url('../assets/akkroo/preview-badge-new.png');}
+		&[name="prototypeHedgehog"] 			{background-image: url('../assets/integrate/preview-hedgehog.png');}
 	}
 }
-
-
-// test thumbnails
 
 ul.thumbnails {
 	padding: 0;
@@ -1255,3 +1252,93 @@ ul.thumbnails {
 		}
 	}
 }
+
+
+// stowify animations
+
+.animated-image {
+	display: block;
+	height: 256px;
+	width: 256px;
+	margin: 32px auto;
+	background-position: 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &.logo 		{background-image: url('../assets/stowify/frames-logo.png');}
+  &.glass 		{background-image: url('../assets/stowify/frames-glass.png');}
+  &.spinner 	{background-image: url('../assets/stowify/frames-spinner.png');}
+}
+
+.button-container{
+	margin-bottom: 80px;
+	.button {
+		display: inline-block;
+		width: 88px;
+		border: 2px solid #090959;
+		padding: 8px 16px;
+		border-radius: 8px;
+		color: #090959;
+		cursor: pointer;
+		margin: 0 4px;
+
+		&.disabled {
+			cursor: not-allowed;
+			opacity: .4;
+			pointer-events: none;
+		}
+	}
+}
+
+.animated-image.logo.wink {animation: playWink 0.8s steps(20) 1 forwards;}
+.animated-image.logo.oops {animation: playOops 1s steps(21) 1 forwards;}
+.animated-image.logo.back {animation: playBack .3s steps(4) 1 forwards;}
+.animated-image.glass.break {animation: playBreak .5s steps(5) 1 forwards;}
+.animated-image.glass.fix {animation: playFix .5s steps(5) 1 forwards;}
+.animated-image.spinner.spin {animation: playSpin 0.8s steps(20) 1 forwards;}
+
+@keyframes playWink {
+  from {background-position-x: 0px;}
+  to {background-position-x: -5120px;}
+}
+
+@keyframes playOops {
+  from {background-position-x: -5632px;}
+  to {background-position-x: -11008px;}
+}
+
+@keyframes playBack {
+  from {background-position-x: -11008px;}
+  to {background-position-x: -12032px;}
+}
+
+@keyframes playSpin {
+  from {background-position-x: 0px;}
+  to {background-position-x: -5120px;}
+}
+
+@keyframes playBreak {
+  from {background-position-x: 0px;}
+  to {background-position-x: -1280px;}
+}
+
+@keyframes playFix {
+  from {background-position-x: -1280px;}
+  to {background-position-x: 0px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
