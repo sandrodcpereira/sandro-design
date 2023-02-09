@@ -1247,6 +1247,7 @@ ul.thumbnails li a p {
   background-position: 0 0;
   background-size: cover;
   background-repeat: no-repeat;
+  transform: scale(0.8);
 }
 .animated-image.logo {
   background-image: url('../assets/stowify/frames-logo.png');
@@ -1263,7 +1264,7 @@ ul.thumbnails li a p {
 .button-container .button {
   display: inline-block;
   width: 88px;
-  border: 2px solid #090959;
+  background-color: #EF8202;
   padding: 8px 16px;
   border-radius: 8px;
   color: #090959;
