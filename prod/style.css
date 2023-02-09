@@ -1276,18 +1276,18 @@ ul.thumbnails li a p {
   pointer-events: none;
 }
 .animated-image.logo.wink {
-  animation: playWink 0.8s steps(20) 1 forwards;
+  animation: playWink 0.8s steps(20) 1;
 }
 .animated-image.logo.oops {
   animation: playOops 1s steps(21) 1 forwards;
 }
-.animated-image.logo.back {
+.animated-image.logo.oops.back {
   animation: playBack 0.3s steps(4) 1 forwards;
 }
 .animated-image.glass.break {
   animation: playBreak 0.5s steps(5) 1 forwards;
 }
-.animated-image.glass.fix {
+.animated-image.glass:not(.break) {
   animation: playFix 0.5s steps(5) 1 forwards;
 }
 .animated-image.spinner.spin {

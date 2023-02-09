@@ -55,6 +55,10 @@
 
 			<section>
 
+				<p>I don't do much branding nowadays — it's not really my forte — but when I do I make sure there's something special about it.</p>
+
+				<p>How does an interactive brand sound?</p>
+
 				<div class="img-full" style="background-color: #FF900E; padding: 40px 0;">
 					
 					<div class="animated-image logo"></div>
@@ -68,7 +72,6 @@
 
 					<div class="button-container">
 						<div class="button break">Break</div>
-						<div class="button disabled fix">Fix</div>
 					</div>
 
 					<div class="animated-image spinner"></div>
@@ -89,65 +92,63 @@
 	</div>
 
 	<script>
-		
-$(function(){
-	$('.button.wink').click(function(){
-		$('.button.wink').addClass('disabled');
-    $('.animated-image.logo').addClass('wink');
-    setTimeout(function() { 
-        $('.button.wink').removeClass('disabled');
-        $('.animated-image.logo').removeClass('wink');
-    }, 1000);
-	});
-});
 
-$(function(){
-	$('.button.oops').click(function(){
-		$('.button.oops').addClass('disabled');
-    $('.animated-image.logo').addClass('oops');
-    setTimeout(function() { 
-        $('.animated-image.logo').removeClass('oops');
-    }, 5000);
-    setTimeout(function() { 
-    	$('.button.oops').removeClass('disabled');
-        $('.animated-image.logo').addClass('back');
-        setTimeout(function() { 
-	        $('.animated-image.logo').removeClass('back');
-	    }, 300);
-    }, 4000);
-	});
-});
+		document.querySelector('.button.oops').addEventListener('click', function() {
+		  const animationElement = document.querySelector('.animated-image.logo');
+		  const animationTrigger = document.querySelector('.button.oops');
 
-$(function(){
-	$('.button.spin').click(function(){
-		$('.button.spin').addClass('disabled');
-    $('.animated-image.spinner').addClass('spin');
-    setTimeout(function() { 
-        $('.button.spin').removeClass('disabled');
-        $('.animated-image.spinner').removeClass('spin');
-    }, 800);
-	});
-});
+		  animationElement.classList.add('oops');
+		  animationTrigger.classList.add('disabled');
 
-$(function(){
-	$('.button.break').click(function(){
-		$('.button.break').addClass('disabled');
-    $('.animated-image.glass').addClass('break');
-    $('.button.fix').removeClass('disabled');
-    });
-});
+		  setTimeout(function() {
+		    animationElement.classList.add('back');
+		  }, 3000);
 
-$(function(){
-	$('.button.fix').click(function(){
-		$('.button.fix').addClass('disabled');
-    $('.animated-image.glass').addClass('fix');
-    $('.button.break').removeClass('disabled');
-    });
-});
+		  setTimeout(function() {
+		    animationElement.classList.remove('oops');
+		    animationElement.classList.remove('back');
+		    animationTrigger.classList.remove('disabled');
+		  }, 3300);
+		});
+				
+		$(function(){
+			const $winkButton = $('.button.wink');
+			const $logo = $('.animated-image.logo');
 
+			$winkButton.click(function(){
+				$winkButton.addClass('disabled');
+				$logo.addClass('wink');
+				setTimeout(function() { 
+					$winkButton.removeClass('disabled');
+					$logo.removeClass('wink');
+				}, 1000);
+			});
+		});
 
+		$(function(){
+			const $spinButton = $('.button.spin');
+			const $spinner = $('.animated-image.spinner');
 
+			$spinButton.click(function(){
+				$spinButton.addClass('disabled');
+				$spinner.addClass('spin');
+				setTimeout(function() { 
+					$spinButton.removeClass('disabled');
+					$spinner.removeClass('spin');
+				}, 800);
+			});
+		});
 
+		$(function(){
+			$('.button.break').click(function(){
+		    $('.animated-image.glass').toggleClass('break');
+		    	if ($(this).text() === 'Fix') {
+			    	$(this).text('Break');
+				} else {
+			    	$(this).text('Fix');
+				}
+		    });
+		});
 
 	</script>
 </body>

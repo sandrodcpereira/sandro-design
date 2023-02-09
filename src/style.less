@@ -1290,11 +1290,11 @@ ul.thumbnails {
 	}
 }
 
-.animated-image.logo.wink {animation: playWink 0.8s steps(20) 1 forwards;}
+.animated-image.logo.wink {animation: playWink 0.8s steps(20) 1;}
 .animated-image.logo.oops {animation: playOops 1s steps(21) 1 forwards;}
-.animated-image.logo.back {animation: playBack .3s steps(4) 1 forwards;}
+.animated-image.logo.oops.back {animation: playBack .3s steps(4) 1 forwards;}
 .animated-image.glass.break {animation: playBreak .5s steps(5) 1 forwards;}
-.animated-image.glass.fix {animation: playFix .5s steps(5) 1 forwards;}
+.animated-image.glass:not(.break) {animation: playFix .5s steps(5) 1 forwards;}
 .animated-image.spinner.spin {animation: playSpin 0.8s steps(20) 1 forwards;}
 
 @keyframes playWink {
@@ -1326,6 +1326,7 @@ ul.thumbnails {
   from {background-position-x: -1280px;}
   to {background-position-x: 0px;}
 }
+
 
 
 
