@@ -66,7 +66,7 @@
 					
 					<div class="animated-image logo"></div>
 
-					<div class="button-container">
+					<div class="button-container logo">
 						<div class="button wink">Wink</div>
 						<div class="button oops">Frown</div>
 					</div>
@@ -97,11 +97,13 @@
 	<script>
 
 		document.querySelector('.button.oops').addEventListener('click', function() {
-		  const animationElement = document.querySelector('.animated-image.logo');
 		  const animationTrigger = document.querySelector('.button.oops');
+		  const animationElement = document.querySelector('.animated-image.logo');
+		  const animationControls = document.querySelector('.button-container.logo');
+		  
 
 		  animationElement.classList.add('oops');
-		  animationTrigger.classList.add('disabled');
+		  animationControls.classList.add('disabled');
 
 		  setTimeout(function() {
 		    animationElement.classList.add('back');
@@ -110,19 +112,20 @@
 		  setTimeout(function() {
 		    animationElement.classList.remove('oops');
 		    animationElement.classList.remove('back');
-		    animationTrigger.classList.remove('disabled');
-		  }, 2300);
+		    animationControls.classList.remove('disabled');
+		  }, 2100);
 		});
 				
 		$(function(){
 			const $winkButton = $('.button.wink');
 			const $logo = $('.animated-image.logo');
+			const $controls = $('.button-container.logo')
 
 			$winkButton.click(function(){
-				$winkButton.addClass('disabled');
+				$controls.addClass('disabled');
 				$logo.addClass('wink');
 				setTimeout(function() { 
-					$winkButton.removeClass('disabled');
+					$controls.removeClass('disabled');
 					$logo.removeClass('wink');
 				}, 1000);
 			});
