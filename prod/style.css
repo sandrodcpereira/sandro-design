@@ -1286,7 +1286,7 @@ ul.thumbnails li a p {
   animation: playOops 0.7s steps(21) 1 forwards;
 }
 .animated-image.logo.oops.back {
-  animation: playBack 0.15s steps(9) 1;
+  animation: playBack 0.2s steps(9) forwards;
 }
 .animated-image.glass.break {
   animation: playBreak 0.2s steps(5) 1 forwards;
