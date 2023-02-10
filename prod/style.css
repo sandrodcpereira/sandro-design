@@ -1277,22 +1277,22 @@ ul.thumbnails li a p {
   pointer-events: none;
 }
 .animated-image.logo.wink {
-  animation: playWink 0.8s steps(20) 1;
+  animation: playWink 0.6s steps(20) 1;
 }
 .animated-image.logo.oops {
-  animation: playOops 1s steps(21) 1 forwards;
+  animation: playOops 0.7s steps(21) 1 forwards;
 }
 .animated-image.logo.oops.back {
-  animation: playBack 0.3s steps(4) 1 forwards;
+  animation: playBack 0.15s steps(9) 1;
 }
 .animated-image.glass.break {
-  animation: playBreak 0.5s steps(5) 1 forwards;
+  animation: playBreak 0.2s steps(5) 1 forwards;
 }
 .animated-image.glass:not(.break) {
-  animation: playFix 0.5s steps(5) 1 forwards;
+  animation: playFix 0.2s steps(5) 1 forwards;
 }
 .animated-image.spinner.spin {
-  animation: playSpin 0.8s steps(20) 1 forwards;
+  animation: playSpin 0.6s steps(20) 1 forwards;
 }
 @keyframes playWink {
   from {
@@ -1312,10 +1312,10 @@ ul.thumbnails li a p {
 }
 @keyframes playBack {
   from {
-    background-position-x: -11008px;
+    background-position-x: -7680px;
   }
   to {
-    background-position-x: -12032px;
+    background-position-x: -5376px;
   }
 }
 @keyframes playSpin {
