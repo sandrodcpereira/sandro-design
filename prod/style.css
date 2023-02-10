@@ -188,10 +188,6 @@ li.disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
-ol li::marker {
-  color: #1B1BFF;
-  font-weigth: 800;
-}
 h1,
 h2,
 h3 {
