@@ -9,17 +9,15 @@
 @accent-color: 	#1B1BFF;
 @green: #1FAD72;
 @visited-link: 	#7e1bff;
-
 @max-width: 	840px;
 
 // icons
 
-/*
-warning 	f071
-info		f05a
-quesrtion	f059
-pointer		f25a
-*/
+// warning 		f071
+// info				f05a
+// quesrtion	f059
+// pointer		f25a
+
 
 // general layout
 
@@ -72,14 +70,12 @@ html, body {
 
 			.nav-contents {
 				padding: 60px 40px 60px 20px;
-
 			}
 
 			ul {
 				list-style-type: none;
 				padding: 0 0 0 10px;
 				padding-inline-start: 10px;
-
 			}
 
 			p, h3 {
@@ -105,9 +101,7 @@ html, body {
 		}
 
 		@media (min-width: 1120px) {
-
 			&:hover, &.focus {
-
 				background-color: @light-grey;
 				box-shadow: 0 14px 28px rgba(0,0,0,0.15);
 
@@ -132,16 +126,13 @@ html, body {
 		}
 
 		@media (max-width: 1200px) {
-
 			background-color: @light-grey;
 			box-shadow: 0 14px 28px rgba(0,0,0,0.15);
 			left: -300px;
 			transition: left .2s ease-out;
 			font-size: .6em;
 
-			&.open {
-				left: 0;
-			}
+			&.open {left: 0;}
 
 			.nav-container {
 				display: block;
@@ -267,7 +258,6 @@ hr {
 	position: relative;
 
 	>p {font-size: 1em;}
-
 	>p:first-child {margin-top: 0;}
 	>p:last-child {margin-bottom: 0;}
 
@@ -289,7 +279,6 @@ hr {
 
 	&.prototype:before {content: "\f25a";}
 	&.video:before {content: "\f04b";}
-
 	&.award {background-color: #ECE6C9;}
 	&.award:before {
 		content: "\f5a2";
@@ -302,14 +291,10 @@ img {
 	display: block;
 	margin: 40px auto 20px auto;
 
-		&.border-radius {border-radius: 4px;}
-
+		&.border-radius 		{border-radius: 4px;}
 		&.border-radius-big {border-radius: 8px;}
-
-		&.medium {max-width: 600px;}
-
-		&.small {max-width: 200px;}
-
+		&.medium 						{max-width: 600px;}
+		&.small 						{max-width: 200px;}
 		&.border {
 			border-radius: 4px;
 			border: 2px solid @light-grey;
@@ -351,7 +336,6 @@ img {
 }
 
 .old-new-toggle {
-
 	position: relative;
 	width: 100%;
 	text-align: center;
@@ -396,7 +380,6 @@ img {
     &.first 			{transition-delay: .2s}
     &.second 			{transition-delay: .3s}
     &.third 			{transition-delay: .4s}
-
 		&.hierarchy 	{top: 40%; left: 30%;}
 		&.progress 		{top: -2%; left: 50%;}
 		&.overview 		{top: 70%; left: 80%;}
@@ -469,7 +452,7 @@ img {
 			&.overview 		{top: 20%; left: 80%;}
 			&.contents 		{top: 40%; left: 90%;}
 			&.navigation 	{top: 50%; left: 60%;}
-			&.next 				{top: 30%; left: 80%; }
+			&.next 				{top: 30%; left: 80%;}
 			&.prepare 		{top: 31%; left: 85%;}
 			&.recording 	{top: 38%; left: 30%;}
 			&.draft 			{top: 82%; left: 19%;}
@@ -521,7 +504,6 @@ h3 {
 		margin: 0 10px 0 0;
 	}
 }
-
 
 figcaption {
 	display: block;
@@ -873,32 +855,6 @@ ul.value, ul.improvements {
 	}
 }
 
-ul.steps {
-	list-style: none;
-	font-size: 1.1em;
-
-	li {
-		line-height: 60px;
-	}
-	
-	li:before {
-		display: inline-block;
-		margin-left: -1.5em;
-		width: 80px;
-		padding: 30px 50px 30px 0px;
-		text-align: right;
-		background-position: center left;
-		background-size: 100px;
-		background-repeat: no-repeat;
-		content: "";
-		vertical-align: top;
-	}
-}
-
-ul.steps > li:first-child:before {background-image: url(../assets/synclick/step-1.png);}
-ul.steps > li:nth-child(2):before {background-image: url(../assets/synclick/step-2.png);}
-ul.steps > li:nth-child(3):before {background-image: url(../assets/synclick/step-3.png);}
-
 ul.value > li:before {content: "\f00c";}
 ul.improvements > li:before {content: "\f00d";}
 
@@ -975,28 +931,14 @@ ul.improvements > li:before {content: "\f00d";}
 	}
 }
 
-.motion .img-full {background-color: #6254e7;}
-.illustration .img-full {background-color: #fe5b60;}
-.brastemp .img-full {background-color: #abdff3;}
-.sintagma .img-full {background-color: #ffffff;}
-.logos .img-full {background-color: #ffffff;}
-.adclick .img-full {background-color: #ffffff;}
+.motion .img-full 			{background-color: #6254e7;}
 
 .dotfetch, .showpad {
 	.video-container {
 		margin: 40px auto 20px auto;
 
-		video {
-			padding-top: 0;
-		}
+		video {padding-top: 0;}
 	}
-}
-
-.about .img-full {
-	background-image: url('../assets/generic/porto.png');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center bottom;
 }
 
 @keyframes scroll {
@@ -1042,8 +984,6 @@ ul.improvements > li:before {content: "\f00d";}
 		@media (max-width: 1023px) {
 			width: 100%;
 		}
-
-		
 	}
 
 	> img {
@@ -1107,7 +1047,6 @@ ul.improvements > li:before {content: "\f00d";}
 
 .video-container {
 	width: 100%;
-	//max-width: 640px;
 	margin: 80px auto 20px auto;
 
 	&.no-label {
@@ -1205,8 +1144,6 @@ ul.thumbnails {
 			border-radius: 6px;
 
 			&:focus {
-				
-			    //outline: 8px solid #ff0102;
     			outline-offset: -2px;
 			    outline: -webkit-focus-ring-color auto 1px;
 			}
@@ -1242,10 +1179,9 @@ ul.thumbnails {
 					font-size: .4em;
 					padding: 4px 6px;
 					border: 3px solid @pure-white;
-					//margin-left: 4px;
-				    display: inline-block;
-    				vertical-align: top;
-    				line-height: normal;
+			    display: inline-block;
+  				vertical-align: top;
+  				line-height: normal;
 				}
 			}
 
@@ -1259,7 +1195,6 @@ ul.thumbnails {
 	}
 }
 
-
 // stowify animations
 
 .animated-image {
@@ -1272,7 +1207,7 @@ ul.thumbnails {
   background-repeat: no-repeat;
   transform: scale(.8);
 
-  &.logo 		{background-image: url('../assets/stowify/frames-logo.png');}
+  &.logo 			{background-image: url('../assets/stowify/frames-logo.png');}
   &.glass 		{background-image: url('../assets/stowify/frames-glass.png');}
   &.spinner 	{background-image: url('../assets/stowify/frames-spinner.png');}
 }
