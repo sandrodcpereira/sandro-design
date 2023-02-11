@@ -754,13 +754,28 @@ table th span {
 header {
   padding: 80px 0 0;
 }
-header #logo {
+#logo {
   display: inline-block;
-  transform: scale(1);
-  transition: transform 0.2s cubic-bezier(0.69, -0.01, 0.63, 1.55);
+  height: 64px;
+  width: 64px;
+  background-position: 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../assets/generic/s-logo.png');
 }
-header #logo:hover {
-  transform: scale(1.05);
+@keyframes logoAnimation {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -1408px;
+  }
+}
+#logo.animated {
+  background-image: url('../assets/generic/s-logo-frames.png');
+}
+#logo.animated:hover {
+  animation: logoAnimation 1.2s steps(22) 1;
 }
 footer {
   margin-top: 120px;
