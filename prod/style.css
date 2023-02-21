@@ -1301,6 +1301,10 @@ ul.thumbnails li a p {
     background-position-x: 0px;
   }
 }
+.dottify-demo {
+  padding: 24px;
+  box-sizing: border-box;
+}
 .dottify-demo .container {
   margin: 80px auto;
   width: 100%;
@@ -1312,8 +1316,8 @@ ul.thumbnails li a p {
 .dottify-demo .container .widget img {
   box-sizing: border-box;
   border-radius: 8px;
-  border: 1px solid rgba(119, 127, 137, 0.2);
   margin: 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15), 0px 8px 16px rgba(0, 0, 0, 0.15);
 }
 .dottify-demo .container .widget img.before {
   position: absolute;
@@ -1343,10 +1347,15 @@ ul.thumbnails li a p {
   top: 50%;
   left: 50%;
 }
-.dottify-demo .container .widget .dot:hover {
+.dottify-demo .container .widget .dot.three {
+  top: 75%;
+  left: 75%;
+}
+.dottify-demo .container .widget .dot:hover,
+.dottify-demo .container .widget .dot.focused {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 1px #68B2C9, 0px 0px 0px 16px rgba(22, 79, 208, 0.2);
 }
-.dottify-demo .container .widget .toggle {
+.dottify-demo .container .toggle {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -1359,9 +1368,20 @@ ul.thumbnails li a p {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 1px #68B2C9;
   border-radius: 20px;
   position: relative;
-  margin: 16px auto;
+  margin: 24px auto;
 }
-.dottify-demo .container .widget .toggle .button {
+.dottify-demo .container .toggle.toggled .selection {
+  left: 108px;
+}
+.dottify-demo .container .toggle.toggled .button.after {
+  color: #2F3E4A;
+  font-weight: 800;
+}
+.dottify-demo .container .toggle.toggled .button.before {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 500;
+}
+.dottify-demo .container .toggle .button {
   width: 80px;
   text-align: center;
   flex: none;
@@ -1369,7 +1389,15 @@ ul.thumbnails li a p {
   flex-grow: 0;
   z-index: 20;
 }
-.dottify-demo .container .widget .toggle .selection {
+.dottify-demo .container .toggle .button.before {
+  color: #2F3E4A;
+  font-weight: 800;
+}
+.dottify-demo .container .toggle .button.after {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 500;
+}
+.dottify-demo .container .toggle .selection {
   position: absolute;
   width: 104px;
   height: 26px;
@@ -1378,8 +1406,37 @@ ul.thumbnails li a p {
   top: 4px;
   left: 4px;
   z-index: 10;
+  transition: left 0.2s cubic-bezier(0.4, 1.26, 0.58, 1);
 }
-.dottify-demo .container:hover .dot {
+.dottify-demo .container .legend p {
+  transition: transform 0.1s cubic-bezier(0.34, 2.01, 0.56, 1), opacity 0.1s linear;
+  opacity: 1;
+}
+.dottify-demo .container .legend .dot {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
   color: white;
+  background: linear-gradient(180deg, #2C64E3 0%, #164FD0 100%);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 1px #68B2C9, 0px 0px 0px 0px rgba(22, 79, 208, 0.1);
+  border-radius: 20px;
+  line-height: 32px;
+  text-align: center;
+  font-weight: 800;
+  transform: scale(0.8);
+  transition: transform 0.1s cubic-bezier(0.34, 2.01, 0.56, 1), color 0.1s linear, box-shadow 0.1s linear;
+  cursor: pointer;
+}
+.dottify-demo .container .legend p:hover,
+.dottify-demo .container .legend .focused {
+  transform: scale(1.01);
+}
+.dottify-demo .container .legend p:hover .dot,
+.dottify-demo .container .legend .focused .dot {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 1px #68B2C9, 0px 0px 0px 8px rgba(22, 79, 208, 0.2);
+}
+.dottify-demo .container:hover .widget .dot {
   transform: scale(1);
+  color: white;
 }

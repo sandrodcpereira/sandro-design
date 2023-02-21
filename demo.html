@@ -20,14 +20,64 @@
 			<img src="assets/showpad/coach-overview-new.png" class="after" alt="">
 			<div class="dot one">1</div>
 			<div class="dot two">2</div>
-			<div class="toggle">
-				<div class="selection"></div>
-				<div class="button">Before</div>
-				<div class="button">After</div>
-				
-			</div>
+			<div class="dot three">3</div>
+		</div>
+		<div class="toggle">
+			<div class="selection"></div>
+			<div class="button before">Before</div>
+			<div class="button after">After</div>		
+		</div>
+		<div class="legend">
+			<p class="one"><span class="dot">1</span>Made it easier to track progress by <b>keeping the progress bar always visible</b>; before, during, and after you've finished a course.</p>
+
+			<p class="two"><span class="dot">2</span>Made it easier to parse information by <b>removing clutter and being considerate about visual hierarchy</b>.</p>
+
+			<p class="three"><span class="dot">3</span><b>Removed the need for a separate overview page</b> by making it a different state of the learning UI.</p>
 		</div>
 	</div>
+
+	<script>
+
+		function addRemoveFocusClass() {
+		  const groups = ["one", "two", "three"];
+
+		  groups.forEach(group => {
+		    const elements = document.querySelectorAll(`.${group}`);
+
+		    elements.forEach(element => {
+		      element.addEventListener("mouseenter", () => {
+		        elements.forEach(el => {
+		          el.classList.add("focused");
+		        });
+		      });
+
+		      element.addEventListener("mouseleave", () => {
+		        elements.forEach(el => {
+		          el.classList.remove("focused");
+		        });
+		      });
+		    });
+		  });
+		}
+
+		addRemoveFocusClass();
+
+
+		function toggleClass() {
+		  const toggleElement = document.querySelector(".toggle");
+		  toggleElement.classList.toggle("toggled");
+		}
+
+		const toggleElement = document.querySelector(".toggle");
+		toggleElement.addEventListener("click", toggleClass);
+
+
+
+
+
+
+
+	</script>
 
 </body>
 </html>
