@@ -1335,7 +1335,7 @@ ul.thumbnails li a p {
   font-weight: 800;
   color: transparent;
   position: absolute;
-  transform: scale(0.6);
+  transform: scale(0.4);
   transition: transform 0.1s cubic-bezier(0.34, 2.01, 0.56, 1), color 0.1s linear, box-shadow 0.1s linear;
   cursor: pointer;
 }
