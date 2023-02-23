@@ -1301,61 +1301,86 @@ ul.thumbnails li a p {
     background-position-x: 0px;
   }
 }
-.dottify-demo {
+.focus-demo {
   padding: 24px;
   box-sizing: border-box;
 }
-.dottify-demo .container {
+.focus-demo .dot {
+  background: linear-gradient(180deg, #2C64E3 0%, #164FD0 100%);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 1px #68B2C9, 0px 0px 0px 0px rgba(22, 79, 208, 0.1);
+  border-radius: 128px;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  cursor: default;
+  font-weight: 800;
+  transition: box-shadow 0.1s ease-out, transform 0.2s cubic-bezier(0.73, 2.62, 0.67, 0.51), top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.focus-demo .dot:hover,
+.focus-demo .dot.focused {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 1px #68B2C9, 0px 0px 0px 16px rgba(22, 79, 208, 0.2);
+}
+.focus-demo .focus-widget {
   margin: 80px auto;
   width: 100%;
   max-width: 800px;
 }
-.dottify-demo .container .widget {
-  position: relative;
-}
-.dottify-demo .container .widget img {
+.focus-demo .focus-widget .image-container {
   box-sizing: border-box;
   border-radius: 8px;
   margin: 0;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15), 0px 8px 16px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
-.dottify-demo .container .widget img.before {
+.focus-demo .focus-widget .image-container img {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15), 0px 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+}
+.focus-demo .focus-widget .image-container img.before {
+  box-shadow: none;
+  margin: 0;
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 1;
+  transition: opacity 0.1s ease-out;
 }
-.dottify-demo .container .widget .dot {
+.focus-demo .focus-widget .image-container .dot {
+  font-size: 16px;
   width: 32px;
   height: 32px;
-  background: linear-gradient(180deg, #2C64E3 0%, #164FD0 100%);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 1px #68B2C9, 0px 0px 0px 0px rgba(22, 79, 208, 0.1);
-  border-radius: 20px;
   line-height: 32px;
-  text-align: center;
-  font-weight: 800;
+  transform: scale(0.4);
   color: transparent;
   position: absolute;
-  transform: scale(0.4);
-  transition: transform 0.1s cubic-bezier(0.34, 2.01, 0.56, 1), color 0.1s linear, box-shadow 0.1s linear;
-  cursor: pointer;
 }
-.dottify-demo .container .widget .dot.one {
+.focus-demo .focus-widget .image-container .dot.one {
   top: 25%;
   left: 25%;
 }
-.dottify-demo .container .widget .dot.two {
+.focus-demo .focus-widget .image-container .dot.two {
   top: 50%;
   left: 50%;
 }
-.dottify-demo .container .widget .dot.three {
+.focus-demo .focus-widget .image-container .dot.three {
   top: 75%;
   left: 75%;
 }
-.dottify-demo .container .widget .dot:hover,
-.dottify-demo .container .widget .dot.focused {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 1px #68B2C9, 0px 0px 0px 16px rgba(22, 79, 208, 0.2);
+.focus-demo .focus-widget .image-container.after img.before {
+  opacity: 0;
 }
-.dottify-demo .container .toggle {
+.focus-demo .focus-widget .image-container.after .dot.one {
+  top: 20%;
+  left: 40%;
+}
+.focus-demo .focus-widget .image-container.after .dot.two {
+  top: 30%;
+  left: 80%;
+}
+.focus-demo .focus-widget .image-container.after .dot.three {
+  top: 85%;
+  left: 10%;
+}
+.focus-demo .focus-widget .toggle {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -1368,20 +1393,20 @@ ul.thumbnails li a p {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 1px #68B2C9;
   border-radius: 20px;
   position: relative;
-  margin: 24px auto;
+  margin: 40px auto 24px auto;
 }
-.dottify-demo .container .toggle.toggled .selection {
+.focus-demo .focus-widget .toggle.toggled .selection {
   left: 108px;
 }
-.dottify-demo .container .toggle.toggled .button.after {
+.focus-demo .focus-widget .toggle.toggled .button.after {
   color: #2F3E4A;
   font-weight: 800;
 }
-.dottify-demo .container .toggle.toggled .button.before {
+.focus-demo .focus-widget .toggle.toggled .button.before {
   color: rgba(255, 255, 255, 0.4);
   font-weight: 500;
 }
-.dottify-demo .container .toggle .button {
+.focus-demo .focus-widget .toggle .button {
   width: 80px;
   text-align: center;
   flex: none;
@@ -1389,15 +1414,15 @@ ul.thumbnails li a p {
   flex-grow: 0;
   z-index: 20;
 }
-.dottify-demo .container .toggle .button.before {
+.focus-demo .focus-widget .toggle .button.before {
   color: #2F3E4A;
   font-weight: 800;
 }
-.dottify-demo .container .toggle .button.after {
+.focus-demo .focus-widget .toggle .button.after {
   color: rgba(255, 255, 255, 0.4);
   font-weight: 500;
 }
-.dottify-demo .container .toggle .selection {
+.focus-demo .focus-widget .toggle .selection {
   position: absolute;
   width: 104px;
   height: 26px;
@@ -1408,35 +1433,38 @@ ul.thumbnails li a p {
   z-index: 10;
   transition: left 0.2s cubic-bezier(0.4, 1.26, 0.58, 1);
 }
-.dottify-demo .container .legend p {
-  transition: transform 0.1s cubic-bezier(0.34, 2.01, 0.56, 1), opacity 0.1s linear;
-  opacity: 1;
+.focus-demo .focus-widget .legend-container {
+  max-width: 640px;
+  margin: 40px auto;
+  cursor: default;
 }
-.dottify-demo .container .legend .dot {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
+.focus-demo .focus-widget .legend-container p {
+  transition: transform 0.1s ease-in-out;
+}
+.focus-demo .focus-widget .legend-container p .dot {
+  font-size: 12px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  vertical-align: 2px;
   margin-right: 8px;
-  color: white;
-  background: linear-gradient(180deg, #2C64E3 0%, #164FD0 100%);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 1px #68B2C9, 0px 0px 0px 0px rgba(22, 79, 208, 0.1);
-  border-radius: 20px;
-  line-height: 32px;
-  text-align: center;
-  font-weight: 800;
-  transform: scale(0.8);
-  transition: transform 0.1s cubic-bezier(0.34, 2.01, 0.56, 1), color 0.1s linear, box-shadow 0.1s linear;
-  cursor: pointer;
 }
-.dottify-demo .container .legend p:hover,
-.dottify-demo .container .legend .focused {
+.focus-demo .focus-widget .legend-container p.focused {
   transform: scale(1.01);
 }
-.dottify-demo .container .legend p:hover .dot,
-.dottify-demo .container .legend .focused .dot {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 1px #68B2C9, 0px 0px 0px 8px rgba(22, 79, 208, 0.2);
+.focus-demo .focus-widget .legend-container p.focused .dot {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 1px #68B2C9, 0px 0px 0px 4px rgba(22, 79, 208, 0.2);
 }
-.dottify-demo .container:hover .widget .dot {
+.focus-demo .focus-widget:hover .image-container .dot {
   transform: scale(1);
   color: white;
+}
+.image-container > .dot.order-1 {
+  transition-delay: 0ms, 0ms, 0ms, 0ms;
+}
+.image-container > .dot.order-2 {
+  transition-delay: 0ms, 50ms, 100ms, 100ms;
+}
+.image-container > .dot.order-3 {
+  transition-delay: 0ms, 100ms, 200ms, 200ms;
 }

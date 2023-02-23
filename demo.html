@@ -3,40 +3,75 @@
 <head>
 
 	<meta charset="UTF-8">
-
 	<link rel="stylesheet" href="https://use.typekit.net/hbh0upr.css">
-
-
 	<link rel="stylesheet" type="text/css" media="screen" href="prod/normalise.css">
 	<link rel="stylesheet" type="text/css" media="screen" href="prod/style.css">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 
-	<title>Dot Demo</title>
+	<title>Focus Demo</title>
 
 </head>
-<body class="dottify-demo">
+<body class="focus-demo">
 
-	<div class="container">
-		<div class="widget">
-			<!--img src="assets/showpad/coach-overview-old.png" class="before" alt=""-->
-			<img src="assets/showpad/coach-overview-new.png" class="after" alt="">
-			<div class="dot one">1</div>
-			<div class="dot two">2</div>
-			<div class="dot three">3</div>
-		</div>
-		<div class="toggle">
-			<div class="selection"></div>
-			<div class="button before">Before</div>
-			<div class="button after">After</div>		
-		</div>
-		<div class="legend">
-			<p class="one"><span class="dot">1</span>Made it easier to track progress by <b>keeping the progress bar always visible</b>; before, during, and after you've finished a course.</p>
+	<div class="wrapper">
 
-			<p class="two"><span class="dot">2</span>Made it easier to parse information by <b>removing clutter and being considerate about visual hierarchy</b>.</p>
+		<main>
 
-			<p class="three"><span class="dot">3</span><b>Removed the need for a separate overview page</b> by making it a different state of the learning UI.</p>
-		</div>
+			<section>
+
+				<h2>Before and after</h2>
+
+				<div class="focus-widget">
+					<div class="image-container after">
+						<img src="assets/integrate/integrate-web-event.png" class="after">
+						<img src="assets/integrate/integrate-web-builder.png" class="before">
+						<div class="dot one order-1">1</div>
+						<div class="dot two order-2">2</div>
+						<div class="dot three order-3">3</div>
+					</div>
+
+					<div class="toggle toggled">
+						<div class="selection"></div>
+						<div class="button before">Before</div>
+						<div class="button after">After</div>
+					</div>
+
+					<div class="legend-container">
+						<p class="one"><span class="dot">1</span>Made it easier to track progress by <b>keeping the progress bar always visible</b>; before, during, and after you've finished a course.</p>
+
+						<p class="two"><span class="dot">2</span>Made it easier to parse information by <b>removing clutter and being considerate about visual hierarchy</b>.</p>
+
+						<p class="three"><span class="dot">3</span><b>Removed the need for a separate overview page</b> by making it a different state of the learning UI.</p>
+					</div>
+				</div>
+
+			</section>
+
+			<section>
+
+				<h2>Single image</h2>
+
+				<div class="focus-widget">
+					<div class="image-container">
+						<img src="assets/integrate/integrate-web-event.png" >
+						<div class="dot one order-1">1</div>
+						<div class="dot two order-2">2</div>
+						<div class="dot three order-3">3</div>
+					</div>
+
+					<div class="legend-container">
+						<p class="one"><span class="dot">1</span>Made it easier to track progress by <b>keeping the progress bar always visible</b>; before, during, and after you've finished a course.</p>
+
+						<p class="two"><span class="dot">2</span>Made it easier to parse information by <b>removing clutter and being considerate about visual hierarchy</b>.</p>
+
+						<p class="three"><span class="dot">3</span><b>Removed the need for a separate overview page</b> by making it a different state of the learning UI.</p>
+					</div>
+				</div>
+
+			</section>
+
+		</main>
+
 	</div>
 
 	<script>
@@ -65,10 +100,11 @@
 
 		addRemoveFocusClass();
 
-
 		function toggleClass() {
 		  const toggleElement = document.querySelector(".toggle");
+		  const containerElement = document.querySelector(".image-container");
 		  toggleElement.classList.toggle("toggled");
+		  containerElement.classList.toggle("after");
 		}
 
 		const toggleElement = document.querySelector(".toggle");
