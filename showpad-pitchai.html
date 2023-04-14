@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+	<link rel="stylesheet" type="text/css" media="screen" href="prod/normalise.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="prod/style.css">
+	<link rel="stylesheet" href="https://use.typekit.net/etj2pwl.css">
+
+	<script src="https://kit.fontawesome.com/266997c388.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="prod/script.js"></script>
+
+	<link rel="mask-icon" href="assets/favicons/favicon.svg" color="#2F3E4A">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/favicons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/favicons/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="Sandro Pereira"/>
+	<meta name="msapplication-TileColor" content="##EAEEF" />
+	<meta name="msapplication-TileImage" content="assets/favicons/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="assets/favicons/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="assets/favicons/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="assets/favicons/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="assets/favicons/mstile-310x310.png" />
+
+	<!-- sharing metadata -->
+
+	<meta property="og:title" content="Showpad PitchAI">
+	<meta property="og:description" content="A brand new feature to get immediate feedback on sales pitches, driven by AI.">
+	<meta property="og:image" content="https://sandro.design/assets/meta/meta-showpad-pitchai.png">
+	<meta name="twitter:image:alt" content="The interface for PithcAI.">
+	<meta property="og:url" content="https://sandro.design/showpad-pitchai.html">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="og:site_name" content="Portfolio of Sandro Pereira">
+	<meta name="twitter:site" content="@sandrodcpereira">
+
+	<title>PitchAI — Sandro Pereira</title>
+
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<header></header>
+
+		<nav></nav>
+
+		<main>
+			<section>
+				<h4>Q1 2023</h4>
+				<h1>PitchAI</h1>
+			</section>
+
+			<section>
+
+				<div class="img-full showpad">
+					<img src="assets/showpad/hero-pitchai.png" alt="#TODO">
+				</div>
+
+				<h2>Context</h2>
+
+				<p>Pitch IQ is a Showpad Coach feature that allows sales people to practice their sales pitches and receive feedback from their peers and managers.</p>
+
+
+			</section>
+
+			<section>
+				
+				<h2>Problem</h2>
+
+				<p>As much value as Pitch IQ offered to sales users, the high volume of submissions and the limited time of reviewers typically resulted in long delays in users receiving feedback on how they performed.</p>
+
+				<p>In order to shorten the time to get valuable insights and increase the users’ confidence in the pitches they submitting for review, we looked into making use of our dataset of pitches and reviews to help sales users receive more timely feedback on their pitches.</p>
+
+				<p>Using the <a href="https://www.intercom.com/books/jobs-to-be-done" target="_blank">Jobs to Be Done</a> framework, we arrived at the following goal:</p>
+
+				<blockquote class="jtbd">As <u>a sales user practising my pitching</u>, I want to be able to <u>get immediate and valuable feedback</u> in order to <u>to have more confidence in the practise pitches I’m submitting for review</u>.</blockquote>
+
+			</section>
+
+			<section>
+
+				<h2>Solution</h2>
+
+				<p>With the company hoping to bring AI into the Showpad platform, we were left with a fairly tight deadline — the entire Pitch AI project was the be researched, designed, implemented, tested, and delivered within one quarter. </p>
+
+				<h3>Design before data</h3>
+
+				<p>While discussions were being had with the data team and engineering to assess feasibility, I started to get some design work done. From a UI perspective, there were a few things to figure out as well.</p>
+
+				<p>My first designs took on an agnostic approach to showcasing any metric — users should be able to identify it, understand how they performed relative to the ideal score for this particular metric. This approach proved to be the best one for the project and the final design ended up looking fairly similar to some of the first iterations.</p>
+
+				<h3>Deciding what to track</h3>
+
+				<p>In order to deliver on this project, we needed to understand which metrics we’d like to report on, which we’d be able to report on (and how reliably), and which would have the biggest impact on the sales pitch.</p>
+
+				<p>We met with the data team to check the dataset available, arrange it by score, and try to extrapolate ranges for all the metrics we could track.</p>
+
+				<p>Once we ran the checks, we got a good understanding of what we could track with the most confidence and what had the biggest impact in the quality of a pitch. In the end, and for this first release, we decided to track:</p>
+
+				<ul>
+					<li>Silences</li>
+					<li>Smiling</li>
+					<li>Body language</li>
+					<li>Speech pace</li>
+				</ul>
+
+				<div class="info">
+					<p><b>Fun fact:</b> while looking at the data, we realised that the ideal ranges for some of the metrics varied with language. Long silences make for a bad pitch in German, but a good one in Portuguese.</p>
+				</div>
+
+				<h3>A couple of design dead ends</h3>
+
+				<p>Since design was happening simultaneously with discovery and research, a few assumptions had to be made that were later proven wrong. For example:</p>
+
+				<ul>
+					<li><p>The possibility of needing explicit user consent and action to analyse their pitches led me to design the experience in a flyout UI that would require a button press to open. The processing of our users’ pitches turned out to be covered by the T&C of our platform making it possible for us to show the analysis inline with the pitch without requiring explicit consent and action by the user.</p></li>
+					<li><p>One of the first iterations showed a big pitch score. As we narrowed down on the metrics tracked, we realised it wouldn’t be possible for us to review the pitch as a whole, since we were targeting only a few of its aspects. The limited scope of the metrics analysed in this fist pass meant we couldn’t confidently score the pitch, just these specific aspects of it</p></li>
+				</ul>
+
+				<h3>How to represent the user's performance</h3>
+
+				<p>Even though we experimented with many different ways to represent and visualise the user’s performance, the original design showcasing the score within a spectrum turned out to be both easy to implement and understand.</p>
+
+				<p>It’s got some limitations — it doesn’t show the variation in performance across the length of the pitch, for instance, which is something I would have liked to tackle on the first pass, but time constraints forced us to spend our time elsewhere.</p>
+
+				<h3>How to make the report actionable</h3>
+
+				<p>In addition to showing the user’s score in any of the tracked metrics, we also wanted to make it easy for users to rerecord and improve their score. Initial feedback showed that even if people understood their score, they weren’t always clear on how to improve it.</p>
+
+				<p>In order to address this, we added a banner with some textual tips on how to improve their score in all the tracked metrics. The content of the banner reflects the score and performance of the user.</p>
+
+				<h3>How to make sure users wait for the report</h3>
+
+				<p>While the loading times projected were quite fast, there were some scenarios in which the report could take a few seconds to load. In order to make sure users affected by this would still benefit from this feature, we made sure to make the loader hint at the benefits of the report in order to hopefully encourage them to wait a bit longer for it to load.</p>
+
+				<p>We did this by referencing the metrics analysed, which should make the user curious about the report. </p>
+
+				<h3>How to collect feedback</h3>
+
+				<p>In order to collect feedback on how users found this feature, we used a Pendo Guide to prompt a feedback form after the submission of a pitch.</p>
+
+				<p>Data volume is still low at the time of writing, but general sentiment is fairly positive.</p>
+
+				<h2>Where to take PitchAI from here</h2>
+
+				<p>While we're quite happy with the launch of PitchAI, there's a lot that was not included in the first release. We already have a big list of improvements we'd like to make in further iterations. Here's a few examples of what we'd like to do:</p>
+
+				<ul>
+					<li><p>Expand on the reported metrics (e.g. track speech clarity, usage of recommended words, and more).</p></li>
+					<li><p>Implement different ways to represent the users' score visually, including score variation throughout the duration of the pitch.</p></li>
+					<li><p>Show examples from peers to illustrate good practises to help with specific metrics.</p></li>
+				</ul>
+
+			</section>
+
+		</main>
+
+		<footer></footer>
+
+	</div>
+
+</body>
+</html>
