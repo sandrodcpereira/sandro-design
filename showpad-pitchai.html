@@ -73,7 +73,7 @@
 
 				<h2>Context</h2>
 
-				<p>Pitch IQ is a Showpad Coach feature that allows salespeople to practice their sales pitches and receive feedback from their peers and managers.</p>
+				<p>PitchIQ is a Showpad Coach feature that allows salespeople to practice their sales pitches and receive feedback from their peers and managers.</p>
 
 
 			</section>
@@ -82,7 +82,7 @@
 				
 				<h2>Problem</h2>
 
-				<p>As much value as Pitch IQ offered to sales users, the high volume of submissions and the limited time of reviewers typically resulted in long delays in users receiving feedback on how they performed.</p>
+				<p>As much value as PitchIQ offered to sales users, the high volume of submissions and the limited time of reviewers typically resulted in long delays in users receiving feedback on how they performed.</p>
 
 				<p>To shorten the time to get valuable insights and increase the users’ confidence in the pitches they're submitting for review, we looked into making use of our dataset of pitches and reviews to help sales users receive more timely feedback.</p>
 
@@ -96,24 +96,24 @@
 
 				<h2>Solution</h2>
 
-				<p>With the company hoping to bring AI into the Showpad platform, we were left with a fairly tight deadline — the entire PitchAI project was to be researched, designed, implemented, tested, and delivered within one quarter. </p>
+				<p>With the company hoping to bring <abbr title="Artificial Intelligence">AI</abbr> into the Showpad platform as soon as possible, we were left with a fairly tight deadline — the entire PitchAI project was to be researched, designed, implemented, tested, and delivered within one quarter. </p>
 
 				<h3>Design before data</h3>
 
-				<p>While discussions were being had with the data team and engineering to assess feasibility, I started to get some design work done. From a UI perspective, there were a few things to figure out as well.</p>
+				<p>While discussions were still being held with the data team and engineering to assess feasibility, I started to get some design work done. From a <abbr title="User Interface">UI</abbr> perspective, there were a few things to figure out as well.</p>
 
-				<p>My first designs took on an agnostic approach to showcasing any metric — users should be able to identify it and understand how they performed relative to the ideal score for this particular metric. This approach proved to be the best for the project and part of the final UI was heavily informed by these early explorations.</p>
+				<p>My first designs took on an agnostic approach to showcasing any metric — users should be able to identify it and understand how they performed relative to the ideal score for this particular metric. This approach proved to be the best for the project and part of the final <abbr title="User Interface">UI</abbr> was heavily informed by these early explorations.</p>
 
 				<h3>Deciding what to track</h3>
 
-				<p>In order to deliver on this project, we needed to understand which metrics we’d like to report on, which we’d be able to report on (and how reliably), and which would have the biggest impact on the sales pitch.</p>
+				<p>In order to deliver on this project, we needed to understand which metrics we’d like to report on, which we’d be able to report on (and how reliably), and which would have the biggest impact on the final quality of the sales pitch.</p>
 
 				<p>We met with the data team to check the dataset available, arrange it by score, and try to extrapolate ranges for all the metrics we could track.</p>
 
 				<p>After doing some research, we had a good understanding of what we could track with the most confidence and what had the biggest impact on the quality of a pitch. In the end, and for this first release, we decided to track:</p>
 
 				<ul>
-					<li>Silences</li>
+					<li>Pauses</li>
 					<li>Smiling</li>
 					<li>Body language</li>
 					<li>Speech pace</li>
@@ -128,15 +128,15 @@
 				<p>Since design was happening simultaneously with discovery and research, a few assumptions had to be made that were later proven wrong. For example:</p>
 
 				<ul>
-					<li><p>The possibility of needing explicit user consent and action to analyse their pitches led me to design the experience in a flyout UI that required a button press to open. In the end, the processing of our users’ pitches was confirmed to be covered by the T&C of our platform, making it possible for us to show the analysis inline and immediately after recording.</p></li>
-					<li><p>One of the first iterations showed a big pitch score. As we narrowed down the metrics tracked, we realised it wouldn’t be possible to review the pitch as a whole, since we were targeting only a few of its many components. The limited scope of the metrics analysed in this first pass meant we couldn’t confidently score the overall pitch, just these specific aspects of it</p></li>
+					<li><p>The possibility of needing explicit user consent and action to analyse their pitches led me to design the experience in a flyout <abbr title="User Interface">UI</abbr> that required a button press to action. In the end, the processing of our users’ pitches was confirmed to be covered by the T&C of our platform, making it possible for us to show the analysis inline and immediately after recording.</p></li>
+					<li><p>One of the first iterations showed a big pitch score. As we narrowed down the metrics tracked, we realised it wouldn’t be possible to review the pitch as a whole, since we were targeting only a few of its many comprising parts. The limited scope of the metrics analysed in this first pass meant we couldn’t confidently score the overall pitch, just these specific aspects of it</p></li>
 				</ul>
 
 				<h3>How to represent the users' performance</h3>
 
 				<p>Even though we experimented with many different ways to represent and visualise the users' performance, the original design showcasing the score within a spectrum was found to be both easy to implement and understand.</p>
 
-				<p>It has some limitations — it doesn’t show the variation in performance across the length of the pitch, for instance, which is something I would have liked to tackle on the first pass, but time constraints forced us to spend our time elsewhere.</p>
+				<p>It has some limitations — it doesn’t show the variation in performance across the length of the pitch, for instance, which is something I would have liked to have tackled on the first pass, but time constraints forced us to spend our time elsewhere.</p>
 
 				<h3>How to make the report actionable</h3>
 
@@ -148,7 +148,7 @@
 
 				<p>While the loading times were projected to be quick, there were some scenarios in which the report could take a few seconds to load. To ensure users affected by this would still benefit from this feature, we made sure to make the loader hint at the benefits of the report to hopefully encourage them to wait a bit longer for it to load.</p>
 
-				<p>We did this by referencing the metrics analysed, which should make the user curious about the report. </p>
+				<p>We did this by referencing the metrics analysed, hoping to spike the users' curiosity. </p>
 
 				<h3>How to collect feedback</h3>
 
@@ -158,12 +158,14 @@
 
 				<h2>Where to take PitchAI from here</h2>
 
-				<p>While we're quite happy with the launch of PitchAI, there's a lot that was not included in the first release. We already have a lenghty list of improvements we'd like to make in further iterations. Here are a few examples of what we'd like to do:</p>
+				<p>While we're quite happy with the launch of PitchAI, there's a lot that was not included in the first release. We already have a lenghty list of improvements we'd like to make in further iterations.</p>
+
+				<p>Here are a few examples of what we'd like to do:</p>
 
 				<ul>
-					<li><p>Expand on the reported metrics (e.g. track speech clarity, usage of recommended words, and more).</p></li>
-					<li><p>Implement different ways to represent the users' scores visually, including score variation throughout the pitch.</p></li>
-					<li><p>Show examples from peers to illustrate good practices to help with specific metrics.</p></li>
+					<li><p>Expand on the reported metrics (e.g. track speech clarity and usage of recommended words).</p></li>
+					<li><p>Implement different ways to represent the users' scores visually, including score variation throughout the recording.</p></li>
+					<li><p>Show examples from peers to illustrate good practices for specific metrics.</p></li>
 				</ul>
 
 			</section>
