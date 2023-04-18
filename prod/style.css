@@ -285,6 +285,9 @@ img.border-radius-big {
 img.medium {
   max-width: 600px;
 }
+img.medium-small {
+  max-width: 400px;
+}
 img.small {
   max-width: 200px;
 }
