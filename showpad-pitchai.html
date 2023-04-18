@@ -104,6 +104,12 @@
 
 				<p>My first designs took on an agnostic approach to showcasing any metric — users should be able to identify it and understand how they performed relative to the ideal score for this particular metric. This approach proved to be the best for the project and part of the final <abbr title="User Interface">UI</abbr> was heavily informed by these early explorations.</p>
 
+				<div class="img-full showpad">
+					<img src="assets/showpad/pitchai-explorations.png" class="border-radius shadow" alt="#TODO">
+				</div>
+				<figcaption>A few of the initial UI explorations for PitchAI.</figcaption>
+
+
 				<h3>Deciding what to track</h3>
 
 				<p>In order to deliver on this project, we needed to understand which metrics we’d like to report on, which we’d be able to report on (and how reliably), and which would have the biggest impact on the final quality of the sales pitch.</p>
@@ -112,12 +118,8 @@
 
 				<p>After doing some research, we had a good understanding of what we could track with the most confidence and what had the biggest impact on the quality of a pitch. In the end, and for this first release, we decided to track:</p>
 
-				<ul>
-					<li>Pauses</li>
-					<li>Smiling</li>
-					<li>Body language</li>
-					<li>Speech pace</li>
-				</ul>
+				<img src="assets/showpad/pitchai-metrics.png" class="border-radius shadow" alt="#TODO">
+				<figcaption>A few examples of the banner messaging in PitchAI.</figcaption>
 
 				<div class="info">
 					<p><b>Fun fact:</b> while looking at the data, we realised that the ideal ranges for some of the metrics varied with language. Long silences make for a bad pitch in German, but a good one in Portuguese.</p>
@@ -132,11 +134,19 @@
 					<li><p>One of the first iterations showed a big pitch score. As we narrowed down the metrics tracked, we realised it wouldn’t be possible to review the pitch as a whole, since we were targeting only a few of its many comprising parts. The limited scope of the metrics analysed in this first pass meant we couldn’t confidently score the overall pitch, just these specific aspects of it</p></li>
 				</ul>
 
+				<img src="assets/showpad/pitchai-flyout.png" class="border-radius medium shadow" alt="#TODO">
+				<figcaption>An early design showing a flyout and a pitch score.</figcaption>
+
+
+
 				<h3>How to represent the users' performance</h3>
 
 				<p>Even though we experimented with many different ways to represent and visualise the users' performance, the original design showcasing the score within a spectrum was found to be both easy to implement and understand.</p>
 
 				<p>It has some limitations — it doesn’t show the variation in performance across the length of the pitch, for instance, which is something I would have liked to have tackled on the first pass, but time constraints forced us to spend our time elsewhere.</p>
+
+				<img src="assets/showpad/pitchai-datavis.png" class="border-radius-big shadow medium" alt="#TODO">
+				<figcaption>A few examples of metric score visualisation explorations.</figcaption>
 
 				<h3>How to make the report actionable</h3>
 
@@ -144,17 +154,43 @@
 
 				<p>To address this, we added a banner with some textual tips on how to achieve this in all the tracked metrics. The content of the banner reflects the score and performance of the user.</p>
 
+				<img src="assets/showpad/pitchai-banner-1.png" class="border-radius shadow medium" alt="#TODO">
+				<img src="assets/showpad/pitchai-banner-2.png" class="border-radius shadow medium" alt="#TODO">
+				<img src="assets/showpad/pitchai-banner-3.png" class="border-radius shadow medium" alt="#TODO">
+				<figcaption>A few examples of the banner messaging in PitchAI.</figcaption>
+
 				<h3>How to make sure users wait for the report</h3>
 
 				<p>While the loading times were projected to be quick, there were some scenarios in which the report could take a few seconds to load. To ensure users affected by this would still benefit from this feature, we made sure to make the loader hint at the benefits of the report to hopefully encourage them to wait a bit longer for it to load.</p>
 
 				<p>We did this by referencing the metrics analysed, hoping to spike the users' curiosity. </p>
 
+
+				<div class="frame-container web">
+					<div class="helper">
+						<p><i class="fas fa-hand-pointer"></i> Prototype</p>
+					</div>
+
+					<iframe style="border: none;" width="800" height="800" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FsH06MJ1lpglDdPsd6HBUkY%2FSandro-Design%3Fpage-id%3D607%253A16736%26node-id%3D607-17160%26viewport%3D522%252C520%252C0.11%26scaling%3Dscale-down-width%26starting-point-node-id%3D607%253A16797%26hide-ui%3D1" allowfullscreen></iframe>
+				</div>
+				<figcaption>The PitchAI experience, including loading. (Press R to restart.)</figcaption>
+
+
 				<h3>How to collect feedback</h3>
 
 				<p>We used a Pendo Guide to prompt a feedback form after the pitch submission to collect feedback on how our users found this feature.</p>
 
 				<p>Data volume is still low at the time of writing, but the general sentiment is fairly positive.</p>
+
+				<img src="assets/showpad/pitchai-feedback.png" class="border-radius shadow medium-small" alt="#TODO">
+				<figcaption>The feedback collection form.</figcaption>
+
+				<h3>Final design</h3>
+
+				<div class="img-full showpad">
+					<img src="assets/showpad/pitchai-final.png" class="" alt="#TODO">
+				</div>
+				<figcaption>The first release of PitchAI.</figcaption>
 
 				<h2>Where to take PitchAI from here</h2>
 
