@@ -338,6 +338,9 @@ img.shadow {
 .img-full.dotfetch {
   background-color: #ee4653;
 }
+.img-full.card-game {
+  background-color: #5849AD;
+}
 .old-new-toggle {
   position: relative;
   width: 100%;
