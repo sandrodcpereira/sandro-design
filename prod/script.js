@@ -3,7 +3,7 @@
 $(function(){
 	$("header").load("layout/header.html"); 
 	$("footer").load("layout/footer.html"); 
-	$("nav").load("layout/nav.html"); 
+	$("nav").load("layout/nav.html");
 });
 
 // hide play prototype button when clicked
