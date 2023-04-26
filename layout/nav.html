@@ -57,24 +57,17 @@ $('nav a').filter(function(){
 
 // mobile menu open and close
 
-$(function(){
-	$('#menu-toggle').click(function(){
-		$('nav').toggleClass("open");
-		$('#menu-toggle').toggleClass("open");
-	});
-});
+
 
 // open on focus
 
 $(function(){
 	$('nav a').focus(function(){
-		console.log('hello you');
-		$('nav').addClass("focus");
+		$('nav > .nav-container').addClass("focus");
 	});
 
 	$('nav a').focusout(function(){
-		console.log('hello you');
-		$('nav').removeClass("focus");
+		$('nav > .nav-container').removeClass("focus");
 	});
 });
 

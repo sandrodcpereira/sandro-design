@@ -51,6 +51,7 @@ header .sticky {
   transition: top 0.2s ease;
   padding: 8px 0;
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid #EAEEF0;
   z-index: 10;
 }
@@ -77,11 +78,6 @@ header .sticky > .wrapper h3 {
   text-overflow: ellipsis;
   line-height: 32px;
 }
-@media (max-width: 1024px) {
-  main.open {
-    opacity: 0.2;
-  }
-}
 .wrapper {
   width: 100%;
   max-width: 816px;
@@ -97,19 +93,34 @@ header .sticky > .wrapper h3 {
   z-index: 9;
   opacity: 1;
   font-size: 0.5em;
+  /* &.open {
+			transform: translateX(0);
+		}*/
 }
-.wrapper nav.open {
+.wrapper nav.toggled {
+  background-color: rgba(47, 62, 74, 0.2);
+  right: 0;
   transform: translateX(0);
 }
+@media (max-width: 1024px) {
+  .wrapper nav {
+    transform: translateX(-512px);
+  }
+}
 .wrapper nav .nav-container {
+  width: fit-content;
   overflow-x: none;
   height: 100%;
-  padding: 80px 40px 80px 24px;
+  padding: 96px 24px 24px 24px;
 }
 .wrapper nav .nav-container ul {
   list-style-type: none;
   padding: 0 0 0 10px;
   padding-inline-start: 10px;
+}
+.wrapper nav .nav-container h3 {
+  font-size: 1.4em;
+  margin: 16px 2px 2px 2px;
 }
 .wrapper nav .nav-container p,
 .wrapper nav .nav-container h3 {
@@ -129,57 +140,50 @@ header .sticky > .wrapper h3 {
 .wrapper nav .nav-container h3 a {
   color: transparent;
 }
-.wrapper nav .nav-container h3 {
-  font-size: 1.4em;
-  margin: 16px 2px 2px 2px;
-}
-@media (max-width: 1024px) {
-  .wrapper nav {
-    transform: translateX(-512px);
-  }
-}
-.wrapper nav:hover,
-.wrapper nav.focus,
-.wrapper nav .open {
+.wrapper nav .nav-container:hover,
+.wrapper nav .nav-container.focus,
+.wrapper nav .nav-container.open {
   overflow-x: scroll;
-  transform: translateX(0);
-  background-color: #EAEEF0;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+  background-color: rgba(234, 238, 240, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right: 1px solid #EAEEF0;
 }
-.wrapper nav:hover p,
-.wrapper nav.focus p,
-.wrapper nav .open p,
-.wrapper nav:hover h3,
-.wrapper nav.focus h3,
-.wrapper nav .open h3 {
+.wrapper nav .nav-container:hover p,
+.wrapper nav .nav-container.focus p,
+.wrapper nav .nav-container.open p,
+.wrapper nav .nav-container:hover h3,
+.wrapper nav .nav-container.focus h3,
+.wrapper nav .nav-container.open h3 {
   color: #2F3E4A;
   opacity: 1;
   background-image: none;
   letter-spacing: 0px;
 }
-.wrapper nav:hover p a,
-.wrapper nav.focus p a,
-.wrapper nav .open p a,
-.wrapper nav:hover h3 a,
-.wrapper nav.focus h3 a,
-.wrapper nav .open h3 a {
+.wrapper nav .nav-container:hover p a,
+.wrapper nav .nav-container.focus p a,
+.wrapper nav .nav-container.open p a,
+.wrapper nav .nav-container:hover h3 a,
+.wrapper nav .nav-container.focus h3 a,
+.wrapper nav .nav-container.open h3 a {
   color: #2F3E4A;
 }
-.wrapper nav:hover p a.active,
-.wrapper nav.focus p a.active,
-.wrapper nav .open p a.active,
-.wrapper nav:hover h3 a.active,
-.wrapper nav.focus h3 a.active,
-.wrapper nav .open h3 a.active {
+.wrapper nav .nav-container:hover p a.active,
+.wrapper nav .nav-container.focus p a.active,
+.wrapper nav .nav-container.open p a.active,
+.wrapper nav .nav-container:hover h3 a.active,
+.wrapper nav .nav-container.focus h3 a.active,
+.wrapper nav .nav-container.open h3 a.active {
   color: #1B1BFF;
   font-weight: bold;
 }
-.wrapper nav:hover p a:hover,
-.wrapper nav.focus p a:hover,
-.wrapper nav .open p a:hover,
-.wrapper nav:hover h3 a:hover,
-.wrapper nav.focus h3 a:hover,
-.wrapper nav .open h3 a:hover {
+.wrapper nav .nav-container:hover p a:hover,
+.wrapper nav .nav-container.focus p a:hover,
+.wrapper nav .nav-container.open p a:hover,
+.wrapper nav .nav-container:hover h3 a:hover,
+.wrapper nav .nav-container.focus h3 a:hover,
+.wrapper nav .nav-container.open h3 a:hover {
   color: #1B1BFF;
 }
 section,

@@ -70,6 +70,7 @@ header {
 		transition: top .2s ease;
 		padding: 8px 0;
 		backdrop-filter: blur(16px);
+		-webkit-backdrop-filter: blur(20px);
 		border-bottom: 1px solid @light-grey;
 		z-index: 10;
 
@@ -99,14 +100,6 @@ header {
 	}
 }
 
-main {
-	@media (max-width: 1024px) {
-		&.open {
-			opacity: .2;
-		}
-	}
-}
-
 .wrapper {
 	width: 100%;
 	max-width: @max-width;
@@ -125,19 +118,33 @@ main {
 		opacity: 1;
 		font-size: .5em;
 
-		&.open {
+		&.toggled {
+			background-color: rgba(47, 62, 74, 0.2);
+			right: 0;
 			transform: translateX(0);
 		}
 
+		/* &.open {
+			transform: translateX(0);
+		}*/
+
+		@media (max-width: 1024px) {transform: translateX(-512px);}
+
 		.nav-container {
+			width: fit-content;
 			overflow-x: none;
 			height: 100%;
-			padding: 80px 40px 80px 24px;
+			padding: 96px 24px 24px 24px;
 
 			ul {
 				list-style-type: none;
 				padding: 0 0 0 10px;
 				padding-inline-start: 10px;
+			}
+
+			h3 {
+				font-size: 1.4em;
+				margin: 16px 2px 2px 2px;
 			}
 
 			p, h3 {
@@ -152,42 +159,35 @@ main {
 				background-repeat: repeat-x;
 				background-position: center center;
 				background-size: 10px;
-
 				a {color: transparent;}
 			}
 
-			h3 {
-				font-size: 1.4em;
-				margin: 16px 2px 2px 2px;
-			}
-		}
-
-		@media (max-width: 1024px) {
-			transform: translateX(-512px);
-		}
-
-		&:hover, &.focus, .open {
-			overflow-x: scroll;
-			transform: translateX(0);
-			background-color: @light-grey;
-			box-shadow: 0 14px 28px rgba(0,0,0,0.15);
-			p, h3 {
-				color: @dark-grey;
-				opacity: 1;
-				background-image: none;
-				letter-spacing: 0px;
-
-				a {
+			&:hover, &.focus, &.open {
+				overflow-x: scroll;
+				box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+				background-color: rgba(234, 238, 240, 0.9);
+				backdrop-filter: blur(16px);
+				-webkit-backdrop-filter: blur(20px);
+				border-right: 1px solid @light-grey;
+				p, h3 {
 					color: @dark-grey;
+					opacity: 1;
+					background-image: none;
+					letter-spacing: 0px;
 
-					&.active {
-						color: @accent-color;
-						font-weight: bold;
+					a {
+						color: @dark-grey;
+
+						&.active {
+							color: @accent-color;
+							font-weight: bold;
+						}
+
+						&:hover {color: @accent-color;}
 					}
-
-					&:hover {color: @accent-color;}
 				}
 			}
+			
 		}
 	}
 }
