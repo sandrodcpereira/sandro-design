@@ -1,1 +1,78 @@
-<a href="index.html" id="logo" class="animated"></a>
+
+<div class="container">
+	<div class="icon menu menu-toggle"></div>
+
+	<a href="index.html" id="logo" class="animated"></a>
+</div>
+
+
+
+<div class="sticky">
+	<div class="wrapper">
+
+		<div class="icon menu menu-toggle"></div>
+		<a class="icon logo" href="index.html"></a>
+
+
+		<h3>#Oops</h3>
+	</div>
+</div>
+
+
+
+
+<script>
+	
+	// copy main header content to sticky header
+
+	$(document).ready(function() {
+	  var h1Text = $('h1:first').text(); // get the text content of the first h1 element
+	  $('.sticky > .wrapper > h3').text(h1Text); // set the text content of the h3 element to the text content of the h1 element
+	});
+
+
+	// sticky header show on h1 out of view
+
+	$(document).ready(function() {
+	  $(window).scroll(function() {
+	    var scrollPosition = $(window).scrollTop();
+	    var h1Position = $('h1:first').offset().top + $('h1:first').outerHeight(); 
+	    var headerHeight = $('.header').outerHeight(); 
+	    if (scrollPosition >= h1Position - headerHeight) {
+	      $('.sticky').addClass('show');
+	    } else {
+	      $('.sticky').removeClass('show');
+	    }
+	  });
+	});
+
+
+	// open and close menu
+
+	$(document).ready(function() {
+		$(function(){
+			$('.menu-toggle').click(function(){
+				$('.nav-container').toggleClass("open");
+				$('nav').toggleClass("open");
+				$('.menu-toggle').toggleClass("open");
+				$('main').toggleClass("open");
+			});
+		});
+	});
+
+	// close if clicked outside
+	
+	$(document).ready(function() {
+	  $('main').click(function() {
+	    if ($('nav').hasClass('open')) {
+	      $('nav').removeClass('open');
+	      $('.nav-container').removeClass('open');
+	      $('.menu-toggle').removeClass("open");
+	      $('main').removeClass("open");
+	    }
+	  });
+	});
+	
+
+
+</script>

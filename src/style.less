@@ -8,7 +8,7 @@
 @accent-color: 	#1B1BFF;
 @green: #1FAD72;
 @visited-link: 	#7e1bff;
-@max-width: 	840px;
+@max-width: 	816px;
 
 // icons
 
@@ -35,6 +35,78 @@ html, body {
 	color: @dark-grey;
 }
 
+header {
+	padding: 80px 0 0;
+
+	.container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 16px;
+    margin-left: -48px;
+    z-index: 20;
+	}
+
+	.icon {
+		flex: 0 0 32px;
+		height: 32px;
+		background-position: center center;
+		background-size: 32px;
+		background-repeat: no-repeat;
+		cursor: pointer;
+
+		&.logo {background-image: url(../assets/generic/icon-logo.png);}
+		&.menu {background-image: url(../assets/generic/icon-menu.png);}
+		&.menu.open {background-image: url(../assets/generic/icon-close.png);}
+	}
+
+	.sticky {
+		position: fixed;
+		top: -128px;
+		left: 0;
+		right: 0;
+		background-color: rgba(234, 238, 240, 0.9);
+		box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+		transition: top .2s ease;
+		padding: 8px 0;
+		backdrop-filter: blur(16px);
+		border-bottom: 1px solid @light-grey;
+		z-index: 10;
+
+		&.show {top: 0px;}
+
+		> .wrapper {
+			max-width: @max-width;
+			margin: 8px auto;
+			padding: 0 40px;
+			overflow-x: scroll;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+  		justify-content: flex-start;
+  		gap: 8px;
+
+			h3 {
+				margin-top: .2em;
+				margin-bottom: .2em;
+				height: 32px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				line-height: 32px;
+			}
+		}
+	}
+}
+
+main {
+	@media (max-width: 1024px) {
+		&.open {
+			opacity: .2;
+		}
+	}
+}
+
 .wrapper {
 	width: 100%;
 	max-width: @max-width;
@@ -44,71 +116,23 @@ html, body {
 
 	// navigation
 
-	nav {
+	 nav {
 		position: fixed;
 		left: 0;
 		top: 0;
-		right: 0;
 		bottom: 0;
 		z-index: 9;
 		opacity: 1;
+		font-size: .5em;
 
-		.header-sticky {
-			position: relative;
-			top: -128px;
-			background-color: rgba(234, 238, 240, 0.9);
-			box-shadow: 0 14px 28px rgba(0,0,0,0.15);
-			transition: top .2s ease;
-			padding: 8px 0;
-			backdrop-filter: blur(16px);
-			border-bottom: 1px solid @light-grey;
-
-			&.show {top: 0px;}
-
-			.header-container {
-				max-width: @max-width;
-				margin: 8px auto;
-				padding: 0 40px;
-				overflow-x: scroll;
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-    		justify-content: flex-start;
-    		gap: 8px;
-
-    		.icon {
-    			background-color: red;
-    			flex: 0 0 32px;
-    			height: 32px;
-    		}
-
-				h3 {
-					margin-top: .2em;
-					margin-bottom: .2em;
-					height: 32px;
-					white-space: nowrap;
-  				overflow: hidden;
-  				text-overflow: ellipsis;
-  				line-height: 32px;
-				}
-			}
+		&.open {
+			transform: translateX(0);
 		}
 
-
-		/* 
-		#menu-toggle {display: none;}
-
 		.nav-container {
-			overflow-x: scroll;
-			display: flex;
-			align-items: left;
-			flex-direction: column;
+			overflow-x: none;
 			height: 100%;
-			i {font-size: 1.8em;}
-
-			.nav-contents {
-				padding: 60px 40px 60px 20px;
-			}
+			padding: 80px 40px 80px 24px;
 
 			ul {
 				list-style-type: none;
@@ -138,30 +162,33 @@ html, body {
 			}
 		}
 
-		@media (min-width: 1120px) {
-			&:hover, &.focus {
-				background-color: @light-grey;
-				box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+		@media (max-width: 1024px) {
+			transform: translateX(-512px);
+		}
 
-				p, h3 {
+		&:hover, &.focus, .open {
+			overflow-x: scroll;
+			transform: translateX(0);
+			background-color: @light-grey;
+			box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+			p, h3 {
+				color: @dark-grey;
+				opacity: 1;
+				background-image: none;
+				letter-spacing: 0px;
+
+				a {
 					color: @dark-grey;
-					opacity: .8;
-					background-image: none;
-					letter-spacing: 0px;
 
-					a {
-						color: @dark-grey;
-
-						&.active {
-							color: @accent-color;
-							font-weight: bold;
-						}
-
-						&:hover {color: @accent-color;}
+					&.active {
+						color: @accent-color;
+						font-weight: bold;
 					}
+
+					&:hover {color: @accent-color;}
 				}
 			}
-		}*/
+		}
 	}
 }
 
@@ -696,10 +723,6 @@ table {
 }
 
 // generic layout components
-
-header {
-	padding: 80px 0 0;
-}
 
 #logo {
 	display: inline-block;
