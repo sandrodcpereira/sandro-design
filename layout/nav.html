@@ -41,36 +41,24 @@
 
 </div>
 
-
-
-
-
-
-
 <script>
 	
-// active menu item
+	// active menu item
 
-$('nav a').filter(function(){
-  return this.href === location.href;
-}).addClass('active');
+	$('nav a').filter(function(){
+	  return this.href === location.href;
+	}).addClass('active');
 
-// mobile menu open and close
+	// open on focus
 
+	$(function(){
+		$('nav a').focus(function(){
+			$('nav > .nav-container').addClass("focus");
+		});
 
-
-// open on focus
-
-$(function(){
-	$('nav a').focus(function(){
-		$('nav > .nav-container').addClass("focus");
+		$('nav a').focusout(function(){
+			$('nav > .nav-container').removeClass("focus");
+		});
 	});
-
-	$('nav a').focusout(function(){
-		$('nav > .nav-container').removeClass("focus");
-	});
-});
-
-
 
 </script>
