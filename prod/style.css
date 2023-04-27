@@ -1113,9 +1113,15 @@ ul.improvements > li:before {
 }
 .frame-container.web {
   width: initial;
+  height: initial;
   max-width: none;
   margin: 40px -60px 20px;
-  height: 538px;
+  aspect-ratio: 144 / 90;
+}
+@media (max-width: 860px) {
+  .frame-container.web {
+    margin: 40px -20px 20px;
+  }
 }
 .frame-container > iframe {
   width: 100%;
@@ -1124,6 +1130,7 @@ ul.improvements > li:before {
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
+  display: block;
 }
 .frame-container > iframe[name="prototypeSyncingEvents"] {
   background-image: url('../assets/akkroo/preview-sync.png');

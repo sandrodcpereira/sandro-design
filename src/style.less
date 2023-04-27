@@ -1100,9 +1100,15 @@ ul.improvements > li:before {content: "\f00d";}
 
 	&.web {
 		width: initial;
+		height: initial;
 		max-width: none;
 		margin: 40px -60px 20px;
-		height: 538px;
+		aspect-ratio: 144 / 90;
+
+
+		@media (max-width: 860px) {
+			margin: 40px -20px 20px;
+		}
 	}
 
 	> iframe {
@@ -1112,6 +1118,7 @@ ul.improvements > li:before {content: "\f00d";}
 		background-position: center center;
 		background-size: contain;
 		background-repeat: no-repeat;
+		display: block;
 
 		&[name="prototypeSyncingEvents"] 	{background-image: url('../assets/akkroo/preview-sync.png');}
 		&[name="prototypeRecordStarring"] {background-image: url('../assets/akkroo/preview-sync.png');}
