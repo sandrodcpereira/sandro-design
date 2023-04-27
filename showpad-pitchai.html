@@ -73,7 +73,9 @@
 
 				<h2>Context</h2>
 
-				<p>PitchIQ is a Showpad Coach feature that allows salespeople to practice their sales pitches and receive feedback from their peers and managers.</p>
+				<p>PitchIQ is a legacy Showpad Coach feature that allows salespeople to <b>practice their sales pitches and receive feedback</b> from their peers and managers.</p>
+
+				<p>PitchAI was introduced as an add-on to PitchIQ at the end of the first quarter of 2023 as <b>Showpad's first true <abbr title="Artificial Intelligence">AI</abbr>-driven feature</b>.</p>
 
 
 			</section>
@@ -82,7 +84,7 @@
 				
 				<h2>Problem</h2>
 
-				<p>As much value as PitchIQ offered to sales users, the high volume of submissions and the limited time of reviewers typically resulted in long delays in users receiving feedback on how they performed.</p>
+				<p>As much value as PitchIQ offered to sales users, the <b>high volume of submissions and the limited time of reviewers typically resulted in long delays in users receiving feedback</b> on how they performed.</p>
 
 				<p>To shorten the time to get valuable insights and increase the users’ confidence in the pitches they're submitting for review, we looked into making use of our dataset of pitches and reviews to help sales users receive more timely feedback.</p>
 
@@ -102,7 +104,7 @@
 
 				<p>While discussions were still being held with the data team and engineering to assess feasibility, I started to get some design work done. From a <abbr title="User Interface">UI</abbr> perspective, there were a few things to figure out as well.</p>
 
-				<p>My first designs took on an agnostic approach to showcasing any metric — users should be able to identify it and understand how they performed relative to the ideal score for this particular metric. This approach proved to be the best for the project and part of the final <abbr title="User Interface">UI</abbr> was heavily informed by these early explorations.</p>
+				<p>My first designs took on an <b>agnostic approach to showcasing any metric</b> — users should be able to identify it and understand how they performed relative to the ideal score for this particular metric. This approach proved to be the best for the project and part of the final <abbr title="User Interface">UI</abbr> was heavily informed by these early explorations.</p>
 
 				<div class="img-full showpad">
 					<img src="assets/showpad/pitchai-explorations.png" class="border-radius shadow" alt="#TODO">
@@ -112,7 +114,7 @@
 
 				<h3>Deciding what to track</h3>
 
-				<p>In order to deliver on this project, we needed to understand which metrics we’d like to report on, which we’d be able to report on (and how reliably), and which would have the biggest impact on the final quality of the sales pitch.</p>
+				<p>In order to deliver on this project, we needed to understand <b>which metrics we’d like to report on, which we’d be able to report on (and how reliably), and which would have the biggest impact on the final quality</b> of the sales pitch.</p>
 
 				<p>We met with the data team to check the dataset available, arrange it by score, and try to extrapolate ranges for all the metrics we could track.</p>
 
@@ -131,7 +133,7 @@
 
 				<ul>
 					<li><p>The possibility of needing explicit user consent and action to analyse their pitches led me to design the experience in a flyout <abbr title="User Interface">UI</abbr> that required a button press to action. In the end, the processing of our users’ pitches was confirmed to be covered by the T&C of our platform, making it possible for us to show the analysis inline and immediately after recording.</p></li>
-					<li><p>One of the first iterations showed a big pitch score. As we narrowed down the metrics tracked, we realised it wouldn’t be possible to review the pitch as a whole, since we were targeting only a few of its many comprising parts. The limited scope of the metrics analysed in this first pass meant we couldn’t confidently score the overall pitch, just these specific aspects of it</p></li>
+					<li><p>One of the first iterations showed a big pitch score. As we narrowed down the metrics tracked, we realised it wouldn’t be possible to review the pitch as a whole, since we were targeting only a few of its many comprising parts. <b>The limited scope of the metrics analysed in this first pass meant we couldn’t confidently score the overall pitch</b>, just these specific aspects of it</p></li>
 				</ul>
 
 				<img src="assets/showpad/pitchai-flyout.png" class="border-radius medium shadow" alt="#TODO">
@@ -141,7 +143,7 @@
 
 				<h3>How to represent the users' performance</h3>
 
-				<p>Even though we experimented with many different ways to represent and visualise the users' performance, the original design showcasing the score within a spectrum was found to be both easy to implement and understand.</p>
+				<p>Even though we experimented with many different ways to represent and visualise the users' performance, the original design showcasing <b>the score within a spectrum was found to be both easy to implement and understand</b>.</p>
 
 				<p>It has some limitations — it doesn’t show the variation in performance across the length of the pitch, for instance, which is something I would have liked to have tackled on the first pass, but time constraints forced us to spend our time elsewhere.</p>
 
@@ -150,9 +152,9 @@
 
 				<h3>How to make the report actionable</h3>
 
-				<p>In addition to showing the users' score in any of the tracked metrics, we also wanted to make it easy for users to rerecord and improve their pitches. Initial feedback showed that even if people understood their scores, they weren’t always clear on how to improve them.</p>
+				<p>In addition to showing the users' score in any of the tracked metrics, we also wanted to <b>make it easy for users to rerecord and improve their pitches with our feedback in mind</b>. Initial feedback showed that even if people understood their scores, they weren’t always clear on how to improve them.</p>
 
-				<p>To address this, we added a banner with some textual tips on how to achieve this in all the tracked metrics. The content of the banner reflects the score and performance of the user.</p>
+				<p>To address this, we added <b>a banner with textual tips on how to achieve this</b> in all the tracked metrics. The content of the banner reflects the score and performance of the user.</p>
 
 				<img src="assets/showpad/pitchai-banner-1.png" class="border-radius shadow medium" alt="#TODO">
 				<img src="assets/showpad/pitchai-banner-2.png" class="border-radius shadow medium" alt="#TODO">
@@ -161,7 +163,7 @@
 
 				<h3>How to make sure users wait for the report</h3>
 
-				<p>While the loading times were projected to be quick, there were some scenarios in which the report could take a few seconds to load. To ensure users affected by this would still benefit from this feature, we made sure to make the loader hint at the benefits of the report to hopefully encourage them to wait a bit longer for it to load.</p>
+				<p>While the loading times were projected to be quick, there were some scenarios in which the report could take a few seconds to load. To ensure users affected by this would still benefit from this feature, we made the loader <b>hint at the benefits of the report</b> to hopefully encourage them to wait a bit longer for it to load.</p>
 
 				<p>We did this by referencing the metrics analysed, hoping to spike the users' curiosity. </p>
 
@@ -180,7 +182,7 @@
 
 				<p>We used a Pendo Guide to prompt a feedback form after the pitch submission to collect feedback on how our users found this feature.</p>
 
-				<p>Data volume is still low at the time of writing, but the general sentiment is fairly positive.</p>
+				<p>Data volume is still low at the time of writing, but the <b>general sentiment is very positive</b>.</p>
 
 				<img src="assets/showpad/pitchai-feedback.png" class="border-radius shadow medium-small" alt="#TODO">
 				<figcaption>The feedback collection form.</figcaption>
