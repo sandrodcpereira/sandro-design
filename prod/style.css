@@ -679,7 +679,7 @@ section a[target="_blank"]:hover:after {
   text-rendering: auto;
   line-height: 1;
   position: absolute;
-  top: 6px;
+  top: 3px;
   right: -24px;
 }
 .thumbnails a[target="_blank"]:hover h3:after {
@@ -1204,7 +1204,7 @@ ul.thumbnails li a img {
   border-radius: 5px 5px 0 0;
 }
 ul.thumbnails li a h3 {
-  margin: 20px 20px 5px 20px;
+  margin: 20px 20px 0px 20px;
   text-decoration: none;
   font-size: 1.2em;
 }
@@ -1223,7 +1223,7 @@ ul.thumbnails li a h3 > span {
   line-height: normal;
 }
 ul.thumbnails li a p {
-  margin: 8px 20px 20px 20px;
+  margin: 4px 20px 20px 20px;
   font-size: 0.8em;
   line-height: 1.6em;
   color: #2F3E4A;
