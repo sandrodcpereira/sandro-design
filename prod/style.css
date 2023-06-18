@@ -1180,7 +1180,6 @@ ul.thumbnails li a.disabled > h3 > span {
 ul.thumbnails li a img {
   background-color: #1B1BFF;
   margin: 0;
-  border-radius: 5px 5px 0 0;
 }
 ul.thumbnails li a h3 {
   margin: 20px 20px 0px 20px;
@@ -1188,8 +1187,8 @@ ul.thumbnails li a h3 {
   font-size: 1.2em;
 }
 ul.thumbnails li a h3 > span {
-  background-color: #EAEEF0;
-  color: #638096;
+  color: #4D7A1E;
+  background-color: #BEF485;
   text-transform: uppercase;
   font-family: "azo-sans-web", 'Azo Sans', sans-serif;
   letter-spacing: 1px;
