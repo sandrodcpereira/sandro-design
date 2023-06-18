@@ -679,11 +679,14 @@ section a[target="_blank"]:hover:after {
   text-rendering: auto;
   line-height: 1;
   position: absolute;
-  top: 6px;
+  top: 3px;
   right: -24px;
 }
 .thumbnails a[target="_blank"]:hover h3:after {
   opacity: 1;
+}
+section.featured {
+  margin-top: -128px;
 }
 .nav-contents a[target="_blank"] {
   color: #2F3E4A;
@@ -939,30 +942,6 @@ ul.improvements > li:before {
 .home .wrapper:first-child .header p abbr[title] {
   border-bottom: 1px dashed rgba(234, 238, 240, 0.25);
 }
-.home .wrapper:first-child .header .scroll-indicator {
-  position: absolute;
-  bottom: 80px;
-  left: 50%;
-  transform: translate(-50%, 0px);
-  display: block;
-  height: 60px;
-  width: 60px;
-  animation: scroll 3s infinite;
-  color: #ffffff;
-  font-size: 2.2em;
-  text-align: center;
-  line-height: 1.8em;
-  opacity: 0.4;
-  transition: opacity 0.5s ease;
-}
-.home .wrapper:first-child .header .scroll-indicator:hover {
-  opacity: 1;
-}
-@media (max-width: 500px) {
-  .home .wrapper:first-child .header .scroll-indicator {
-    bottom: 20px;
-  }
-}
 .motion .img-full {
   background-color: #6254e7;
 }
@@ -1183,12 +1162,12 @@ ul.thumbnails li:hover {
 ul.thumbnails li a {
   display: block;
   text-decoration: none;
-  border: 1px solid #11111126;
   border-radius: 6px;
 }
 ul.thumbnails li a:focus {
   outline-offset: -2px;
   outline: -webkit-focus-ring-color auto 1px;
+  border: 1px solid #11111126;
 }
 ul.thumbnails li a.disabled {
   opacity: 0.3;
@@ -1201,16 +1180,15 @@ ul.thumbnails li a.disabled > h3 > span {
 ul.thumbnails li a img {
   background-color: #1B1BFF;
   margin: 0;
-  border-radius: 5px 5px 0 0;
 }
 ul.thumbnails li a h3 {
-  margin: 20px 20px 5px 20px;
+  margin: 20px 20px 0px 20px;
   text-decoration: none;
   font-size: 1.2em;
 }
 ul.thumbnails li a h3 > span {
-  background-color: #EAEEF0;
-  color: #638096;
+  color: #4D7A1E;
+  background-color: #BEF485;
   text-transform: uppercase;
   font-family: "azo-sans-web", 'Azo Sans', sans-serif;
   letter-spacing: 1px;
@@ -1223,7 +1201,7 @@ ul.thumbnails li a h3 > span {
   line-height: normal;
 }
 ul.thumbnails li a p {
-  margin: 8px 20px 20px 20px;
+  margin: 4px 20px 20px 20px;
   font-size: 0.8em;
   line-height: 1.6em;
   color: #2F3E4A;
