@@ -1141,7 +1141,6 @@ ul.thumbnails {
 }
 ul.thumbnails li {
   border-radius: 6px;
-  overflow: hidden;
   background-color: #ffffff;
   display: inline-block;
   width: calc(50% - 20px);
@@ -1180,6 +1179,7 @@ ul.thumbnails li a.disabled > h3 > span {
 ul.thumbnails li a img {
   background-color: #1B1BFF;
   margin: 0;
+  border-radius: 5.5px 5.5px 0 0;
 }
 ul.thumbnails li a h3 {
   margin: 20px 20px 0px 20px;
