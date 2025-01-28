@@ -846,7 +846,7 @@ footer ul li a span {
   padding: 5px 6px;
   border-radius: 6px;
   transform: translate(-50%, 0px);
-  transition: opacity 0.2s ease-out, top 0.2s ease-out;
+  transition: top 0.2s ease-out;
 }
 footer p {
   font-weight: 500;
