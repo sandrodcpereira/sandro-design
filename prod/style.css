@@ -637,10 +637,12 @@ abbr[title] {
   border-bottom: 1px dashed #638096;
   text-decoration: none;
 }
-section a[target="_blank"] {
+section a[target="_blank"],
+nav a[target="_blank"] {
   color: #2F3E4A;
 }
-section a[target="_blank"]:after {
+section a[target="_blank"]:after,
+nav a[target="_blank"]:after {
   font-family: "Font Awesome 5 Pro";
   content: "\f35d";
   font-weight: 900;
@@ -654,10 +656,12 @@ section a[target="_blank"]:after {
   display: inline-block;
   margin-left: 4px;
 }
-section a[target="_blank"]:hover {
+section a[target="_blank"]:hover,
+nav a[target="_blank"]:hover {
   color: #1B1BFF;
 }
-section a[target="_blank"]:hover:after {
+section a[target="_blank"]:hover:after,
+nav a[target="_blank"]:hover:after {
   opacity: 1;
 }
 .thumbnails a[target="_blank"]:after {
