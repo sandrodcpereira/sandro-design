@@ -19,6 +19,8 @@ html.device input,html.device textarea{-webkit-user-select:text;user-select:text
 .device .bar{display:none}
 .device .scaler{position:fixed;left:0;top:0}
 .device .phone{box-shadow:none}
+/* iPhone 16 Pro display corners are 62pt; sheets sit 8pt in, so 62-8 = 54pt keeps them concentric */
+.device .sheet{border-radius:54px}
 #sat{position:fixed;left:0;right:0;top:0;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
 #sat{transition:box-shadow .28s}
 .device:has(.scrim.on) #sat{box-shadow:inset 0 0 0 999px rgba(25,27,30,.32)}
